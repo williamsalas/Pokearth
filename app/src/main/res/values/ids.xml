@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="spritesRelativeLayout" type="id"></item>
+    <item name="linearLayoutTopButtons" type="id"></item>
+    <item name="linearLayoutBottomButtons" type="id"></item>
+    <item name="newDuoButton" type="id"></item>
+    <item name="pokemon_1_HP" type="id"></item>
+    <item name="pokemon_2_HP" type="id"></item>
+    <item name="linearLayoutPokemonHP" type="id"></item>
+</resources>

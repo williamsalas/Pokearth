@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="pokedex_button">Click for a Pokedex entry!</string>
+    <string name="sprite_pokemon_1">Sprite Pokemon 1</string>
+    <string name="sprite_pokemon_2">Sprite Pokemon 2</string>
 </resources>
