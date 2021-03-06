@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokearth">
-        <activity android:name=".MainActivity" android:label="Main">
+        <activity android:name=".MainActivity"/>
 
-        </activity>
+        <activity android:name=".PlayActivity"/>
 
         <activity android:name=".SplashActivity">
             <intent-filter>
