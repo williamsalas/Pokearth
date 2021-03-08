@@ -15,6 +15,12 @@
 
         <activity android:name=".PlayActivity"/>
 
+        <activity android:name=".FightActivity"/>
+
+        <activity android:name=".InventoryActivity"/>
+
+        <activity android:name=".ShopActivity"/>
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
