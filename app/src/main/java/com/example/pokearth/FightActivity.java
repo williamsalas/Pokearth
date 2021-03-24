@@ -1,16 +1,19 @@
 package com.example.pokearth;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FightActivity extends AppCompatActivity {
+
 
     TextView textView, textView2;
 
@@ -79,5 +82,10 @@ public class FightActivity extends AppCompatActivity {
         layerDrawable2.setLayerInset(4, 15, 15, 15, 15);
 
         textView2.setBackground(layerDrawable2);
+    }
+
+    public void openPlayActivity(View v){
+        Intent intent = new Intent(FightActivity.this, PlayActivity.class);
+        startActivity(intent);
     }
 }
