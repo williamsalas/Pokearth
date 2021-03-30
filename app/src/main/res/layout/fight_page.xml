@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/pokearth_grassland">
 
     <!--    Opponent Pokemon TextViews RelativeLayout-->
@@ -67,7 +67,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:srcCompat="@drawable/charizard" />
 
     </RelativeLayout>
@@ -96,7 +96,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="5dp"
             android:scaleX="-1"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:srcCompat="@drawable/pokemon_back" />
 
     </RelativeLayout>
@@ -144,18 +144,53 @@
     </RelativeLayout>
 
 
+    <!--    Fight Buttons Linear Layout-->
+    <LinearLayout
+        android:id="@+id/fightButtonsLinearLayout"
+        android:layout_width="185dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="655dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--    Fight Button-->
+        <Button
+            android:id="@+id/move1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="playerAttackButtonClick"
+
+            android:text="Move1" />
+
+        <!--    Fight Button-->
+        <Button
+            android:id="@+id/move2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="playerAttackButtonClick"
+            android:text="Move2" />
+
+    </LinearLayout>
+
     <!--    Battle Text Relative Layout-->
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_gravity="end"
         android:layout_marginTop="655dp"
         android:gravity="left"
         android:orientation="horizontal"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <!--        Battle Dialog TextView-->
@@ -166,11 +201,11 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/border2"
             android:gravity="center"
+            android:padding="5dp"
             android:text="Battle Text View" />
 
     </RelativeLayout>
@@ -196,6 +231,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="95dp"
             android:layout_marginRight="95dp"
+            android:onClick="displayAttackMenu"
             android:text="FIGHT" />
 
         <!--    Items Button-->
