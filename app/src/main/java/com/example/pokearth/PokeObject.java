@@ -1,8 +1,10 @@
 package com.example.pokearth;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -104,8 +106,7 @@ public class PokeObject extends MainActivity {
         return PokeTypes.valueOf(this.myPoke[0].getTypes().get(0).getType().getName()).ordinal();
     }
 
-    public double getMatchupEffectiveness(PokeObject opponent)
-    {
+    public double getMatchupEffectiveness(PokeObject opponent) {
         return typeMatchupEffectiveness[this.getTypeIndex()][opponent.getTypeIndex()];
     }
 
@@ -180,7 +181,32 @@ public class PokeObject extends MainActivity {
         return ans;
     }
 
+    public boolean isDualType() {
+        return this.myPoke[0].getTypes().size() > 1;
+    }
 
+    @SuppressLint("SetTextI18n")
+    public int attack(PokeObject defender, TextView battleText)
+    {
+        int damage = (int) (Math.random() * 50);
+        defender.health.takeDamage(damage);
+
+        double matchupEffectivenessResult = this.getMatchupEffectiveness(defender);
+        if (matchupEffectivenessResult == 0.0) {
+            // no effect
+            battleText.setText(this.getName() + " attacked " + defender.getName() + " with no effect...");
+        } else if (matchupEffectivenessResult > 1) {
+            //super effective
+            battleText.setText(this.getName() + " attacked " + defender.getName() + " for " + damage + " damage! Super effective!");
+        } else if (matchupEffectivenessResult < 1) {
+            // not very effective
+            battleText.setText(this.getName() + " attacked " + defender.getName() + " for " + damage + " damage! Not very effective...");
+        } else {
+            battleText.setText(this.getName() + " attacked " + defender.getName() + " for " + damage + " damage!");
+        }
+
+        return damage;
+    }
 }
 
 
