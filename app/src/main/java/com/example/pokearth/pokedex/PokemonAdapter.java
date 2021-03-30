@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import com.example.pokearth.PokemonObject;
 import com.example.pokearth.databinding.PokemonObjectLayoutBinding;
 
+
 import java.util.ArrayList;
 import java.util.List;
 

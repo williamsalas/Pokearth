@@ -35,20 +35,6 @@ public class PokedexActivity extends AppCompatActivity {
 
         listViewPokedex = findViewById(R.id.pokemonList);
 
-        /*
-        PokemonObject first = new PokemonObject("A", "");
-        PokemonObject second = new PokemonObject("B", "");
-        PokemonObject third = new PokemonObject("C", "");
-        PokemonObject fourth = new PokemonObject("D", "");
-        PokemonObject fifth = new PokemonObject("E", "");
-
-        pokemonList.add(first);
-        pokemonList.add(second);
-        pokemonList.add(third);
-        pokemonList.add(fourth);
-        pokemonList.add(fifth);
-         */
-
         PokedexThreads thread1 = new PokedexThreads(0, 20);
         PokedexThreads thread2 = new PokedexThreads(20, 40);
 

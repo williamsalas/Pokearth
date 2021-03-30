@@ -15,7 +15,7 @@ public class PokemonActivity extends AppCompatActivity {
 
     int position;
     String name = "";
-    Bitmap bitmap;
+    Bitmap image;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,8 +25,10 @@ public class PokemonActivity extends AppCompatActivity {
 
         position = getIntent().getIntExtra("position",0);
         name = getIntent().getStringExtra("name");
+        image = getIntent().getParcelableExtra("image");
         setTitle(name);
         ui.pokemonNameView2.setText(name);
+        ui.pokemonImage.setImageBitmap(image);
     }
 
     public void onReturnClicked(View view){

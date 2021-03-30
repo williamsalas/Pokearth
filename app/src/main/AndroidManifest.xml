@@ -23,6 +23,8 @@
 
         <activity android:name=".pokedex.PokedexActivity"/>
 
+        <activity android:name=".pokedex.PokemonActivity"/>
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
