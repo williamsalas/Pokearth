@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.pokearth.databinding.PokemonActivityBinding;
 
+// this activity populates the pokemon_activity.xml when a pokemon is clicked
+// in the list view of pokemon_list.xml
 public class PokemonActivity extends AppCompatActivity {
 
     PokemonActivityBinding ui;

@@ -30,11 +30,11 @@
         app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
 
     <TextView
-        android:id="@+id/pokemonDescriptionView"
+        android:id="@+id/pokemonStatsView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
-        android:text="Pokemon Description"
+        android:text="Pokemon Stats"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
