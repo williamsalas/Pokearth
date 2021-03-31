@@ -45,7 +45,7 @@ public class PokedexActivity extends AppCompatActivity {
         PokedexThreads thread3 = new PokedexThreads(10, 15);
         PokedexThreads thread4 = new PokedexThreads(15, 20);
         PokedexThreads thread5 = new PokedexThreads(20, 25);
-        PokedexThreads thread6 = new PokedexThreads(25, 30);
+
 
 
         thread1.start();
@@ -53,7 +53,7 @@ public class PokedexActivity extends AppCompatActivity {
         thread3.start();
         thread4.start();
         thread5.start();
-        thread6.start();
+
 
 
         // wait for thread to finish before continuing
@@ -63,7 +63,7 @@ public class PokedexActivity extends AppCompatActivity {
             thread3.join();
             thread4.join();
             thread5.join();
-            thread6.join();
+           
         } catch (InterruptedException e) {
             // oops
         }
