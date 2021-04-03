@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:id="@+id/fightScreen"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pokearth_grassland">
 
+
     <!--    Opponent Pokemon TextViews RelativeLayout-->
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/opponentPokemonTextViewsRL"
+        android:layout_width="wrap_content"
         android:layout_height="100dp"
+        android:layout_alignParentTop="@id/opponentPokemonSpriteRelativeLayout"
         android:layout_gravity="end"
+        android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="140dp"
-        android:gravity="left"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        >
+        android:layout_marginTop="175dp"
+        android:orientation="horizontal">
 
         <!--        Opponent Pokemon Name TextView-->
         <TextView
@@ -38,33 +38,28 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/border2"
             android:gravity="center"
-            android:text="Opponent Pokemon HP"
-
-
-            />
+            android:text="Opponent Pokemon HP" />
 
     </RelativeLayout>
 
     <!--    Opponent Pokemon Sprite RelativeLayout-->
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:id="@+id/opponentPokemonSpriteRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_gravity="end"
-        android:layout_marginTop="235dp"
-        android:gravity="right"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        >
+        android:layout_marginTop="250dp"
+        android:layout_toEndOf="@+id/opponentPokemonTextViewsRL"
+        android:layout_toRightOf="@+id/opponentPokemonTextViewsRL"
+        android:gravity="end"
+        android:orientation="horizontal">
 
         <!--    Opponent Pokemon Sprite ImageView-->
         <ImageView
             android:id="@+id/opponentPokemonSprite"
             android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
+            android:layout_height="200dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:visibility="invisible"
@@ -74,14 +69,10 @@
 
     <!--    Player Pokemon Sprite RelativeLayout-->
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:layout_gravity="end"
-        android:layout_marginTop="460dp"
-        android:gravity="left"
+        android:layout_above="@+id/fightButtonsLinearLayout"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
         >
 
@@ -104,17 +95,14 @@
 
     <!--    Player Pokemon TextViews RelativeLayout-->
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:layout_gravity="end"
-        android:layout_marginTop="560dp"
+        android:layout_above="@+id/leftColumnButtons"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:gravity="right"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="5dp">
 
 
         <!--       Player Pokemon Name TextView-->
@@ -147,15 +135,15 @@
     <!--    Fight Buttons Linear Layout-->
     <LinearLayout
         android:id="@+id/fightButtonsLinearLayout"
-        android:layout_width="185dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:layout_marginTop="655dp"
-        android:gravity="left"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/leftColumnButtons"
+        android:layout_toLeftOf="@+id/leftColumnButtons"
         android:orientation="horizontal"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:visibility="invisible">
 
         <!--    Fight Button-->
         <Button
@@ -183,14 +171,14 @@
     <!--    Battle Text Relative Layout-->
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_gravity="end"
-        android:layout_marginTop="655dp"
-        android:gravity="left"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/leftColumnButtons"
+        android:layout_toLeftOf="@+id/leftColumnButtons"
         android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:visibility="visible">
 
 
         <!--        Battle Dialog TextView-->
@@ -198,11 +186,6 @@
             android:id="@+id/battleTextView"
             android:layout_width="185dp"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:background="@drawable/border2"
             android:gravity="center"
             android:padding="5dp"
@@ -213,24 +196,22 @@
 
     <!--    Left Column Buttons-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:id="@+id/leftColumnButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="end"
-        android:layout_marginTop="655dp"
-        android:gravity="right"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        >
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toStartOf="@+id/rightColumnButtons"
+        android:layout_toLeftOf="@+id/rightColumnButtons"
+        android:orientation="vertical">
 
         <!--    Fight Button-->
         <Button
             android:id="@+id/fightButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="95dp"
-            android:layout_marginRight="95dp"
             android:onClick="displayAttackMenu"
             android:text="FIGHT" />
 
@@ -239,8 +220,6 @@
             android:id="@+id/itemsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="95dp"
-            android:layout_marginRight="95dp"
             android:text="ITEMS"
 
             />
@@ -250,14 +229,15 @@
 
     <!--    Right Column Buttons-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:id="@+id/rightColumnButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="end"
-        android:layout_marginTop="655dp"
-        android:gravity="right"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+
+        android:orientation="vertical">
 
         <!--    Pokemon Team Button-->
         <Button
