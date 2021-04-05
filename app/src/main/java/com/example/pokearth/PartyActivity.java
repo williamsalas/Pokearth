@@ -152,7 +152,7 @@ public class PartyActivity extends AppCompatActivity
 
                     if(po[0] != null)
                     {
-                        pokeName1.setText(po[0].getPokemonName());
+                        pokeName1.setText(po[0].getName());
                         pokemonImageView1.setImageBitmap(po[0].getBitmap());
                     }
                     else
@@ -165,7 +165,7 @@ public class PartyActivity extends AppCompatActivity
                     ImageView pokemonImageView2 = (ImageView) findViewById(R.id.pokemonImageView2);
                     if(po[1] != null)
                     {
-                        pokeName2.setText(po[1].getPokemonName());
+                        pokeName2.setText(po[1].getName());
                         pokemonImageView2.setImageBitmap(po[1].getBitmap());
                     }
                     else
@@ -178,7 +178,7 @@ public class PartyActivity extends AppCompatActivity
                     ImageView pokemonImageView3 = (ImageView) findViewById(R.id.pokemonImageView3);
                     if(po[2] != null)
                     {
-                        pokeName3.setText(po[2].getPokemonName());
+                        pokeName3.setText(po[2].getName());
                         pokemonImageView3.setImageBitmap(po[2].getBitmap());
                     }
                     else
@@ -191,7 +191,7 @@ public class PartyActivity extends AppCompatActivity
                     ImageView pokemonImageView4 = (ImageView) findViewById(R.id.pokemonImageView4);
                     if(po[3] != null)
                     {
-                        pokeName4.setText(po[3].getPokemonName());
+                        pokeName4.setText(po[3].getName());
                         pokemonImageView4.setImageBitmap(po[3].getBitmap());
                     }
                     else
@@ -204,7 +204,7 @@ public class PartyActivity extends AppCompatActivity
                     ImageView pokemonImageView5 = (ImageView) findViewById(R.id.pokemonImageView5);
                     if(po[4] != null)
                     {
-                        pokeName5.setText(po[4].getPokemonName());
+                        pokeName5.setText(po[4].getName());
                         pokemonImageView5.setImageBitmap(po[4].getBitmap());
                     }
                     else
@@ -217,7 +217,7 @@ public class PartyActivity extends AppCompatActivity
                     ImageView pokemonImageView6 = (ImageView) findViewById(R.id.pokemonImageView6);
                     if(po[5] != null)
                     {
-                        pokeName6.setText(po[5].getPokemonName());
+                        pokeName6.setText(po[5].getName());
                         pokemonImageView6.setImageBitmap(po[5].getBitmap());
                     }
                     else
@@ -260,7 +260,7 @@ public class PartyActivity extends AppCompatActivity
 
                         if(po[0] != null)
                         {
-                            pokeName1.setText(po[0].getPokemonName());
+                            pokeName1.setText(po[0].getName());
                             pokemonImageView1.setImageBitmap(po[0].getBitmap());
                         }
                         else
@@ -273,7 +273,7 @@ public class PartyActivity extends AppCompatActivity
                         ImageView pokemonImageView2 = (ImageView) findViewById(R.id.pokemonImageView2);
                         if(po[1] != null)
                         {
-                            pokeName2.setText(po[1].getPokemonName());
+                            pokeName2.setText(po[1].getName());
                             pokemonImageView2.setImageBitmap(po[1].getBitmap());
                         }
                         else
@@ -286,7 +286,7 @@ public class PartyActivity extends AppCompatActivity
                         ImageView pokemonImageView3 = (ImageView) findViewById(R.id.pokemonImageView3);
                         if(po[2] != null)
                         {
-                            pokeName3.setText(po[2].getPokemonName());
+                            pokeName3.setText(po[2].getName());
                             pokemonImageView3.setImageBitmap(po[2].getBitmap());
                         }
                         else
@@ -299,7 +299,7 @@ public class PartyActivity extends AppCompatActivity
                         ImageView pokemonImageView4 = (ImageView) findViewById(R.id.pokemonImageView4);
                         if(po[3] != null)
                         {
-                            pokeName4.setText(po[3].getPokemonName());
+                            pokeName4.setText(po[3].getName());
                             pokemonImageView4.setImageBitmap(po[3].getBitmap());
                         }
                         else
@@ -312,7 +312,7 @@ public class PartyActivity extends AppCompatActivity
                         ImageView pokemonImageView5 = (ImageView) findViewById(R.id.pokemonImageView5);
                         if(po[4] != null)
                         {
-                            pokeName5.setText(po[4].getPokemonName());
+                            pokeName5.setText(po[4].getName());
                             pokemonImageView5.setImageBitmap(po[4].getBitmap());
                         }
                         else
@@ -325,7 +325,7 @@ public class PartyActivity extends AppCompatActivity
                         ImageView pokemonImageView6 = (ImageView) findViewById(R.id.pokemonImageView6);
                         if(po[5] != null)
                         {
-                            pokeName6.setText(po[5].getPokemonName());
+                            pokeName6.setText(po[5].getName());
                             pokemonImageView6.setImageBitmap(po[5].getBitmap());
                         }
                         else
@@ -360,6 +360,7 @@ public class PartyActivity extends AppCompatActivity
                 }
 
                 List<Party> partyPokemon = dataSource.getAllPokemon();
+
                 for (int x = 0; x < 6; x++)
                 {
                     po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
@@ -371,37 +372,37 @@ public class PartyActivity extends AppCompatActivity
                 public void run()
                 {
                     TextView pokeName1 = (TextView) findViewById(R.id.pokeName1);
-                    pokeName1.setText(po[0].getPokemonName());
+                    pokeName1.setText(po[0].getName());
                     ImageView pokemonImageView1 = (ImageView) findViewById(R.id.pokemonImageView1);
                     pokemonImageView1.setImageBitmap(po[0].getBitmap());
 
 
                     TextView pokeName2 = (TextView) findViewById(R.id.pokeName2);
-                    pokeName2.setText(po[1].getPokemonName());
+                    pokeName2.setText(po[1].getName());
                     ImageView pokemonImageView2 = (ImageView) findViewById(R.id.pokemonImageView2);
                     pokemonImageView2.setImageBitmap(po[1].getBitmap());
 
 
                     TextView pokeName3 = (TextView) findViewById(R.id.pokeName3);
-                    pokeName3.setText(po[2].getPokemonName());
+                    pokeName3.setText(po[2].getName());
                     ImageView pokemonImageView3 = (ImageView) findViewById(R.id.pokemonImageView3);
                     pokemonImageView3.setImageBitmap(po[2].getBitmap());
 
 
                     TextView pokeName4 = (TextView) findViewById(R.id.pokeName4);
-                    pokeName4.setText(po[3].getPokemonName());
+                    pokeName4.setText(po[3].getName());
                     ImageView pokemonImageView4 = (ImageView) findViewById(R.id.pokemonImageView4);
                     pokemonImageView4.setImageBitmap(po[3].getBitmap());
 
 
                     TextView pokeName5 = (TextView) findViewById(R.id.pokeName5);
-                    pokeName5.setText(po[4].getPokemonName());
+                    pokeName5.setText(po[4].getName());
                     ImageView pokemonImageView5 = (ImageView) findViewById(R.id.pokemonImageView5);
                     pokemonImageView5.setImageBitmap(po[4].getBitmap());
 
 
                     TextView pokeName6 = (TextView) findViewById(R.id.pokeName6);
-                    pokeName6.setText(po[5].getPokemonName());
+                    pokeName6.setText(po[5].getName());
                     ImageView pokemonImageView6 = (ImageView) findViewById(R.id.pokemonImageView6);
                     pokemonImageView6.setImageBitmap(po[5].getBitmap());
 

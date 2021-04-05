@@ -12,7 +12,7 @@ import java.net.URL;
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
-public class PokeObject extends MainActivity {
+public class PokemonObject extends MainActivity {
 
 
     public enum PokeTypes {
@@ -64,7 +64,7 @@ public class PokeObject extends MainActivity {
     final private Boolean[] isShiny = {null};
     final Health health = new Health();
 
-    public PokeObject(int id) {
+    public PokemonObject(int id) {
         this.myPoke[0] = pokeApi.getPokemon(id);
         this.myPokeSpecies[0] = pokeApi.getPokemonSpecies(id);
         this.isShiny[0] = Math.random() <= 0.25;
@@ -106,7 +106,7 @@ public class PokeObject extends MainActivity {
         return PokeTypes.valueOf(this.myPoke[0].getTypes().get(0).getType().getName()).ordinal();
     }
 
-    public double getMatchupEffectiveness(PokeObject opponent) {
+    public double getMatchupEffectiveness(PokemonObject opponent) {
         return typeMatchupEffectiveness[this.getTypeIndex()][opponent.getTypeIndex()];
     }
 
@@ -186,7 +186,7 @@ public class PokeObject extends MainActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public int attack(PokeObject defender, TextView battleText)
+    public int attack(PokemonObject defender, TextView battleText)
     {
         int damage = (int) (Math.random() * 50);
         defender.health.takeDamage(damage);
