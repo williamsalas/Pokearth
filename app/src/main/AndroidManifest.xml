@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pokearth">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -11,20 +17,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokearth">
-        <activity android:name=".MainActivity"/>
-
-        <activity android:name=".PlayActivity"/>
-
-        <activity android:name=".FightActivity"/>
-
-        <activity android:name=".InventoryActivity"/>
-
-        <activity android:name=".ShopActivity"/>
 
         <activity android:name=".ItemActivity"/>
+        <activity android:name=".BiomeActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".PlayActivity" />
+        <activity android:name=".FightActivity" />
+        <activity android:name=".InventoryActivity" />
+        <activity android:name=".ShopActivity" />
 
         <activity android:name=".pokedex.PokedexActivity"/>
-
         <activity android:name=".pokedex.PokemonActivity"/>
 
         <activity android:name=".SplashActivity">
@@ -34,7 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import me.sargunvohra.lib.pokekotlin.client.PokeApi;
+import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button playButton, inventoryButton, shopButton;
-
+    PokeApi pokeApi = new PokeApiClient();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
