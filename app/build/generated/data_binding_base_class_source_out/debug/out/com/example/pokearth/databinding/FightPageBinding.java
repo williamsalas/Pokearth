@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.pokearth.R;
 import java.lang.NullPointerException;
@@ -18,54 +19,101 @@ import java.lang.String;
 
 public final class FightPageBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
-  public final Button button;
+  public final TextView battleTextView;
 
   @NonNull
-  public final Button button2;
+  public final Button fightButton;
 
   @NonNull
-  public final Button button3;
+  public final LinearLayout fightButtonsLinearLayout;
 
   @NonNull
-  public final Button button4;
+  public final RelativeLayout fightScreen;
 
   @NonNull
-  public final ImageView imageView2;
+  public final Button itemsButton;
 
   @NonNull
-  public final ImageView imageView3;
+  public final LinearLayout leftColumnButtons;
 
   @NonNull
-  public final TextView textView;
+  public final Button move1Button;
 
   @NonNull
-  public final TextView textView2;
+  public final Button move2Button;
 
   @NonNull
-  public final TextView textView3;
+  public final TextView opponentPokemonHPTextView;
 
-  private FightPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button button,
-      @NonNull Button button2, @NonNull Button button3, @NonNull Button button4,
-      @NonNull ImageView imageView2, @NonNull ImageView imageView3, @NonNull TextView textView,
-      @NonNull TextView textView2, @NonNull TextView textView3) {
+  @NonNull
+  public final TextView opponentPokemonNameTextView;
+
+  @NonNull
+  public final ImageView opponentPokemonSprite;
+
+  @NonNull
+  public final RelativeLayout opponentPokemonSpriteRelativeLayout;
+
+  @NonNull
+  public final RelativeLayout opponentPokemonTextViewsRL;
+
+  @NonNull
+  public final TextView playerPokemonHPTextView;
+
+  @NonNull
+  public final TextView playerPokemonNameTextView;
+
+  @NonNull
+  public final ImageView playerPokemonSprite;
+
+  @NonNull
+  public final Button pokemonTeamButton;
+
+  @NonNull
+  public final LinearLayout rightColumnButtons;
+
+  @NonNull
+  public final Button runButton;
+
+  private FightPageBinding(@NonNull RelativeLayout rootView, @NonNull TextView battleTextView,
+      @NonNull Button fightButton, @NonNull LinearLayout fightButtonsLinearLayout,
+      @NonNull RelativeLayout fightScreen, @NonNull Button itemsButton,
+      @NonNull LinearLayout leftColumnButtons, @NonNull Button move1Button,
+      @NonNull Button move2Button, @NonNull TextView opponentPokemonHPTextView,
+      @NonNull TextView opponentPokemonNameTextView, @NonNull ImageView opponentPokemonSprite,
+      @NonNull RelativeLayout opponentPokemonSpriteRelativeLayout,
+      @NonNull RelativeLayout opponentPokemonTextViewsRL, @NonNull TextView playerPokemonHPTextView,
+      @NonNull TextView playerPokemonNameTextView, @NonNull ImageView playerPokemonSprite,
+      @NonNull Button pokemonTeamButton, @NonNull LinearLayout rightColumnButtons,
+      @NonNull Button runButton) {
     this.rootView = rootView;
-    this.button = button;
-    this.button2 = button2;
-    this.button3 = button3;
-    this.button4 = button4;
-    this.imageView2 = imageView2;
-    this.imageView3 = imageView3;
-    this.textView = textView;
-    this.textView2 = textView2;
-    this.textView3 = textView3;
+    this.battleTextView = battleTextView;
+    this.fightButton = fightButton;
+    this.fightButtonsLinearLayout = fightButtonsLinearLayout;
+    this.fightScreen = fightScreen;
+    this.itemsButton = itemsButton;
+    this.leftColumnButtons = leftColumnButtons;
+    this.move1Button = move1Button;
+    this.move2Button = move2Button;
+    this.opponentPokemonHPTextView = opponentPokemonHPTextView;
+    this.opponentPokemonNameTextView = opponentPokemonNameTextView;
+    this.opponentPokemonSprite = opponentPokemonSprite;
+    this.opponentPokemonSpriteRelativeLayout = opponentPokemonSpriteRelativeLayout;
+    this.opponentPokemonTextViewsRL = opponentPokemonTextViewsRL;
+    this.playerPokemonHPTextView = playerPokemonHPTextView;
+    this.playerPokemonNameTextView = playerPokemonNameTextView;
+    this.playerPokemonSprite = playerPokemonSprite;
+    this.pokemonTeamButton = pokemonTeamButton;
+    this.rightColumnButtons = rightColumnButtons;
+    this.runButton = runButton;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -90,62 +138,122 @@ public final class FightPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button;
-      Button button = rootView.findViewById(id);
-      if (button == null) {
+      id = R.id.battleTextView;
+      TextView battleTextView = rootView.findViewById(id);
+      if (battleTextView == null) {
         break missingId;
       }
 
-      id = R.id.button2;
-      Button button2 = rootView.findViewById(id);
-      if (button2 == null) {
+      id = R.id.fightButton;
+      Button fightButton = rootView.findViewById(id);
+      if (fightButton == null) {
         break missingId;
       }
 
-      id = R.id.button3;
-      Button button3 = rootView.findViewById(id);
-      if (button3 == null) {
+      id = R.id.fightButtonsLinearLayout;
+      LinearLayout fightButtonsLinearLayout = rootView.findViewById(id);
+      if (fightButtonsLinearLayout == null) {
         break missingId;
       }
 
-      id = R.id.button4;
-      Button button4 = rootView.findViewById(id);
-      if (button4 == null) {
+      RelativeLayout fightScreen = (RelativeLayout) rootView;
+
+      id = R.id.itemsButton;
+      Button itemsButton = rootView.findViewById(id);
+      if (itemsButton == null) {
         break missingId;
       }
 
-      id = R.id.imageView2;
-      ImageView imageView2 = rootView.findViewById(id);
-      if (imageView2 == null) {
+      id = R.id.leftColumnButtons;
+      LinearLayout leftColumnButtons = rootView.findViewById(id);
+      if (leftColumnButtons == null) {
         break missingId;
       }
 
-      id = R.id.imageView3;
-      ImageView imageView3 = rootView.findViewById(id);
-      if (imageView3 == null) {
+      id = R.id.move1Button;
+      Button move1Button = rootView.findViewById(id);
+      if (move1Button == null) {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
-      if (textView == null) {
+      id = R.id.move2Button;
+      Button move2Button = rootView.findViewById(id);
+      if (move2Button == null) {
         break missingId;
       }
 
-      id = R.id.textView2;
-      TextView textView2 = rootView.findViewById(id);
-      if (textView2 == null) {
+      id = R.id.opponentPokemonHPTextView;
+      TextView opponentPokemonHPTextView = rootView.findViewById(id);
+      if (opponentPokemonHPTextView == null) {
         break missingId;
       }
 
-      id = R.id.textView3;
-      TextView textView3 = rootView.findViewById(id);
-      if (textView3 == null) {
+      id = R.id.opponentPokemonNameTextView;
+      TextView opponentPokemonNameTextView = rootView.findViewById(id);
+      if (opponentPokemonNameTextView == null) {
         break missingId;
       }
 
-      return new FightPageBinding((ConstraintLayout) rootView, button, button2, button3, button4,
-          imageView2, imageView3, textView, textView2, textView3);
+      id = R.id.opponentPokemonSprite;
+      ImageView opponentPokemonSprite = rootView.findViewById(id);
+      if (opponentPokemonSprite == null) {
+        break missingId;
+      }
+
+      id = R.id.opponentPokemonSpriteRelativeLayout;
+      RelativeLayout opponentPokemonSpriteRelativeLayout = rootView.findViewById(id);
+      if (opponentPokemonSpriteRelativeLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.opponentPokemonTextViewsRL;
+      RelativeLayout opponentPokemonTextViewsRL = rootView.findViewById(id);
+      if (opponentPokemonTextViewsRL == null) {
+        break missingId;
+      }
+
+      id = R.id.playerPokemonHPTextView;
+      TextView playerPokemonHPTextView = rootView.findViewById(id);
+      if (playerPokemonHPTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.playerPokemonNameTextView;
+      TextView playerPokemonNameTextView = rootView.findViewById(id);
+      if (playerPokemonNameTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.playerPokemonSprite;
+      ImageView playerPokemonSprite = rootView.findViewById(id);
+      if (playerPokemonSprite == null) {
+        break missingId;
+      }
+
+      id = R.id.pokemonTeamButton;
+      Button pokemonTeamButton = rootView.findViewById(id);
+      if (pokemonTeamButton == null) {
+        break missingId;
+      }
+
+      id = R.id.rightColumnButtons;
+      LinearLayout rightColumnButtons = rootView.findViewById(id);
+      if (rightColumnButtons == null) {
+        break missingId;
+      }
+
+      id = R.id.runButton;
+      Button runButton = rootView.findViewById(id);
+      if (runButton == null) {
+        break missingId;
+      }
+
+      return new FightPageBinding((RelativeLayout) rootView, battleTextView, fightButton,
+          fightButtonsLinearLayout, fightScreen, itemsButton, leftColumnButtons, move1Button,
+          move2Button, opponentPokemonHPTextView, opponentPokemonNameTextView,
+          opponentPokemonSprite, opponentPokemonSpriteRelativeLayout, opponentPokemonTextViewsRL,
+          playerPokemonHPTextView, playerPokemonNameTextView, playerPokemonSprite,
+          pokemonTeamButton, rightColumnButtons, runButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

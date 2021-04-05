@@ -209,6 +209,10 @@ attr chipStyle
 attr chipSurfaceColor
 attr circleRadius
 attr circularProgressIndicatorStyle
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clickAction
 attr clockFaceBackgroundColor
 attr clockHandColor
@@ -1631,6 +1635,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable battle_stage
 drawable border
+drawable border2
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1639,7 +1644,6 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable charizard
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1686,10 +1690,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable play_page_background
+drawable pokearth_grassland
 drawable pokemon_back
 drawable splash_page
-drawable splash_page2
-drawable splash_page3
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1782,18 +1786,18 @@ id autoCompleteToStart
 id backButton
 id barrier
 id baseline
+id battleTextView
 id beginOnFirstDraw
 id beginning
+id biomeImage
+id biomeImageName
+id biomeMenuParentLayout
 id biome_select_button
 id blocking
 id bottom
 id bounce
-id button
-id button2
-id button3
-id button4
-id button5
 id buttonPanel
+id buyButton
 id cache_measures
 id cancel_button
 id center
@@ -1866,6 +1870,9 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fightButton
+id fightButtonsLinearLayout
+id fightScreen
 id fight_button
 id fill
 id fill_horizontal
@@ -1897,14 +1904,17 @@ id ignore
 id ignoreRequest
 id image
 id imageItem
-id imageView2
-id imageView3
+id imageView
 id info
 id inventory_button
 id invisible
 id inward
 id italic
+id itemDescriptionView
+id itemName
+id itemNameView
 id item_touch_helper_previous_elevation
+id itemsButton
 id jumpToEnd
 id jumpToStart
 id labelGroup
@@ -1912,11 +1922,13 @@ id labeled
 id largeLabel
 id layout
 id left
+id leftColumnButtons
 id leftToRight
 id line1
 id line3
 id linear
 id listMode
+id listObjects
 id list_item
 id masked
 id material_clock_display
@@ -1948,6 +1960,8 @@ id month_navigation_next
 id month_navigation_previous
 id month_title
 id motion_base
+id move1Button
+id move2Button
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -1984,6 +1998,11 @@ id off
 id on
 id onAttachStateChangeListener
 id onDateChanged
+id opponentPokemonHPTextView
+id opponentPokemonNameTextView
+id opponentPokemonSprite
+id opponentPokemonSpriteRelativeLayout
+id opponentPokemonTextViewsRL
 id outline
 id outward
 id packed
@@ -2000,13 +2019,16 @@ id peekHeight
 id percent
 id pin
 id play_button
+id playerPokemonHPTextView
+id playerPokemonNameTextView
+id playerPokemonSprite
 id pokeName1
 id pokeName2
 id pokeName3
 id pokeName4
 id pokeName5
 id pokeName6
-id pokemonDescriptionView
+id pokemonImage
 id pokemonImageView1
 id pokemonImageView2
 id pokemonImageView3
@@ -2015,6 +2037,8 @@ id pokemonImageView5
 id pokemonImageView6
 id pokemonList
 id pokemonNameView2
+id pokemonStatsView
+id pokemonTeamButton
 id pokemon_select_button
 id position
 id postLayout
@@ -2023,6 +2047,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id remove1
 id remove2
 id remove3
@@ -2032,11 +2057,13 @@ id remove6
 id returnButton
 id reverseSawtooth
 id right
+id rightColumnButtons
 id rightToLeft
 id right_icon
 id right_side
 id rounded
 id row_index_key
+id runButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2121,9 +2148,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
-id textView2
-id textView3
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -2222,6 +2246,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_item
+layout activity_shop
+layout biome_listitem
+layout biome_page
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2240,6 +2268,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fight_page
 layout inventory_page
+layout itemlist_object_layout
 layout main_page
 layout material_chip_input_combo
 layout material_clock_display
@@ -3164,6 +3193,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

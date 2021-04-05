@@ -19,7 +19,7 @@ import java.util.Random;
 public class FightActivity extends AppCompatActivity {
 
 
-    final PokeObject[] po = {null, null};
+    final PokemonObject[] po = {null, null};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -96,7 +96,7 @@ public class FightActivity extends AppCompatActivity {
         public void run() {
             Looper.prepare();
             for (int i = 0; i < 2; i++) {
-                po[i] = new PokeObject(rand.nextInt(151) + 1);
+                po[i] = new PokemonObject(rand.nextInt(151) + 1);
             }
 
             runOnUiThread(new Runnable() {
