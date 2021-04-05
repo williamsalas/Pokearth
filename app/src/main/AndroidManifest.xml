@@ -18,12 +18,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokearth">
 
+        <activity android:name=".ItemActivity"/>
         <activity android:name=".BiomeActivity"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".FightActivity" />
         <activity android:name=".InventoryActivity" />
         <activity android:name=".ShopActivity" />
+
         <activity android:name=".pokedex.PokedexActivity"/>
         <activity android:name=".pokedex.PokemonActivity"/>
 
