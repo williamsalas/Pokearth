@@ -21,6 +21,8 @@
 
         <activity android:name=".ShopActivity"/>
 
+        <activity android:name=".ItemActivity"/>
+
         <activity android:name=".pokedex.PokedexActivity"/>
 
         <activity android:name=".pokedex.PokemonActivity"/>
