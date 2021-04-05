@@ -20,15 +20,6 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_page);
 
-
-        fightButton = findViewById(R.id.fight_button);
-        fightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFightActivity();
-            }
-        });
-
         pokedexButton = findViewById(R.id.pokemon_select_button);
         pokedexButton.setOnClickListener(new View.OnClickListener() {
             @Override
