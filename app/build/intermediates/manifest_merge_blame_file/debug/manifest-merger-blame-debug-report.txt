@@ -1,0 +1,81 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.pokearth"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:7:5-36:19
+14        android:allowBackup="true"
+14-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:8:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.3.1] C:\Users\Ckthulu\.gradle\caches\transforms-2\files-2.1\b234a824af7fd98a5c54fc0522824a91\core-1.3.1\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:9:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:10:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:11:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:12:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.Pokearth" >
+22-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:13:9-46
+23        <activity android:name="com.example.pokearth.MainActivity" />
+23-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:14:9-49
+23-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:14:19-47
+24        <activity android:name="com.example.pokearth.PlayActivity" />
+24-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:16:9-49
+24-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:16:19-47
+25        <activity android:name="com.example.pokearth.FightActivity" />
+25-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:18:9-50
+25-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:18:19-48
+26        <activity android:name="com.example.pokearth.InventoryActivity" />
+26-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:20:9-54
+26-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:20:19-52
+27        <activity android:name="com.example.pokearth.ShopActivity" />
+27-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:22:9-49
+27-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:22:19-47
+28        <activity android:name="com.example.pokearth.pokedex.PokedexActivity" />
+28-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:24:9-60
+28-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:24:19-58
+29        <activity android:name="com.example.pokearth.PartyActivity" />
+29-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:26:9-50
+29-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:26:19-48
+30        <activity android:name="com.example.pokearth.SplashActivity" >
+30-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:28:9-34:20
+30-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:28:19-49
+31            <intent-filter>
+31-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:29:13-33:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:30:17-69
+32-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:30:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:32:17-77
+34-->C:\Users\Ckthulu\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:32:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <service
+38-->[androidx.room:room-runtime:2.2.6] C:\Users\Ckthulu\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+39            android:name="androidx.room.MultiInstanceInvalidationService"
+39-->[androidx.room:room-runtime:2.2.6] C:\Users\Ckthulu\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
+40            android:directBootAware="true"
+40-->[androidx.room:room-runtime:2.2.6] C:\Users\Ckthulu\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+41            android:exported="false" />
+41-->[androidx.room:room-runtime:2.2.6] C:\Users\Ckthulu\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+42    </application>
+43
+44</manifest>

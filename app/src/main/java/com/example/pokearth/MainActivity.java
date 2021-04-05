@@ -12,8 +12,12 @@ import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button playButton, inventoryButton, shopButton;
+
+    private Button playButton, inventoryButton, shopButton, partyButton;
+
+
     PokeApi pokeApi = new PokeApiClient();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 openShopActivity();
             }
         });
+        partyButton = findViewById(R.id.party_button);
+        partyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {openPartyActivity();}
+        });
     }
 
     public void openPlayActivity() {
@@ -53,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openShopActivity() {
         Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+        startActivity(intent);
+    }
+
+    public void openPartyActivity() {
+        Intent intent = new Intent(MainActivity.this, PartyActivity.class);
         startActivity(intent);
     }
 }
