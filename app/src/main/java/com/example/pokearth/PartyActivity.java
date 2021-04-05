@@ -3,7 +3,6 @@ package com.example.pokearth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
@@ -11,9 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
@@ -240,7 +236,7 @@ public class PartyActivity extends AppCompatActivity
             int nullCounter=0;
             for (int x = 0; x < 6; x++)
             {
-                if(partyPokemon.get(x).getPokemonId()>0)
+                if(partyPokemon.size()>0 && partyPokemon.get(x).getPokemonId()>0)
                     po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
                 else
                 {
