@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:id="@+id/biomeMenuParentLayout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/biomeImage"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DUMMY TEXT"
+        android:id="@+id/biomeImageName"
+        android:layout_toRightOf="@+id/biomeImage"
+        android:layout_toEndOf="@+id/biomeImage"
+        android:textColor="#000"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:textSize="17sp"
+        android:layout_marginStart="30dp">
+
+    </TextView>
+
+</RelativeLayout>

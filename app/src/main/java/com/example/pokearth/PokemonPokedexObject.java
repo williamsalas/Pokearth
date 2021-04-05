@@ -10,42 +10,18 @@ import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
+import me.sargunvohra.lib.pokekotlin.model.PokemonStat;
+import me.sargunvohra.lib.pokekotlin.model.Stat;
 
-public class PokemonObject {
-
-    /*
-     private String pokemonName;
-     private String pokemonSprite;
-
-    public PokemonObject(String name, String sprite)
-    {
-        this.pokemonName = name;
-        this.pokemonSprite = sprite;
-    }
-
-    public String getPokemonName() {
-        return pokemonName;
-    }
-
-    public void setPokemonName(String pokemonName) {
-        this.pokemonName = pokemonName;
-    }
-
-    public String getPokemonSprite() {
-        return pokemonSprite;
-    }
-
-    public void setPokemonSprite(String pokemonSprite) {
-        this.pokemonSprite = pokemonSprite;
-    }
-     */
+public class PokemonPokedexObject {
 
     private Pokemon myPoke;
     private PokemonSpecies myPokeSpecies;
     private Bitmap bitmap;
+    private boolean collected = true;
     PokeApi pokeApi = new PokeApiClient();
 
-    public PokemonObject(int id){
+    public PokemonPokedexObject(int id){
         this.myPoke = pokeApi.getPokemon(id);
         this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
         String spriteURL;
@@ -68,5 +44,13 @@ public class PokemonObject {
 
     public String getPokemonName() {
         return this.myPokeSpecies.getName();
+    }
+
+    public boolean isCollected() {
+        return collected;
+    }
+
+    public void setCollected(boolean collected) {
+        this.collected = collected;
     }
 }

@@ -1,36 +1,39 @@
-package com.example.pokearth.pokedex;
+package com.example.pokearth;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.pokearth.databinding.PokemonActivityBinding;
 
-// this activity populates the pokemon_activity.xml when a pokemon is clicked
-// in the list view of pokemon_list.xml
-public class PokemonActivity extends AppCompatActivity {
+import com.example.pokearth.databinding.ActivityItemBinding;
 
-    PokemonActivityBinding ui;
+public class ItemActivity extends AppCompatActivity {
+
+    ActivityItemBinding ui;
 
     int position;
     String name = "";
     Bitmap image;
-
+    String description = "";
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        ui = PokemonActivityBinding.inflate(getLayoutInflater());
+        ui = ActivityItemBinding.inflate(getLayoutInflater());
         setContentView(ui.getRoot());
 
-        position = getIntent().getIntExtra("position",0);
+
+        position = getIntent().getIntExtra("position", 0);
         name = getIntent().getStringExtra("name");
         image = getIntent().getParcelableExtra("image");
+        description = getIntent().getStringExtra("description");
+
         setTitle(name);
-        ui.pokemonNameView2.setText(name);
-        ui.pokemonImage.setImageBitmap(image);
+        ui.itemNameView.setText(name);
+        ui.imageItem.setImageBitmap(image);
+        ui.itemDescriptionView.setText(description);
+
     }
 
     public void onReturnClicked(View view){
@@ -41,11 +44,13 @@ public class PokemonActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onSelectClicked(View view){
+    public void onBuyClicked(View view){
         Intent intent = new Intent();
         intent.putExtra("position", position);
         intent.putExtra("name", name);
         setResult(RESULT_OK,intent);
         finish();
+
     }
+
 }

@@ -6,54 +6,54 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/pokemonImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/imageItem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216"
+        app:layout_constraintVertical_bias="0.144"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/pokemonNameView2"
+        android:id="@+id/itemNameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Pokemon Name"
+        android:layout_marginTop="80dp"
+        android:text="Item Name"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+        app:layout_constraintTop_toBottomOf="@+id/imageItem" />
 
     <TextView
-        android:id="@+id/pokemonStatsView"
+        android:id="@+id/itemDescriptionView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:text="Pokemon Stats"
+        android:layout_marginTop="100dp"
+        android:text="Item Description"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pokemonNameView2" />
+        app:layout_constraintTop_toBottomOf="@+id/itemNameView" />
 
     <Button
-        android:id="@+id/selectButton"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:onClick="onSelectClicked"
-        android:text="select"
+        android:id="@+id/buyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBuyClicked"
+        android:text="Buy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/returnButton"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="onReturnClicked"
         android:text="Return"
         app:layout_constraintBottom_toBottomOf="parent"

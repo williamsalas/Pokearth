@@ -20,14 +20,6 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_page);
 
-        fightButton = findViewById(R.id.fight_button);
-        fightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFightActivity();
-            }
-        });
-
         pokedexButton = findViewById(R.id.pokemon_select_button);
         pokedexButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,11 +27,18 @@ public class PlayActivity extends AppCompatActivity {
                 openPokedex();
             }
         });
+
     }
 
-    public void openFightActivity(){
+    public void openFightActivity(View v){
         Intent intent = new Intent(PlayActivity.this, FightActivity.class);
         startActivity(intent);
+    }
+
+
+    public void openBiomeActivity(View v){
+        Intent intent = new Intent(PlayActivity.this, BiomeActivity.class);
+       startActivity(intent);
     }
 
     public void openPokedex(){
