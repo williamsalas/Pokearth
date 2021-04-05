@@ -9,9 +9,13 @@
         android:id="@+id/fight_button"
         android:layout_width="100dp"
         android:layout_height="70dp"
+
+        android:layout_marginBottom="68dp"
+        android:onClick="openFightActivity"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+      
+
         android:text="FIGHT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -24,11 +28,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="BIOME SELECTION"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fight_button"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+            
+        android:onClick="openBiomeActivity"
+        android:text="BIOME/MAP SELECTION"
+        app:layout_constraintBottom_toTopOf="@+id/fight_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fight_button" />
 
     <Button
         android:id="@+id/pokemon_select_button"
@@ -40,5 +45,6 @@
         android:text="Pokedex"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
