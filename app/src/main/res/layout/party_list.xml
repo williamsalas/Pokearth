@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/remove1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="remove"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView1"
+        app:layout_constraintStart_toEndOf="@+id/stats1" />
+
+    <Button
+        android:id="@+id/assign1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="assign"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView1"
+        app:layout_constraintStart_toEndOf="@+id/remove2" />
+
+    <TextView
+        android:id="@+id/pokeName2"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView2"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView2" />
+
+    <TextView
+        android:id="@+id/pokeName3"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView3"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView3" />
+
+    <TextView
+        android:id="@+id/pokeName4"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView4"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView4" />
+
+    <TextView
+        android:id="@+id/pokeName5"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView5"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView5" />
+
+    <TextView
+        android:id="@+id/pokeName6"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView6"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView6" />
+
+    <Button
+        android:id="@+id/stats2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView2"
+        app:layout_constraintStart_toStartOf="@+id/pokeName2" />
+
+    <Button
+        android:id="@+id/stats3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView3"
+        app:layout_constraintStart_toStartOf="@+id/pokeName3" />
+
+    <Button
+        android:id="@+id/stats4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView4"
+        app:layout_constraintStart_toStartOf="@+id/pokeName4" />
+
+    <Button
+        android:id="@+id/stats5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView5"
+        app:layout_constraintStart_toStartOf="@+id/pokeName5" />
+
+    <Button
+        android:id="@+id/stats6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView6"
+        app:layout_constraintStart_toStartOf="@+id/pokeName6" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView6"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageView5"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageView3"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageView4"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageView2"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageView1"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/pokeName1"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView1"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView1" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/stats1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView1"
+        app:layout_constraintStart_toStartOf="@+id/pokeName1" />
+
+    <Button
+        android:id="@+id/remove2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="remove"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView2"
+        app:layout_constraintStart_toEndOf="@+id/stats2" />
+
+    <Button
+        android:id="@+id/remove3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="remove"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView3"
+        app:layout_constraintStart_toEndOf="@+id/stats3" />
+
+    <Button
+        android:id="@+id/remove4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="remove"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView4"
+        app:layout_constraintStart_toEndOf="@+id/stats4" />
+
+    <Button
+        android:id="@+id/remove5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="remove"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView5"
+        app:layout_constraintStart_toEndOf="@+id/stats5" />
+
+    <Button
+        android:id="@+id/remove6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="remove"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView6"
+        app:layout_constraintStart_toEndOf="@+id/stats6" />
+
+    <Button
+        android:id="@+id/assign2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="assign"
+        app:layout_constraintBottom_toBottomOf="@+id/remove2"
+        app:layout_constraintStart_toEndOf="@+id/remove2" />
+
+    <Button
+        android:id="@+id/assign3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="assign"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView3"
+        app:layout_constraintStart_toEndOf="@+id/remove3" />
+
+    <Button
+        android:id="@+id/assign4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="assign"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView4"
+        app:layout_constraintStart_toEndOf="@+id/remove4" />
+
+    <Button
+        android:id="@+id/assign5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="assign"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView5"
+        app:layout_constraintStart_toEndOf="@+id/remove5" />
+
+    <Button
+        android:id="@+id/assign6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="assign"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView6"
+        app:layout_constraintStart_toEndOf="@+id/remove6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

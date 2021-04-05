@@ -40,8 +40,8 @@ public class PokemonAdapter extends ArrayAdapter<PokemonObject> {
         PokemonObject pokemon = pokemons.get(position);
         ui = PokemonObjectLayoutBinding.bind(convertView);
 
-        ui.pokeName.setText(pokemon.getPokemonName());
-        ui.pokemonImageView.setImageBitmap(pokemon.getBitmap());
+        //ui.pokeName.setText(pokemon.getPokemonName());
+        //ui.pokemonImageView.setImageBitmap(pokemon.getBitmap());
 
         return convertView;
     }
