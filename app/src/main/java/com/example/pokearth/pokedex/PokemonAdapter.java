@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.pokearth.PokemonPokedexObject;
 import com.example.pokearth.R;
 import com.example.pokearth.databinding.PokemonObjectLayoutBinding;
 

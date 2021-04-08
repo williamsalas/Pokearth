@@ -1,6 +1,5 @@
 package com.example.pokearth.pokedex;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
@@ -11,7 +10,6 @@ import android.widget.ListView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pokearth.PokemonPokedexObject;
 import com.example.pokearth.R;
 import com.example.pokearth.databinding.PokemonListBinding;
 

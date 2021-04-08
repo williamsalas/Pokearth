@@ -1,4 +1,4 @@
-package com.example.pokearth;
+package com.example.pokearth.pokedex;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

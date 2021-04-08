@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_home_logo_nintendo_switch.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home_logo_nintendo_switch.jpg"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -154,6 +158,10 @@
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_object_layout.xml.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_object_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_home.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home.jpg"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_grassland.jpg.flat",
