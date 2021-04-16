@@ -2,10 +2,12 @@ package com.example.pokearth;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,17 +16,22 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pokearth.DB.Party;
+import com.example.pokearth.DB.PartyDataSource;
+
+import java.util.List;
 import java.util.Random;
 
 public class FightActivity extends AppCompatActivity {
 
-
+    private PartyDataSource dataSource;
     final PokemonObject[] po = {null, null};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fight_page);
+        dataSource = new PartyDataSource(this);
 
         GenerateRunnable runnable = new GenerateRunnable();
         new Thread(runnable).start();
@@ -68,6 +75,8 @@ public class FightActivity extends AppCompatActivity {
                     h.postDelayed(opponentMove, 3000); // simulate enemy thinking
                 }
 
+            } else if (po[0].health.getCurrentHP() == 0) {
+                battleText.setText("You can't do that! " + po[0].getName() + " is fainted!");
             } else {
                 battleText.setText("You can't do that! " + po[1].getName() + " is already fainted!");
             }
@@ -94,10 +103,16 @@ public class FightActivity extends AppCompatActivity {
 
         @Override
         public void run() {
+            //List<Party> partyPokemon = dataSource.getAllPokemon();
             Looper.prepare();
-            for (int i = 0; i < 2; i++) {
-                po[i] = new PokemonObject(rand.nextInt(151) + 1);
-            }
+            po[0] = new PokemonObject(dataSource.getFirstPokemon().getPokemonId());
+            // po[0] = new PokemonObject(rand.nextInt(151) + 1);
+            po[1] = new PokemonObject(rand.nextInt(151) + 1);
+
+//            for (int i = 0; i < 2; i++) {
+//                //po[i] = new PokemonObject(rand.nextInt(151) + 1);
+//                po[i] = new PokemonObject(partyPokemon.get(i).getPokemonId());
+            //}
 
             runOnUiThread(new Runnable() {
                 @SuppressLint("SetTextI18n")
@@ -149,5 +164,38 @@ public class FightActivity extends AppCompatActivity {
 
         }
     } // end GenerateRunnable
+
+    @SuppressLint("SetTextI18n")
+    public void catchAttempt(View v) {
+        TextView battleText = (TextView) findViewById(R.id.battleTextView);
+        ImageView opponentSprite = (ImageView) findViewById(R.id.opponentPokemonSprite);
+
+        if (Math.random() > 0.5) {
+            battleText.setText("Gotcha! " + this.po[1].getName() + " was caught!");
+            opponentSprite.getLayoutParams().height = 250;
+            opponentSprite.getLayoutParams().width = 250;
+            opponentSprite.setImageResource(R.drawable.pokeballsprite);
+            CapturePokemon runnable = new CapturePokemon();
+            new Thread(runnable).start();
+        } else {
+            battleText.setText("Oh no! The Pokemon broke free!");
+        }
+    }
+
+    private class CapturePokemon implements Runnable {
+        @Override
+        public void run() {
+            if (dataSource != null) {
+                Looper.prepare();
+                int partyIDToFill = dataSource.getFirstEmptySlot();
+                if (partyIDToFill != -1) {
+                    Party caughtPokemon = new Party(partyIDToFill, po[1].getId());
+                    dataSource.createPokemon(caughtPokemon);
+                }else {
+                    Log.d(FightActivity.class.getSimpleName(),"failed to find an index to fill into party.");
+                }
+            }
+        }
+    }
 
 } // end fight activity

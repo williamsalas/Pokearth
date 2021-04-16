@@ -20,8 +20,7 @@ import java.util.Random;
 import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
 
-public class PartyActivity extends AppCompatActivity
-{
+public class PartyActivity extends AppCompatActivity {
     PokeApi pokeApi = new PokeApiClient();
     final PokemonObject[] po = {null, null, null, null, null, null};
     private PartyDataSource dataSource;
@@ -111,28 +110,25 @@ public class PartyActivity extends AppCompatActivity
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {onBackPressed();}
+            public void onClick(View v) {
+                onBackPressed();
+            }
         });
     }
 
-    class GenerateRemoveFromParty implements Runnable
-    {
+    class GenerateRemoveFromParty implements Runnable {
         @Override
-        public void run()
-        {
-            if(dataSource != null)
-            {
+        public void run() {
+            if (dataSource != null) {
                 Log.d("onRemoveFromPartyClick", "deleting saved pokemon");
                 dataSource.createPokemon(tempPoke);
-            }
-            else
+            } else
                 Log.d("onRemoveFromPartyClick", " db is null ");
 
-            List<Party> partyPokemon = dataSource.getAllPokemon();
+            List<Party> partyPokemon = dataSource.getAllPartyPokemon();
             Looper.prepare();
-            for (int x = 0; x < 6; x++)
-            {
-                if(partyPokemon.get(x).getPokemonId()>0)
+            for (int x = 0; x < 6; x++) {
+                if (partyPokemon.get(x).getPokemonId() > 0)
                     po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
                 else
                     po[x] = null;
@@ -141,83 +137,64 @@ public class PartyActivity extends AppCompatActivity
             runOnUiThread(new Runnable() {
                 @SuppressLint("SetTextI18n")
                 @Override
-                public void run()
-                {
+                public void run() {
                     TextView pokeName1 = (TextView) findViewById(R.id.pokeName1);
                     ImageView pokemonImageView1 = (ImageView) findViewById(R.id.pokemonImageView1);
 
-                    if(po[0] != null)
-                    {
+                    if (po[0] != null) {
                         pokeName1.setText(po[0].getName());
                         pokemonImageView1.setImageBitmap(po[0].getBitmap());
-                    }
-                    else
-                    {
+                    } else {
                         pokeName1.setText("Empty");
                         pokemonImageView1.setImageBitmap(null);
                     }
 
                     TextView pokeName2 = (TextView) findViewById(R.id.pokeName2);
                     ImageView pokemonImageView2 = (ImageView) findViewById(R.id.pokemonImageView2);
-                    if(po[1] != null)
-                    {
+                    if (po[1] != null) {
                         pokeName2.setText(po[1].getName());
                         pokemonImageView2.setImageBitmap(po[1].getBitmap());
-                    }
-                    else
-                    {
+                    } else {
                         pokeName2.setText("Empty");
                         pokemonImageView2.setImageBitmap(null);
                     }
 
                     TextView pokeName3 = (TextView) findViewById(R.id.pokeName3);
                     ImageView pokemonImageView3 = (ImageView) findViewById(R.id.pokemonImageView3);
-                    if(po[2] != null)
-                    {
+                    if (po[2] != null) {
                         pokeName3.setText(po[2].getName());
                         pokemonImageView3.setImageBitmap(po[2].getBitmap());
-                    }
-                    else
-                    {
+                    } else {
                         pokeName3.setText("Empty");
                         pokemonImageView3.setImageBitmap(null);
                     }
 
                     TextView pokeName4 = (TextView) findViewById(R.id.pokeName4);
                     ImageView pokemonImageView4 = (ImageView) findViewById(R.id.pokemonImageView4);
-                    if(po[3] != null)
-                    {
+                    if (po[3] != null) {
                         pokeName4.setText(po[3].getName());
                         pokemonImageView4.setImageBitmap(po[3].getBitmap());
-                    }
-                    else
-                    {
+                    } else {
                         pokeName4.setText("Empty");
                         pokemonImageView4.setImageBitmap(null);
                     }
 
                     TextView pokeName5 = (TextView) findViewById(R.id.pokeName5);
                     ImageView pokemonImageView5 = (ImageView) findViewById(R.id.pokemonImageView5);
-                    if(po[4] != null)
-                    {
+                    if (po[4] != null) {
                         pokeName5.setText(po[4].getName());
                         pokemonImageView5.setImageBitmap(po[4].getBitmap());
-                    }
-                    else
-                    {
+                    } else {
                         pokeName5.setText("Empty");
                         pokemonImageView5.setImageBitmap(null);
                     }
 
                     TextView pokeName6 = (TextView) findViewById(R.id.pokeName6);
                     ImageView pokemonImageView6 = (ImageView) findViewById(R.id.pokemonImageView6);
-                    if(po[5] != null)
-                    {
+                    if (po[5] != null) {
                         pokeName6.setText(po[5].getName());
                         pokemonImageView6.setImageBitmap(po[5].getBitmap());
-                    }
-                    else
-                    {
+                    } else {
                         pokeName6.setText("Empty");
                         pokemonImageView6.setImageBitmap(null);
                     }
@@ -226,147 +203,116 @@ public class PartyActivity extends AppCompatActivity
         }
     }
 
-    class GenerateSaved implements Runnable
-    {
+    class GenerateSaved implements Runnable {
         @Override
-        public void run()
-        {
-            List<Party> partyPokemon = dataSource.getAllPokemon();
+        public void run() {
+            List<Party> partyPokemon = dataSource.getAllPartyPokemon();
             Looper.prepare();
-            int nullCounter=0;
-            for (int x = 0; x < 6; x++)
-            {
-                if(partyPokemon.size()>0 && partyPokemon.get(x).getPokemonId()>0)
+            int nullCounter = 0;
+            for (int x = 0; x < 6; x++) {
+                if (partyPokemon.size() > 0 && partyPokemon.get(x).getPokemonId() > 0)
                     po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
-                else
-                {
+                else {
                     po[x] = null;
                     nullCounter++;
                 }
             }
-            if(nullCounter!=6)
-            {
+            if (nullCounter != 6) {
                 runOnUiThread(new Runnable() {
                     @SuppressLint("SetTextI18n")
                     @Override
-                    public void run()
-                    {
+                    public void run() {
                         TextView pokeName1 = (TextView) findViewById(R.id.pokeName1);
                         ImageView pokemonImageView1 = (ImageView) findViewById(R.id.pokemonImageView1);
 
-                        if(po[0] != null)
-                        {
+                        if (po[0] != null) {
                             pokeName1.setText(po[0].getName());
                             pokemonImageView1.setImageBitmap(po[0].getBitmap());
-                        }
-                        else
-                        {
+                        } else {
                             pokeName1.setText("Empty");
                             pokemonImageView1.setImageBitmap(null);
                         }
 
                         TextView pokeName2 = (TextView) findViewById(R.id.pokeName2);
                         ImageView pokemonImageView2 = (ImageView) findViewById(R.id.pokemonImageView2);
-                        if(po[1] != null)
-                        {
+                        if (po[1] != null) {
                             pokeName2.setText(po[1].getName());
                             pokemonImageView2.setImageBitmap(po[1].getBitmap());
-                        }
-                        else
-                        {
+                        } else {
                             pokeName2.setText("Empty");
                             pokemonImageView2.setImageBitmap(null);
                         }
 
                         TextView pokeName3 = (TextView) findViewById(R.id.pokeName3);
                         ImageView pokemonImageView3 = (ImageView) findViewById(R.id.pokemonImageView3);
-                        if(po[2] != null)
-                        {
+                        if (po[2] != null) {
                             pokeName3.setText(po[2].getName());
                             pokemonImageView3.setImageBitmap(po[2].getBitmap());
-                        }
-                        else
-                        {
+                        } else {
                             pokeName3.setText("Empty");
                             pokemonImageView3.setImageBitmap(null);
                         }
 
                         TextView pokeName4 = (TextView) findViewById(R.id.pokeName4);
                         ImageView pokemonImageView4 = (ImageView) findViewById(R.id.pokemonImageView4);
-                        if(po[3] != null)
-                        {
+                        if (po[3] != null) {
                             pokeName4.setText(po[3].getName());
                             pokemonImageView4.setImageBitmap(po[3].getBitmap());
-                        }
-                        else
-                        {
+                        } else {
                             pokeName4.setText("Empty");
                             pokemonImageView4.setImageBitmap(null);
                         }
 
                         TextView pokeName5 = (TextView) findViewById(R.id.pokeName5);
                         ImageView pokemonImageView5 = (ImageView) findViewById(R.id.pokemonImageView5);
-                        if(po[4] != null)
-                        {
+                        if (po[4] != null) {
                             pokeName5.setText(po[4].getName());
                             pokemonImageView5.setImageBitmap(po[4].getBitmap());
-                        }
-                        else
-                        {
+                        } else {
                             pokeName5.setText("Empty");
                             pokemonImageView5.setImageBitmap(null);
                         }
 
                         TextView pokeName6 = (TextView) findViewById(R.id.pokeName6);
                         ImageView pokemonImageView6 = (ImageView) findViewById(R.id.pokemonImageView6);
-                        if(po[5] != null)
-                        {
+                        if (po[5] != null) {
                             pokeName6.setText(po[5].getName());
                             pokemonImageView6.setImageBitmap(po[5].getBitmap());
-                        }
-                        else
-                        {
+                        } else {
                             pokeName6.setText("Empty");
                             pokemonImageView6.setImageBitmap(null);
                         }
                     }
                 });
-            }
-            else
-            {
+            } else {
                 GenerateParty runnable = new GenerateParty();
                 new Thread(runnable).start();
             }
         }
     }
 
-    class GenerateParty implements Runnable
-    {
+    class GenerateParty implements Runnable {
         Random rand = new Random();
+
         @Override
-        public void run()
-        {
-            if(dataSource!=null)
-            {
+        public void run() {
+            if (dataSource != null) {
                 Looper.prepare();
-                for (int i = 1; i <= 6; i++)
-                {
+                for (int i = 1; i <= 6; i++) {
                     Party tempPokemon = new Party(i, rand.nextInt(151) + 1);
                     dataSource.createPokemon(tempPokemon);
                 }
 
-                List<Party> partyPokemon = dataSource.getAllPokemon();
+                List<Party> partyPokemon = dataSource.getAllPartyPokemon();
 
-                for (int x = 0; x < 6; x++)
-                {
+                for (int x = 0; x < 6; x++) {
                     po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
                 }
             }
 
             runOnUiThread(new Runnable() {
                 @Override
-                public void run()
-                {
+                public void run() {
                     TextView pokeName1 = (TextView) findViewById(R.id.pokeName1);
                     pokeName1.setText(po[0].getName());
                     ImageView pokemonImageView1 = (ImageView) findViewById(R.id.pokemonImageView1);

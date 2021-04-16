@@ -1693,6 +1693,7 @@ drawable notify_panel_notification_icon_bg
 drawable pica_home_screen
 drawable play_page_background
 drawable pokearth_grassland
+drawable pokeballsprite
 drawable pokemon_back
 drawable pokemon_home
 drawable pokemon_home_logo_nintendo_switch
@@ -1886,6 +1887,7 @@ id fitToContents
 id fixed
 id flip
 id floating
+id floatingActionButton
 id forever
 id ghost_view
 id ghost_view_holder
@@ -2041,8 +2043,8 @@ id pokemonImageView5
 id pokemonImageView6
 id pokemonList
 id pokemonNameView2
-id pokemonStatsView
 id pokemonTeamButton
+id pokemonType
 id pokemon_select_button
 id position
 id postLayout
@@ -2088,7 +2090,6 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id selectButton
 id select_dialog_listview
 id selected
 id selection_type

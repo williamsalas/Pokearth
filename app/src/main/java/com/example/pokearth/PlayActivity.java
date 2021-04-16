@@ -24,7 +24,7 @@ public class PlayActivity extends AppCompatActivity {
         pokedexButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPokedex();
+                openPokedexActivity(v);
             }
         });
 
@@ -41,8 +41,13 @@ public class PlayActivity extends AppCompatActivity {
        startActivity(intent);
     }
 
-    public void openPokedex(){
+    public void openPokedexActivity(View v){
         Intent intent = new Intent(PlayActivity.this, PokedexActivity.class);
+        startActivity(intent);
+    }
+
+    public void openMainActivity(View v){
+        Intent intent = new Intent(PlayActivity.this, MainActivity.class);
         startActivity(intent);
     }
 }
