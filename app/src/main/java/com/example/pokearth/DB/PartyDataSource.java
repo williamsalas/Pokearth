@@ -28,8 +28,6 @@ public class PartyDataSource
         return partyDao.getAllPokemon();
     }
 
-
-
     public void deleteAllFromTable()
     {
         partyDao.deleteAllFromTable();

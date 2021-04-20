@@ -3,6 +3,7 @@ package com.example.pokearth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
@@ -13,12 +14,17 @@ import android.widget.TextView;
 
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
+import com.google.gson.Gson;
+
+import java.io.ByteArrayOutputStream;
 
 import java.util.List;
 import java.util.Random;
 
 import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
+import me.sargunvohra.lib.pokekotlin.model.Pokemon;
+import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
 public class PartyActivity extends AppCompatActivity
 {
@@ -237,7 +243,7 @@ public class PartyActivity extends AppCompatActivity
             for (int x = 0; x < 6; x++)
             {
                 if(partyPokemon.size()>0 && partyPokemon.get(x).getPokemonId()>0)
-                    po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
+                    po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId(), partyPokemon.get(x).getPokeObject(), partyPokemon.get(x).getPokeSpecies(), partyPokemon.get(x).getBitmapString());
                 else
                 {
                     po[x] = null;
@@ -349,17 +355,26 @@ public class PartyActivity extends AppCompatActivity
             if(dataSource!=null)
             {
                 Looper.prepare();
-                for (int i = 1; i <= 6; i++)
-                {
-                    Party tempPokemon = new Party(i, rand.nextInt(151) + 1);
-                    dataSource.createPokemon(tempPokemon);
-                }
-
-                List<Party> partyPokemon = dataSource.getAllPokemon();
-
                 for (int x = 0; x < 6; x++)
                 {
-                    po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
+                    po[x] = new PokemonObject(rand.nextInt(151) + 1);
+                }
+
+                for (int i = 0; i < 6; i++)
+                {
+                    byte[] img = new byte[0];
+                    String myPS = "";
+                    String myP = "";
+                    Gson gson = new Gson();
+
+                    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                    po[i].getBitmap().compress(Bitmap.CompressFormat.PNG, 100, bos);
+                    img = bos.toByteArray();
+
+                    myP = gson.toJson(po[i].myPoke, Pokemon.class);
+                    myPS = gson.toJson(po[i].myPokeSpecies, PokemonSpecies.class);
+                    Party tempPokemon = new Party(i, po[i].getId(),  myP, myPS, img);
+                    dataSource.createPokemon(tempPokemon);
                 }
             }
 

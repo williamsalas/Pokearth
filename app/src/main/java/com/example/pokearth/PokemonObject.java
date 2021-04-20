@@ -6,13 +6,16 @@ import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import java.io.InputStream;
+import java.io.Serializable;
 import java.net.URL;
 
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
-public class PokemonObject extends MainActivity {
+public class PokemonObject extends MainActivity implements Serializable {
 
 
     public enum PokeTypes {
@@ -58,23 +61,22 @@ public class PokemonObject extends MainActivity {
                     {1, 2, 1, 0.5, 1, 1, 1, 1, 0.5, 0.5, 1, 1, 1, 1, 1, 2, 2, 1} // fairy
             };
 
-    final Pokemon[] myPoke = {null};
-    final PokemonSpecies[] myPokeSpecies = {null};
+    Pokemon myPoke  = null;
+    PokemonSpecies myPokeSpecies = null;
     final Bitmap[] bitmap = {null};
     final private Boolean[] isShiny = {null};
     final Health health = new Health();
 
     public PokemonObject(int id) {
-        this.myPoke[0] = pokeApi.getPokemon(id);
-        this.myPokeSpecies[0] = pokeApi.getPokemonSpecies(id);
+        this.myPoke = pokeApi.getPokemon(id);
+        this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
         this.isShiny[0] = Math.random() <= 0.25;
         String frontSpriteURL;
 
-
         if (this.isShiny[0])
-            frontSpriteURL = this.myPoke[0].getSprites().getFrontShiny();
+            frontSpriteURL = this.myPoke.getSprites().getFrontShiny();
         else
-            frontSpriteURL = this.myPoke[0].getSprites().getFrontDefault();
+            frontSpriteURL = this.myPoke.getSprites().getFrontDefault();
         try {
             this.bitmap[0] = BitmapFactory.decodeStream((InputStream) new URL(frontSpriteURL).getContent()); // networking
         } catch (Exception e) {
@@ -82,8 +84,18 @@ public class PokemonObject extends MainActivity {
         }
     }
 
+    public PokemonObject(int id, String pokeObject, String pokeSpecies, byte[] byteBitmap)
+    {
+        this.bitmap[0] = BitmapFactory.decodeByteArray(byteBitmap, 0, byteBitmap.length);
+        Gson gson = new Gson();
+        this.myPoke = gson.fromJson(pokeObject, Pokemon.class);
+        Log.d("serialized:", "PokemonObject ");
+        this.myPokeSpecies = gson.fromJson(pokeSpecies, PokemonSpecies.class);
+        Log.d("serialized:", "PokemonSpecies");
+    }
+
     public int getId() {
-        return this.myPokeSpecies[0].getId();
+        return this.myPokeSpecies.getId();
     }
 
     public Bitmap getBitmap() {
@@ -95,15 +107,15 @@ public class PokemonObject extends MainActivity {
     }
 
     public String getName() {
-        return this.myPokeSpecies[0].getName();
+        return this.myPokeSpecies.getName();
     }
 
     public int getCaptureRate() {
-        return this.myPokeSpecies[0].getCaptureRate();
+        return this.myPokeSpecies.getCaptureRate();
     }
 
     public int getTypeIndex() {
-        return PokeTypes.valueOf(this.myPoke[0].getTypes().get(0).getType().getName()).ordinal();
+        return PokeTypes.valueOf(this.myPoke.getTypes().get(0).getType().getName()).ordinal();
     }
 
     public double getMatchupEffectiveness(PokemonObject opponent) {
@@ -116,7 +128,7 @@ public class PokemonObject extends MainActivity {
 
     public String getTypeColorString(int i) {
 
-        String type = this.myPoke[0].getTypes().get(i).getType().getName();
+        String type = this.myPoke.getTypes().get(i).getType().getName();
         Log.d("Logging info about type", type);
         String ans = "";
         switch (type) {
@@ -182,7 +194,7 @@ public class PokemonObject extends MainActivity {
     }
 
     public boolean isDualType() {
-        return this.myPoke[0].getTypes().size() > 1;
+        return this.myPoke.getTypes().size() > 1;
     }
 
     @SuppressLint("SetTextI18n")
