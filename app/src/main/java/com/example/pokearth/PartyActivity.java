@@ -31,7 +31,7 @@ public class PartyActivity extends AppCompatActivity
     PokeApi pokeApi = new PokeApiClient();
     final PokemonObject[] po = {null, null, null, null, null, null};
     private PartyDataSource dataSource;
-    private Party tempPoke = new Party(1, 0);
+    private Party tempPoke = new Party(0, 0);
 
     private Button backButton;
     private Button statButton1, statButton2, statButton3, statButton4, statButton5, statButton6;
@@ -52,7 +52,7 @@ public class PartyActivity extends AppCompatActivity
         removeButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tempPoke.setId(1);
+                tempPoke.setId(0);
 
                 GenerateRemoveFromParty runnable = new GenerateRemoveFromParty();
                 new Thread(runnable).start();
@@ -63,7 +63,7 @@ public class PartyActivity extends AppCompatActivity
         removeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tempPoke.setId(2);
+                tempPoke.setId(1);
 
                 GenerateRemoveFromParty runnable = new GenerateRemoveFromParty();
                 new Thread(runnable).start();
@@ -74,7 +74,7 @@ public class PartyActivity extends AppCompatActivity
         removeButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tempPoke.setId(3);
+                tempPoke.setId(2);
 
                 GenerateRemoveFromParty runnable = new GenerateRemoveFromParty();
                 new Thread(runnable).start();
@@ -85,7 +85,7 @@ public class PartyActivity extends AppCompatActivity
         removeButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tempPoke.setId(4);
+                tempPoke.setId(3);
 
                 GenerateRemoveFromParty runnable = new GenerateRemoveFromParty();
                 new Thread(runnable).start();
@@ -96,7 +96,7 @@ public class PartyActivity extends AppCompatActivity
         removeButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tempPoke.setId(5);
+                tempPoke.setId(4);
 
                 GenerateRemoveFromParty runnable = new GenerateRemoveFromParty();
                 new Thread(runnable).start();
@@ -107,7 +107,7 @@ public class PartyActivity extends AppCompatActivity
         removeButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tempPoke.setId(6);
+                tempPoke.setId(5);
 
                 GenerateRemoveFromParty runnable = new GenerateRemoveFromParty();
                 new Thread(runnable).start();
@@ -139,7 +139,7 @@ public class PartyActivity extends AppCompatActivity
             for (int x = 0; x < 6; x++)
             {
                 if(partyPokemon.get(x).getPokemonId()>0)
-                    po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
+                    po[x] = new PokemonObject(partyPokemon.get(x).getPokemonId(), partyPokemon.get(x).getPokeObject(), partyPokemon.get(x).getPokeSpecies(), partyPokemon.get(x).getBitmapString());
                 else
                     po[x] = null;
             }
@@ -151,7 +151,6 @@ public class PartyActivity extends AppCompatActivity
                 {
                     TextView pokeName1 = (TextView) findViewById(R.id.pokeName1);
                     ImageView pokemonImageView1 = (ImageView) findViewById(R.id.pokemonImageView1);
-
                     if(po[0] != null)
                     {
                         pokeName1.setText(po[0].getName());
