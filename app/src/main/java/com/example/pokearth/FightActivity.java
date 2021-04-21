@@ -14,11 +14,14 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pokearth.DB.PartyDataSource;
+
 import java.util.Random;
 
 public class FightActivity extends AppCompatActivity {
 
 
+    private PartyDataSource dataSource;
     final PokemonObject[] po = {null, null};
 
     @Override

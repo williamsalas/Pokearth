@@ -27,24 +27,19 @@ public final class PokemonActivityBinding implements ViewBinding {
   public final TextView pokemonNameView2;
 
   @NonNull
-  public final TextView pokemonStatsView;
+  public final TextView pokemonType;
 
   @NonNull
   public final Button returnButton;
 
-  @NonNull
-  public final Button selectButton;
-
   private PokemonActivityBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView pokemonImage, @NonNull TextView pokemonNameView2,
-      @NonNull TextView pokemonStatsView, @NonNull Button returnButton,
-      @NonNull Button selectButton) {
+      @NonNull TextView pokemonType, @NonNull Button returnButton) {
     this.rootView = rootView;
     this.pokemonImage = pokemonImage;
     this.pokemonNameView2 = pokemonNameView2;
-    this.pokemonStatsView = pokemonStatsView;
+    this.pokemonType = pokemonType;
     this.returnButton = returnButton;
-    this.selectButton = selectButton;
   }
 
   @Override
@@ -86,9 +81,9 @@ public final class PokemonActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.pokemonStatsView;
-      TextView pokemonStatsView = rootView.findViewById(id);
-      if (pokemonStatsView == null) {
+      id = R.id.pokemonType;
+      TextView pokemonType = rootView.findViewById(id);
+      if (pokemonType == null) {
         break missingId;
       }
 
@@ -98,14 +93,8 @@ public final class PokemonActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.selectButton;
-      Button selectButton = rootView.findViewById(id);
-      if (selectButton == null) {
-        break missingId;
-      }
-
       return new PokemonActivityBinding((ConstraintLayout) rootView, pokemonImage, pokemonNameView2,
-          pokemonStatsView, returnButton, selectButton);
+          pokemonType, returnButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BranchesTreeState">
@@ -28,15 +29,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="653437a9-f018-4029-b082-7b69f33df3a8" name="Default Changelist" comment="added PokemonPokedexObject to pokedex folder">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/pokearth/PokemonObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/pokearth/PokemonObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/pokearth/PokemonObject.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/pokearth/PokemonObject.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pokearth/PartyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pokearth/PartyActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[98891a474352533341]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -45,9 +58,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -63,8 +76,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="98891a474352533341" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-05T18:59:55.500Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_30_x86" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-21T01:01:26.853Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -195,6 +208,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="added PokemonPokedexObject to pokedex folder" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2226" y="410" key="#com.intellij.ide.util.MemberChooser" timestamp="1618862932299">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2226" y="410" key="#com.intellij.ide.util.MemberChooser/0.0.3440.1400@0.0.3440.1400" timestamp="1618862932299" />
     <state x="2160" y="455" key="AndroidCreateResourceFileDialog" timestamp="1617057085275">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -203,29 +220,29 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2360" y="455" key="FileChooserDialogImpl/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1617056411057" />
-    <state width="1876" height="453" key="GridCell.Tab.0.bottom" timestamp="1617650847430">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1673" height="400" key="GridCell.Tab.0.bottom" timestamp="1618878985152">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1673" height="398" key="GridCell.Tab.0.bottom/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1617611180944" />
-    <state width="1673" height="400" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1617649624827" />
+    <state width="1673" height="400" key="GridCell.Tab.0.bottom/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1618878985152" />
+    <state width="1991" height="400" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1618863521459" />
     <state width="1876" height="453" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617650847430" />
-    <state width="1876" height="453" key="GridCell.Tab.0.center" timestamp="1617650847430">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1673" height="400" key="GridCell.Tab.0.center" timestamp="1618878985152">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1673" height="398" key="GridCell.Tab.0.center/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1617611180944" />
-    <state width="1673" height="400" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1617649624827" />
+    <state width="1673" height="400" key="GridCell.Tab.0.center/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1618878985152" />
+    <state width="1991" height="400" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1618863521459" />
     <state width="1876" height="453" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617650847430" />
-    <state width="1876" height="453" key="GridCell.Tab.0.left" timestamp="1617650847430">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1673" height="400" key="GridCell.Tab.0.left" timestamp="1618878985152">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1673" height="398" key="GridCell.Tab.0.left/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1617611180944" />
-    <state width="1673" height="400" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1617649624823" />
+    <state width="1673" height="400" key="GridCell.Tab.0.left/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1618878985152" />
+    <state width="1991" height="400" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1618863521459" />
     <state width="1876" height="453" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617650847429" />
-    <state width="1876" height="453" key="GridCell.Tab.0.right" timestamp="1617650847430">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1673" height="400" key="GridCell.Tab.0.right" timestamp="1618878985152">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1673" height="398" key="GridCell.Tab.0.right/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1617611180944" />
-    <state width="1673" height="400" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1617649624827" />
+    <state width="1673" height="400" key="GridCell.Tab.0.right/0.0.3440.1400/-1680.0.1680.1010@0.0.3440.1400" timestamp="1618878985152" />
+    <state width="1991" height="400" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1618863521459" />
     <state width="1876" height="453" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1617650847430" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617919677945">
       <screen x="0" y="0" width="1920" height="1040" />
