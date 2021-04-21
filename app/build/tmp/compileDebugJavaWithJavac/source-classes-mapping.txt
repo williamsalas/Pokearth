@@ -3,6 +3,7 @@ com/example/pokearth/Health.java
 com/example/pokearth/PlayActivity.java
  com.example.pokearth.PlayActivity
  com.example.pokearth.PlayActivity$1
+ com.example.pokearth.PlayActivity$1$1
 com/example/pokearth/databinding/BiomePageBinding.java
  com.example.pokearth.databinding.BiomePageBinding
 com/example/pokearth/databinding/ActivityItemBinding.java
@@ -17,10 +18,10 @@ com/example/pokearth/databinding/ItemlistObjectLayoutBinding.java
  com.example.pokearth.databinding.ItemlistObjectLayoutBinding
 com/example/pokearth/pokedex/PokemonActivity.java
  com.example.pokearth.pokedex.PokemonActivity
+com/example/pokearth/MusicPlayer.java
+ com.example.pokearth.MusicPlayer
 com/example/pokearth/Item.java
  com.example.pokearth.Item
-com/example/pokearth/PokemonPokedexObject.java
- com.example.pokearth.PokemonPokedexObject
 com/example/pokearth/databinding/FightPageBinding.java
  com.example.pokearth.databinding.FightPageBinding
 com/example/pokearth/databinding/PokemonListBinding.java
@@ -40,12 +41,16 @@ com/example/pokearth/databinding/SplashPageBinding.java
  com.example.pokearth.databinding.SplashPageBinding
 com/example/pokearth/DB/PartyDatabase.java
  com.example.pokearth.DB.PartyDatabase
+com/example/pokearth/databinding/LoadingScreenPokedexBinding.java
+ com.example.pokearth.databinding.LoadingScreenPokedexBinding
 com/example/pokearth/InventoryActivity.java
  com.example.pokearth.InventoryActivity
 com/example/pokearth/RecyclerViewAdapter.java
  com.example.pokearth.RecyclerViewAdapter
  com.example.pokearth.RecyclerViewAdapter$1
  com.example.pokearth.RecyclerViewAdapter$ViewHolder
+com/example/pokearth/pokedex/LoadingPageDialog.java
+ com.example.pokearth.pokedex.LoadingPageDialog
 com/example/pokearth/databinding/ShopPageBinding.java
  com.example.pokearth.databinding.ShopPageBinding
 com/example/pokearth/BiomeActivity.java
@@ -78,6 +83,8 @@ com/example/pokearth/databinding/ActivityShopBinding.java
  com.example.pokearth.databinding.ActivityShopBinding
 com/example/pokearth/DB/PartyDataSource.java
  com.example.pokearth.DB.PartyDataSource
+com/example/pokearth/pokedex/PokemonPokedexObject.java
+ com.example.pokearth.pokedex.PokemonPokedexObject
 com/example/pokearth/BuildConfig.java
  com.example.pokearth.BuildConfig
 com/example/pokearth/ShopActivity.java
@@ -103,9 +110,7 @@ com/example/pokearth/PartyActivity.java
 com/example/pokearth/pokedex/PokedexActivity.java
  com.example.pokearth.pokedex.PokedexActivity
  com.example.pokearth.pokedex.PokedexActivity$1
- com.example.pokearth.pokedex.PokedexActivity$GenerateRunnable
- com.example.pokearth.pokedex.PokedexActivity$GenerateRunnable$1
- com.example.pokearth.pokedex.PokedexActivity$GenerateRunnable$1$1
+ com.example.pokearth.pokedex.PokedexActivity$2
  com.example.pokearth.pokedex.PokedexActivity$PokedexThreads
 com/example/pokearth/databinding/MainPageBinding.java
  com.example.pokearth.databinding.MainPageBinding

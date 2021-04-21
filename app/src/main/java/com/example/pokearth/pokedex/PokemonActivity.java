@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.pokearth.databinding.PokemonActivityBinding;
 
+import me.sargunvohra.lib.pokekotlin.model.PokemonType;
+
 // this activity populates the pokemon_activity.xml when a pokemon is clicked
 // in the list view of pokemon_list.xml
 public class PokemonActivity extends AppCompatActivity {
@@ -18,6 +20,8 @@ public class PokemonActivity extends AppCompatActivity {
     int position;
     String name = "";
     Bitmap image;
+    int height;
+    PokemonType pokemonType;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,9 +32,12 @@ public class PokemonActivity extends AppCompatActivity {
         position = getIntent().getIntExtra("position",0);
         name = getIntent().getStringExtra("name");
         image = getIntent().getParcelableExtra("image");
+        height = getIntent().getIntExtra("height", 0);
+        // pokemonType = getIntent().getParcelableExtra("type");
         setTitle(name);
         ui.pokemonNameView2.setText(name);
         ui.pokemonImage.setImageBitmap(image);
+        ui.pokemonHeight.setText(String.format("%d", height) + " metters");
     }
 
     public void onReturnClicked(View view){
@@ -41,11 +48,4 @@ public class PokemonActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onSelectClicked(View view){
-        Intent intent = new Intent();
-        intent.putExtra("position", position);
-        intent.putExtra("name", name);
-        setResult(RESULT_OK,intent);
-        finish();
-    }
 }

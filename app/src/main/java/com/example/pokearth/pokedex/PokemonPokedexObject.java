@@ -5,12 +5,15 @@ import android.graphics.BitmapFactory;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 import me.sargunvohra.lib.pokekotlin.model.PokemonStat;
+import me.sargunvohra.lib.pokekotlin.model.PokemonType;
 import me.sargunvohra.lib.pokekotlin.model.Stat;
 
 public class PokemonPokedexObject {
@@ -24,6 +27,7 @@ public class PokemonPokedexObject {
     public PokemonPokedexObject(int id){
         this.myPoke = pokeApi.getPokemon(id);
         this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
+
         String spriteURL;
 
         spriteURL = this.myPoke.getSprites().getFrontDefault();
@@ -38,6 +42,8 @@ public class PokemonPokedexObject {
         return this.myPokeSpecies.getId();
     }
 
+    public int getHeight() {return this.myPoke.getHeight();}
+
     public Bitmap getBitmap() {
         return this.bitmap;
     }
@@ -45,6 +51,8 @@ public class PokemonPokedexObject {
     public String getPokemonName() {
         return this.myPokeSpecies.getName();
     }
+
+    public List<PokemonType> getPokemonType() {return this.myPoke.getTypes();}
 
     public boolean isCollected() {
         return collected;
