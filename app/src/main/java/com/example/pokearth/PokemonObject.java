@@ -58,23 +58,23 @@ public class PokemonObject extends MainActivity {
                     {1, 2, 1, 0.5, 1, 1, 1, 1, 0.5, 0.5, 1, 1, 1, 1, 1, 2, 2, 1} // fairy
             };
 
-    final Pokemon[] myPoke = {null};
-    final PokemonSpecies[] myPokeSpecies = {null};
+    Pokemon myPoke = null;
+    PokemonSpecies myPokeSpecies = null;
     final Bitmap[] bitmap = {null};
     final private Boolean[] isShiny = {null};
     final Health health = new Health();
 
     public PokemonObject(int id) {
-        this.myPoke[0] = pokeApi.getPokemon(id);
-        this.myPokeSpecies[0] = pokeApi.getPokemonSpecies(id);
+        this.myPoke = pokeApi.getPokemon(id);
+        this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
         this.isShiny[0] = Math.random() <= 0.25;
         String frontSpriteURL;
 
 
         if (this.isShiny[0])
-            frontSpriteURL = this.myPoke[0].getSprites().getFrontShiny();
+            frontSpriteURL = this.myPoke.getSprites().getFrontShiny();
         else
-            frontSpriteURL = this.myPoke[0].getSprites().getFrontDefault();
+            frontSpriteURL = this.myPoke.getSprites().getFrontDefault();
         try {
             this.bitmap[0] = BitmapFactory.decodeStream((InputStream) new URL(frontSpriteURL).getContent()); // networking
         } catch (Exception e) {
@@ -83,7 +83,7 @@ public class PokemonObject extends MainActivity {
     }
 
     public int getId() {
-        return this.myPokeSpecies[0].getId();
+        return this.myPokeSpecies.getId();
     }
 
     public Bitmap getBitmap() {
@@ -95,15 +95,15 @@ public class PokemonObject extends MainActivity {
     }
 
     public String getName() {
-        return this.myPokeSpecies[0].getName();
+        return this.myPokeSpecies.getName();
     }
 
     public int getCaptureRate() {
-        return this.myPokeSpecies[0].getCaptureRate();
+        return this.myPokeSpecies.getCaptureRate();
     }
 
     public int getTypeIndex() {
-        return PokeTypes.valueOf(this.myPoke[0].getTypes().get(0).getType().getName()).ordinal();
+        return PokeTypes.valueOf(this.myPoke.getTypes().get(0).getType().getName()).ordinal();
     }
 
     public double getMatchupEffectiveness(PokemonObject opponent) {
@@ -116,7 +116,7 @@ public class PokemonObject extends MainActivity {
 
     public String getTypeColorString(int i) {
 
-        String type = this.myPoke[0].getTypes().get(i).getType().getName();
+        String type = this.myPoke.getTypes().get(i).getType().getName();
         Log.d("Logging info about type", type);
         String ans = "";
         switch (type) {
@@ -182,12 +182,11 @@ public class PokemonObject extends MainActivity {
     }
 
     public boolean isDualType() {
-        return this.myPoke[0].getTypes().size() > 1;
+        return this.myPoke.getTypes().size() > 1;
     }
 
     @SuppressLint("SetTextI18n")
-    public int attack(PokemonObject defender, TextView battleText)
-    {
+    public int attack(PokemonObject defender, TextView battleText) {
         int damage = (int) (Math.random() * 50);
         defender.health.takeDamage(damage);
 

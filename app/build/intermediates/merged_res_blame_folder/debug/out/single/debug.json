@@ -84,16 +84,16 @@
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokeballsprite.png.flat",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\drawable\\pokeballsprite.png"
+    },
+    {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border2.xml.flat",
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\drawable\\border2.xml"
     },
     {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokeballsprite.png.flat",
-        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\drawable\\pokeballsprite.png"
     },
     {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pokemon.png.flat",
