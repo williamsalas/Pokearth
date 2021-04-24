@@ -1,250 +1,250 @@
 [
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_home_logo_nintendo_switch.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home_logo_nintendo_switch.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_background_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pica_home_screen.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\pica_home_screen.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_page.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\splash_page.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_shop_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\main_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_background_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_background_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pokemon.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\pokemon.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\main_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_inventory_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\inventory_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_play_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\play_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pokemon.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\pokemon.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_background_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_background_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_biome_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\biome_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_list.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_list.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_item.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pokemon.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\pokemon.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_biome_listitem.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_background_round.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_background_round.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_itemlist_object_layout.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_grassland.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_grassland.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_background_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_background_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pokemon.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\pokemon.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_battle_stage.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\battle_stage.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_list.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_list.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_itemlist_object_layout.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\border.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_party_list.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\party_list.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play_page_background.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\play_page_background.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_page_background.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\main_page_background.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border2.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\border2.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_activity.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_inventory_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\inventory_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_fight_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\fight_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_fight_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\fight_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_background_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_background_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_background_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_object_layout.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_object_layout.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_back.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_back.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_battle_stage.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\battle_stage.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_back.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_back.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_background_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_background_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\border.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\splash_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pica_home_screen.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pica_home_screen.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pokemon.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\pokemon.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_background_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_background_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_background_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_object_layout.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_object_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_home.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_activity.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_activity.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_grassland.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_grassland.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_background_round.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_background_round.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\splash_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pokemon.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\pokemon.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\activity_item.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pokemon.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\pokemon.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_screen.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\splash_screen.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shop.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_shop.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border2.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\border2.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pokemon.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\pokemon.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play_page_background.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\play_page_background.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pokemon.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\pokemon.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_biome_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\biome_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shop.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\activity_shop.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_biome_listitem.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_page_background.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\main_page_background.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_play_page.xml.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\play_page.xml"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_screen.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\splash_screen.jpg"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_home_logo_nintendo_switch.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home_logo_nintendo_switch.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_background_round.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background_round.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_page.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\splash_page.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_shop_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_party_list.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\party_list.xml"
     },
     {
-        "merged": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokemon_home.jpg.flat",
-        "source": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home.jpg"
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pokemon.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\pokemon.png"
     }
 ]
