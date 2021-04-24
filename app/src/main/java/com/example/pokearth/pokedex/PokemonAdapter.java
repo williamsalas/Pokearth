@@ -45,10 +45,6 @@ public class PokemonAdapter extends ArrayAdapter<PokemonPokedexObject> {
         ui = PokemonObjectLayoutBinding.bind(convertView);
 
 
-        ui.pokeName1.setText(pokemon.getPokemonName());
-        ui.pokemonImageView1.setImageBitmap(pokemon.getBitmap());
-
-
         // blacks out the pokemon if not collected otherwise pokemon is displayed
         if(!pokemon.isCollected()){
             convertView.setBackgroundResource(R.color.black);
@@ -56,6 +52,7 @@ public class PokemonAdapter extends ArrayAdapter<PokemonPokedexObject> {
         }
         else
         {
+            ui.pokemonID.setText(Integer.toString(pokemon.getId()));
             ui.pokeName1.setText(pokemon.getPokemonName());
             ui.pokemonImageView1.setImageBitmap(pokemon.getBitmap());
         }

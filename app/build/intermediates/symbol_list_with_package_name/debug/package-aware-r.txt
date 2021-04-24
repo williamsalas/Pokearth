@@ -1963,6 +1963,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id moreButton
 id motion_base
 id move1Button
 id move2Button
@@ -2032,6 +2033,8 @@ id pokeName3
 id pokeName4
 id pokeName5
 id pokeName6
+id pokemonHeight
+id pokemonID
 id pokemonImage
 id pokemonImageView1
 id pokemonImageView2
@@ -2041,11 +2044,14 @@ id pokemonImageView5
 id pokemonImageView6
 id pokemonList
 id pokemonNameView2
+id pokemonNumber
 id pokemonTeamButton
 id pokemonType
+id pokemonWeight
 id pokemon_select_button
 id position
 id postLayout
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -2151,6 +2157,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -2272,6 +2279,7 @@ layout design_text_input_start_icon
 layout fight_page
 layout inventory_page
 layout itemlist_object_layout
+layout loading_screen_pokedex
 layout main_page
 layout material_chip_input_combo
 layout material_clock_display
@@ -2353,6 +2361,8 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap pokemon
 plurals mtrl_badge_content_description
+raw battlemusic
+raw mainmusic
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

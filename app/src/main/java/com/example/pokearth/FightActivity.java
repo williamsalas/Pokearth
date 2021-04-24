@@ -3,6 +3,7 @@ package com.example.pokearth;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -14,24 +15,29 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pokearth.DB.PartyDataSource;
+import com.example.pokearth.pokedex.PokemonPokedexObject;
 
 import java.util.Random;
+
+import static com.example.pokearth.MusicPlayer.SoundPlayer;
+import static com.example.pokearth.MusicPlayer.StopSound;
 
 public class FightActivity extends AppCompatActivity {
 
 
-    private PartyDataSource dataSource;
     final PokemonObject[] po = {null, null};
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fight_page);
 
+        StopSound();
+
         GenerateRunnable runnable = new GenerateRunnable();
         new Thread(runnable).start();
-
     }
 
     // click on the run button to go back to the Play Activity screen
@@ -106,6 +112,8 @@ public class FightActivity extends AppCompatActivity {
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void run() {
+                    SoundPlayer(FightActivity.this, R.raw.battlemusic);
+
                     // grab reference to relevant data fields
                     TextView pokeName1 = (TextView) findViewById(R.id.playerPokemonNameTextView);
                     TextView pokeName2 = (TextView) findViewById(R.id.opponentPokemonNameTextView);
@@ -144,9 +152,7 @@ public class FightActivity extends AppCompatActivity {
                         pokeAttackButton2.setVisibility(View.INVISIBLE);
                     }
 
-
                 } // end run
-
 
             }); // end run
 
