@@ -2044,8 +2044,10 @@ id pokemonImageView5
 id pokemonImageView6
 id pokemonList
 id pokemonNameView2
+id pokemonNumber
 id pokemonTeamButton
 id pokemonType
+id pokemonWeight
 id pokemon_select_button
 id position
 id postLayout

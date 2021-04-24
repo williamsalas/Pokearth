@@ -52,12 +52,12 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_list.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\shop_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
-    },
-    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\loading_screen_pokedex.xml",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\loading_screen_pokedex.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\shop_page.xml",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_shop.xml",

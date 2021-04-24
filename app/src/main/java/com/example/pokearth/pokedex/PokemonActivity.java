@@ -21,7 +21,8 @@ public class PokemonActivity extends AppCompatActivity {
     String name = "";
     Bitmap image;
     int height;
-    PokemonType pokemonType;
+    int weight;
+    String pokemonType;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,11 +34,15 @@ public class PokemonActivity extends AppCompatActivity {
         name = getIntent().getStringExtra("name");
         image = getIntent().getParcelableExtra("image");
         height = getIntent().getIntExtra("height", 0);
-        // pokemonType = getIntent().getParcelableExtra("type");
+        weight = getIntent().getIntExtra("weight", 0);
+        pokemonType = getIntent().getStringExtra("type");
         setTitle(name);
-        ui.pokemonNameView2.setText(name);
+        ui.pokemonNameView2.setText(name.toUpperCase());
         ui.pokemonImage.setImageBitmap(image);
-        ui.pokemonHeight.setText(String.format("%d", height) + " metters");
+        ui.pokemonNumber.setText("No. " + (position+1));
+        // ui.pokemonType.setText("TYPE: " + pokemonType);
+        ui.pokemonHeight.setText("HEIGHT:     " + String.format("%d", height) + "  ft");
+        ui.pokemonWeight.setText("WEIGHT:     " + String.format("%d", weight) + "  lb");
     }
 
     public void onReturnClicked(View view){

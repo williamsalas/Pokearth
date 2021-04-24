@@ -30,20 +30,29 @@ public final class PokemonActivityBinding implements ViewBinding {
   public final TextView pokemonNameView2;
 
   @NonNull
+  public final TextView pokemonNumber;
+
+  @NonNull
   public final TextView pokemonType;
+
+  @NonNull
+  public final TextView pokemonWeight;
 
   @NonNull
   public final Button returnButton;
 
   private PokemonActivityBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView pokemonHeight, @NonNull ImageView pokemonImage,
-      @NonNull TextView pokemonNameView2, @NonNull TextView pokemonType,
+      @NonNull TextView pokemonNameView2, @NonNull TextView pokemonNumber,
+      @NonNull TextView pokemonType, @NonNull TextView pokemonWeight,
       @NonNull Button returnButton) {
     this.rootView = rootView;
     this.pokemonHeight = pokemonHeight;
     this.pokemonImage = pokemonImage;
     this.pokemonNameView2 = pokemonNameView2;
+    this.pokemonNumber = pokemonNumber;
     this.pokemonType = pokemonType;
+    this.pokemonWeight = pokemonWeight;
     this.returnButton = returnButton;
   }
 
@@ -92,9 +101,21 @@ public final class PokemonActivityBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.pokemonNumber;
+      TextView pokemonNumber = rootView.findViewById(id);
+      if (pokemonNumber == null) {
+        break missingId;
+      }
+
       id = R.id.pokemonType;
       TextView pokemonType = rootView.findViewById(id);
       if (pokemonType == null) {
+        break missingId;
+      }
+
+      id = R.id.pokemonWeight;
+      TextView pokemonWeight = rootView.findViewById(id);
+      if (pokemonWeight == null) {
         break missingId;
       }
 
@@ -105,7 +126,7 @@ public final class PokemonActivityBinding implements ViewBinding {
       }
 
       return new PokemonActivityBinding((ConstraintLayout) rootView, pokemonHeight, pokemonImage,
-          pokemonNameView2, pokemonType, returnButton);
+          pokemonNameView2, pokemonNumber, pokemonType, pokemonWeight, returnButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

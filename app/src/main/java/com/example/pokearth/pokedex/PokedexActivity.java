@@ -41,7 +41,9 @@ public class PokedexActivity extends AppCompatActivity {
 
         listViewPokedex = findViewById(R.id.pokemonList);
 
-        PokedexThreads thread1 = new PokedexThreads(0, 5);
+
+
+        PokedexThreads thread1 = new PokedexThreads(1, 5);
         PokedexThreads thread2 = new PokedexThreads(5, 10);
         PokedexThreads thread3 = new PokedexThreads(10, 15);
         PokedexThreads thread4 = new PokedexThreads(15, 20);
@@ -97,6 +99,7 @@ public class PokedexActivity extends AppCompatActivity {
                 intent.putExtra("image", existingPokemon.getBitmap());
                 // intent.putExtra("type", existingPokemon.getPokemonType());
                 intent.putExtra("height", existingPokemon.getHeight());
+                intent.putExtra("weight", existingPokemon.getWeight());
                 startActivityForResult(intent, 1);
             }
         });
@@ -104,6 +107,9 @@ public class PokedexActivity extends AppCompatActivity {
     }
 
     public void onMoreButtonClicked(View view) {
+
+        // LoadingPageDialog loadingPageDialog = new LoadingPageDialog(PokedexActivity.this);
+        // loadingPageDialog.startLoadingDialog();
 
         if(wasClicked){
             return;
@@ -166,9 +172,21 @@ public class PokedexActivity extends AppCompatActivity {
                 intent.putExtra("image", existingPokemon.getBitmap());
                 // intent.putExtra("type", existingPokemon.getPokemonType());
                 intent.putExtra("height", existingPokemon.getHeight());
+                intent.putExtra("weight", existingPokemon.getWeight());
                 startActivityForResult(intent, 1);
             }
         });
+
+        /*
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadingPageDialog.dismissDialog();
+            }
+        }, 5000);
+         */
+
     }
 
     class PokedexThreads extends Thread {
@@ -185,7 +203,7 @@ public class PokedexActivity extends AppCompatActivity {
         public void run() {
             for(int i = start; i < end; i++)
             {
-                pokemonList.add(new PokemonPokedexObject(i+1));
+                pokemonList.add(new PokemonPokedexObject(i));
             }
         }
     }

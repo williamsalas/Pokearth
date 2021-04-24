@@ -244,12 +244,12 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background_round.png"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_shop_page.xml.flat",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
-    },
-    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_shop_page.xml.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_party_list.xml.flat",
