@@ -111,7 +111,6 @@ com/example/pokearth/pokedex/PokedexActivity.java
  com.example.pokearth.pokedex.PokedexActivity
  com.example.pokearth.pokedex.PokedexActivity$1
  com.example.pokearth.pokedex.PokedexActivity$2
- com.example.pokearth.pokedex.PokedexActivity$3
  com.example.pokearth.pokedex.PokedexActivity$PokedexThreads
 com/example/pokearth/databinding/MainPageBinding.java
  com.example.pokearth.databinding.MainPageBinding
