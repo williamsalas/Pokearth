@@ -1693,9 +1693,13 @@ drawable notify_panel_notification_icon_bg
 drawable pica_home_screen
 drawable play_page_background
 drawable pokearth_grassland
+drawable pokemart_background
 drawable pokemon_back
 drawable pokemon_home
 drawable pokemon_home_logo_nintendo_switch
+drawable shop_bag_icon
+drawable shop_ball_icon
+drawable shop_potion_icon
 drawable splash_page
 drawable splash_screen
 drawable test_custom_background
@@ -1788,6 +1792,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id backButton
+id ball_icon
 id barrier
 id baseline
 id battleTextView
@@ -1909,6 +1914,7 @@ id ignoreRequest
 id image
 id imageItem
 id imageView
+id imageView2
 id info
 id inventory_button
 id invisible
@@ -2046,6 +2052,7 @@ id pokemonType
 id pokemon_select_button
 id position
 id postLayout
+id potion_icon
 id progress_circular
 id progress_horizontal
 id radio
@@ -2249,7 +2256,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_ballshop
 layout activity_item
+layout activity_pokemart
 layout activity_shop
 layout biome_listitem
 layout biome_page

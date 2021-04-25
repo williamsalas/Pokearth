@@ -21,6 +21,7 @@ public class Item {
     private String spriteURL;
     private Bitmap bitmap;
     private String description;
+    private int quantityInBag;
     List<VersionGroupFlavorText> text;
 
     PokeApi pokeApi = new PokeApiClient();
@@ -31,6 +32,7 @@ public class Item {
         String spriteURL = this.pokeApi.getItem(id).getSprites().getDefault();
         text = this.pokeApi.getItem(id).getFlavorTextEntries();
         description = text.get(0).getText();
+        quantityInBag = 0;
 
         try {
             this.bitmap = BitmapFactory.decodeStream((InputStream) new URL(spriteURL).getContent()); // networking
@@ -62,4 +64,7 @@ public class Item {
 
     public String getDescription() { return description;}
 
+    public int getQuantityInBag() { return quantityInBag;}
+
+    public int setQuantityInBag(int newQuantity) { return quantityInBag = newQuantity;}
 }

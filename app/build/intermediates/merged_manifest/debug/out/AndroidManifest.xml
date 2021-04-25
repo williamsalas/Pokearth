@@ -17,6 +17,7 @@
         android:xlargeScreens="true" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -33,6 +34,8 @@
         <activity android:name="com.example.pokearth.FightActivity" />
         <activity android:name="com.example.pokearth.InventoryActivity" />
         <activity android:name="com.example.pokearth.ShopActivity" />
+        <activity android:name="com.example.pokearth.BallShopActivity" />
+        <activity android:name="com.example.pokearth.PokeMartActivity" />
         <activity android:name="com.example.pokearth.pokedex.PokedexActivity" />
         <activity android:name="com.example.pokearth.pokedex.PokemonActivity" />
         <activity android:name="com.example.pokearth.PartyActivity" />

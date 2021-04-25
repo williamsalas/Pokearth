@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openShopActivity() {
-        Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+        Intent intent = new Intent(MainActivity.this, PokeMartActivity.class);
         startActivity(intent);
     }
 
