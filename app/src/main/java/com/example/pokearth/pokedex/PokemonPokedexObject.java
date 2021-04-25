@@ -23,12 +23,10 @@ public class PokemonPokedexObject {
     private Bitmap bitmap;
     private boolean collected = true;
     PokeApi pokeApi = new PokeApiClient();
-    private int pokemonID;
 
     public PokemonPokedexObject(int id){
 
         this.myPoke = pokeApi.getPokemon(id);
-        pokemonID = this.myPoke.getId();
         this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
 
         String spriteURL;
@@ -57,7 +55,7 @@ public class PokemonPokedexObject {
         return this.myPokeSpecies.getName();
     }
 
-    public String getPokemonType() { return this.myPoke.getTypes().get(pokemonID).getType().component1(); }
+    public String getPokemonType() { return this.myPoke.getTypes().get(0).getType().getName(); }
 
     public boolean isCollected() {
         return collected;

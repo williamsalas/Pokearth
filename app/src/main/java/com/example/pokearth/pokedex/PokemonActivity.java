@@ -40,7 +40,7 @@ public class PokemonActivity extends AppCompatActivity {
         ui.pokemonNameView2.setText(name.toUpperCase());
         ui.pokemonImage.setImageBitmap(image);
         ui.pokemonNumber.setText("No. " + (position+1));
-        // ui.pokemonType.setText("TYPE: " + pokemonType);
+        ui.pokemonType.setText("TYPE: " + pokemonType);
         ui.pokemonHeight.setText("HEIGHT:     " + String.format("%d", height) + "  ft");
         ui.pokemonWeight.setText("WEIGHT:     " + String.format("%d", weight) + "  lb");
     }

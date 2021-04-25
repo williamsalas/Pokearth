@@ -97,7 +97,7 @@ public class PokedexActivity extends AppCompatActivity {
                 intent.putExtra("position", position);
                 intent.putExtra("name", existingPokemon.getPokemonName());
                 intent.putExtra("image", existingPokemon.getBitmap());
-                // intent.putExtra("type", existingPokemon.getPokemonType());
+                intent.putExtra("type", existingPokemon.getPokemonType());
                 intent.putExtra("height", existingPokemon.getHeight());
                 intent.putExtra("weight", existingPokemon.getWeight());
                 startActivityForResult(intent, 1);
@@ -170,7 +170,7 @@ public class PokedexActivity extends AppCompatActivity {
                 intent.putExtra("position", position);
                 intent.putExtra("name", existingPokemon.getPokemonName());
                 intent.putExtra("image", existingPokemon.getBitmap());
-                // intent.putExtra("type", existingPokemon.getPokemonType());
+                intent.putExtra("type", existingPokemon.getPokemonType());
                 intent.putExtra("height", existingPokemon.getHeight());
                 intent.putExtra("weight", existingPokemon.getWeight());
                 startActivityForResult(intent, 1);
