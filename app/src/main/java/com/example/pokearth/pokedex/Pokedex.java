@@ -14,6 +14,9 @@ public class Pokedex
     @ColumnInfo(name = "pokemon_number")
     private int pokemonId;
 
+    @ColumnInfo(name = "isSeen")
+    private int isSeen;
+
     @ColumnInfo(name = "pokeObject")
     private String pokeObject;
 
@@ -27,10 +30,11 @@ public class Pokedex
     {
     }
 
-    public Pokedex (int party_id, int pokemon_id, String pokeObject, String pokeSpecies, byte[] bmapString)
+    public Pokedex(int party_id, int pokemon_id, int isSeen, String pokeObject, String pokeSpecies, byte[] bmapString)
     {
         this.id = party_id;
         this.pokemonId = pokemon_id;
+        this.isSeen = isSeen;
         this.bitmapString = bmapString;
         this.pokeObject = pokeObject;
         this.pokeSpecies = pokeSpecies;
@@ -54,6 +58,14 @@ public class Pokedex
     public void setPokemonId(int pokemon_id)
     {
         this.pokemonId = pokemon_id;
+    }
+
+    public void setIsSeen(int isSeen) {
+        this.isSeen = isSeen;
+    }
+
+    public int getIsSeen() {
+        return isSeen;
     }
 
     public byte[] getBitmapString() {
