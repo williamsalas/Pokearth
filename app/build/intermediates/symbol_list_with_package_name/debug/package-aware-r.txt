@@ -1634,6 +1634,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable battle_stage
+drawable blacksquarewcircle500
 drawable border
 drawable border2
 drawable btn_checkbox_checked_mtrl
@@ -1644,6 +1645,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable customcircle
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1691,8 +1693,10 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable pica_home_screen
+drawable pkmntrainersprite
 drawable play_page_background
 drawable pokearth_grassland
+drawable pokeballsprite
 drawable pokemon_back
 drawable pokemon_home
 drawable pokemon_home_logo_nintendo_switch
@@ -1701,6 +1705,7 @@ drawable splash_screen
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable whitecircle
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1799,6 +1804,7 @@ id biomeMenuParentLayout
 id biome_select_button
 id blocking
 id bottom
+id bottomPartySpritesLinearLayout
 id bounce
 id buttonPanel
 id buyButton
@@ -1886,6 +1892,7 @@ id fitToContents
 id fixed
 id flip
 id floating
+id floatingActionButton
 id forever
 id ghost_view
 id ghost_view_holder
@@ -2015,6 +2022,12 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id partySprite1
+id partySprite2
+id partySprite3
+id partySprite4
+id partySprite5
+id partySprite6
 id party_button
 id password_toggle
 id path
@@ -2026,6 +2039,7 @@ id play_button
 id playerPokemonHPTextView
 id playerPokemonNameTextView
 id playerPokemonSprite
+id playerSprite
 id pokeName1
 id pokeName2
 id pokeName3
@@ -2088,6 +2102,12 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id selectPokemon1Button
+id selectPokemon2Button
+id selectPokemon3Button
+id selectPokemon4Button
+id selectPokemon5Button
+id selectPokemon6Button
 id select_dialog_listview
 id selected
 id selection_type
@@ -2140,6 +2160,8 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id teamSelectButtonsEvensLinearLayout
+id teamSelectButtonsOddsLinearLayout
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2168,6 +2190,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id topPartySpritesLinearLayout
 id touch_outside
 id transitionToEnd
 id transitionToStart

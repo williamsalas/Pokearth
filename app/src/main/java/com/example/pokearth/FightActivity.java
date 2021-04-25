@@ -145,7 +145,7 @@ public class FightActivity extends AppCompatActivity {
         public void run() {
             // pokeAttackButton1.setBackgroundColor(Color.parseColor(po[0].getTypeColorString(0)));
             Looper.prepare();
-            List<Party> partyPokemon = dataSource.getAllPartyPokemon();
+            List<Party> partyPokemon = dataSource.getAllPokemon();
             //PokemonObject[] team = new PokemonObject[6];
 
             for (int x = 0; x < 6; x++) {
@@ -337,7 +337,7 @@ public class FightActivity extends AppCompatActivity {
         public void run() {
             if (dataSource != null) {
                 Looper.prepare();
-                int partyIDToFill = dataSource.getFirstEmptySlot();
+                int partyIDToFill = dataSource.getFirstEmpty();
                 if (partyIDToFill != -1) {
                     //Party caughtPokemon = new Party(partyIDToFill, battlingPokemon[1].getId()); // create a Party Object version of the wild pokemon
                     byte[] caughtPokemonImg = new byte[0];

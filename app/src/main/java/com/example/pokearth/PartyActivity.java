@@ -131,7 +131,7 @@ public class PartyActivity extends AppCompatActivity {
             } else
                 Log.d("onRemoveFromPartyClick", " db is null ");
 
-            List<Party> partyPokemon = dataSource.getAllPartyPokemon();
+            List<Party> partyPokemon = dataSource.getAllPokemon();
             Looper.prepare();
             for (int x = 0; x < 6; x++) {
                 if (partyPokemon.get(x).getPokemonId() > 0)
@@ -213,7 +213,7 @@ public class PartyActivity extends AppCompatActivity {
     class GenerateSaved implements Runnable {
         @Override
         public void run() {
-            List<Party> partyPokemon = dataSource.getAllPartyPokemon();
+            List<Party> partyPokemon = dataSource.getAllPokemon();
             Looper.prepare();
             int nullCounter = 0;
             for (int x = 0; x < 6; x++) {

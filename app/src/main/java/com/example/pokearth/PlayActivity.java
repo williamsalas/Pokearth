@@ -79,7 +79,7 @@ public class PlayActivity extends AppCompatActivity {
 
         @Override
         public void run() {
-            List<Party> partyPokemon = dataSource.getAllPartyPokemon();
+            List<Party> partyPokemon = dataSource.getAllPokemon();
             Looper.prepare();
             int nullCounter = 0;
             for (int x = 0; x < 6; x++) {
