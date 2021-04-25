@@ -14,6 +14,7 @@ public class Pokedex
     @ColumnInfo(name = "pokemon_number")
     private int pokemonId;
 
+    //value will be 0 or 1
     @ColumnInfo(name = "isSeen")
     private int isSeen;
 
