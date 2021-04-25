@@ -1,4 +1,4 @@
-#Sun Apr 25 12:15:33 PDT 2021
-base.0=C\:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Sun Apr 25 13:33:03 PDT 2021
+base.0=C\:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

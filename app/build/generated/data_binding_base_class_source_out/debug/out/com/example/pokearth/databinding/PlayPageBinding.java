@@ -5,11 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.pokearth.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,17 +26,62 @@ public final class PlayPageBinding implements ViewBinding {
   public final Button biomeSelectButton;
 
   @NonNull
+  public final LinearLayout bottomPartySpritesLinearLayout;
+
+  @NonNull
   public final Button fightButton;
+
+  @NonNull
+  public final FloatingActionButton floatingActionButton;
+
+  @NonNull
+  public final ImageView partySprite1;
+
+  @NonNull
+  public final ImageView partySprite2;
+
+  @NonNull
+  public final ImageView partySprite3;
+
+  @NonNull
+  public final ImageView partySprite4;
+
+  @NonNull
+  public final ImageView partySprite5;
+
+  @NonNull
+  public final ImageView partySprite6;
+
+  @NonNull
+  public final ImageButton playerSprite;
 
   @NonNull
   public final Button pokemonSelectButton;
 
+  @NonNull
+  public final LinearLayout topPartySpritesLinearLayout;
+
   private PlayPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button biomeSelectButton,
-      @NonNull Button fightButton, @NonNull Button pokemonSelectButton) {
+      @NonNull LinearLayout bottomPartySpritesLinearLayout, @NonNull Button fightButton,
+      @NonNull FloatingActionButton floatingActionButton, @NonNull ImageView partySprite1,
+      @NonNull ImageView partySprite2, @NonNull ImageView partySprite3,
+      @NonNull ImageView partySprite4, @NonNull ImageView partySprite5,
+      @NonNull ImageView partySprite6, @NonNull ImageButton playerSprite,
+      @NonNull Button pokemonSelectButton, @NonNull LinearLayout topPartySpritesLinearLayout) {
     this.rootView = rootView;
     this.biomeSelectButton = biomeSelectButton;
+    this.bottomPartySpritesLinearLayout = bottomPartySpritesLinearLayout;
     this.fightButton = fightButton;
+    this.floatingActionButton = floatingActionButton;
+    this.partySprite1 = partySprite1;
+    this.partySprite2 = partySprite2;
+    this.partySprite3 = partySprite3;
+    this.partySprite4 = partySprite4;
+    this.partySprite5 = partySprite5;
+    this.partySprite6 = partySprite6;
+    this.playerSprite = playerSprite;
     this.pokemonSelectButton = pokemonSelectButton;
+    this.topPartySpritesLinearLayout = topPartySpritesLinearLayout;
   }
 
   @Override
@@ -68,9 +117,63 @@ public final class PlayPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bottomPartySpritesLinearLayout;
+      LinearLayout bottomPartySpritesLinearLayout = rootView.findViewById(id);
+      if (bottomPartySpritesLinearLayout == null) {
+        break missingId;
+      }
+
       id = R.id.fight_button;
       Button fightButton = rootView.findViewById(id);
       if (fightButton == null) {
+        break missingId;
+      }
+
+      id = R.id.floatingActionButton;
+      FloatingActionButton floatingActionButton = rootView.findViewById(id);
+      if (floatingActionButton == null) {
+        break missingId;
+      }
+
+      id = R.id.partySprite1;
+      ImageView partySprite1 = rootView.findViewById(id);
+      if (partySprite1 == null) {
+        break missingId;
+      }
+
+      id = R.id.partySprite2;
+      ImageView partySprite2 = rootView.findViewById(id);
+      if (partySprite2 == null) {
+        break missingId;
+      }
+
+      id = R.id.partySprite3;
+      ImageView partySprite3 = rootView.findViewById(id);
+      if (partySprite3 == null) {
+        break missingId;
+      }
+
+      id = R.id.partySprite4;
+      ImageView partySprite4 = rootView.findViewById(id);
+      if (partySprite4 == null) {
+        break missingId;
+      }
+
+      id = R.id.partySprite5;
+      ImageView partySprite5 = rootView.findViewById(id);
+      if (partySprite5 == null) {
+        break missingId;
+      }
+
+      id = R.id.partySprite6;
+      ImageView partySprite6 = rootView.findViewById(id);
+      if (partySprite6 == null) {
+        break missingId;
+      }
+
+      id = R.id.playerSprite;
+      ImageButton playerSprite = rootView.findViewById(id);
+      if (playerSprite == null) {
         break missingId;
       }
 
@@ -80,8 +183,16 @@ public final class PlayPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PlayPageBinding((ConstraintLayout) rootView, biomeSelectButton, fightButton,
-          pokemonSelectButton);
+      id = R.id.topPartySpritesLinearLayout;
+      LinearLayout topPartySpritesLinearLayout = rootView.findViewById(id);
+      if (topPartySpritesLinearLayout == null) {
+        break missingId;
+      }
+
+      return new PlayPageBinding((ConstraintLayout) rootView, biomeSelectButton,
+          bottomPartySpritesLinearLayout, fightButton, floatingActionButton, partySprite1,
+          partySprite2, partySprite3, partySprite4, partySprite5, partySprite6, playerSprite,
+          pokemonSelectButton, topPartySpritesLinearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

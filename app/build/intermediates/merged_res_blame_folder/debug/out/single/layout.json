@@ -1,66 +1,66 @@
 [
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_listitem.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pokemon_object_layout.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_object_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\biome_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\play_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\play_page.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\play_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\play_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\party_list.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\party_list.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pokemon_object_layout.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_object_layout.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_listitem.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\main_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\loading_screen_pokedex.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\loading_screen_pokedex.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\inventory_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\inventory_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_item.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\activity_item.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\itemlist_object_layout.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\main_page.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_item.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_item.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\shop_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\party_list.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\party_list.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\biome_page.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pokemon_activity.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_activity.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_shop.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\activity_shop.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fight_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\fight_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pokemon_activity.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\splash_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\splash_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\inventory_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\inventory_page.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pokemon_list.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_list.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pokemon_list.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_list.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\loading_screen_pokedex.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\loading_screen_pokedex.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fight_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\fight_page.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\shop_page.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\shop_page.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\itemlist_object_layout.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_shop.xml",
-        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_shop.xml"
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\splash_page.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\splash_page.xml"
     }
 ]

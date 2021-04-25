@@ -32,4 +32,10 @@ public class PartyDataSource
     {
         partyDao.deleteAllFromTable();
     }
+
+    // get first empty slot
+    public int getFirstEmpty(){return partyDao.getFirstEmpty();}
+
+    // get first pokemon
+    public Party getFirstPokemon(){return partyDao.getFirstPokemon();}
 }
