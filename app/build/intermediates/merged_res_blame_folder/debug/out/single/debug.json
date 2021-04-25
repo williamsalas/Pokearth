@@ -80,6 +80,10 @@
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\drawable\\customcircle.xml"
     },
     {
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\raw_mainmusic.mp3.flat",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\raw\\mainmusic.mp3"
+    },
+    {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shop.xml.flat",
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\activity_shop.xml"
     },
@@ -122,6 +126,10 @@
     {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pokemon.png.flat",
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\pokemon.png"
+    },
+    {
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_loading_screen_pokedex.xml.flat",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\loading_screen_pokedex.xml"
     },
     {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_pokemon_object_layout.xml.flat",
@@ -190,6 +198,10 @@
     {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\raw_battlemusic.mp3.flat",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\raw\\battlemusic.mp3"
     },
     {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_party_list.xml.flat",

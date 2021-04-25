@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -18,7 +19,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+
 import com.example.pokearth.DB.PartyDataSource;
+
+import com.example.pokearth.pokedex.PokemonPokedexObject;
 
 
 import com.example.pokearth.DB.Party;
@@ -29,28 +33,36 @@ import java.util.List;
 
 import java.util.Random;
 
+
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
+import static com.example.pokearth.MusicPlayer.SoundPlayer;
+import static com.example.pokearth.MusicPlayer.StopSound;
+
+
 public class FightActivity extends AppCompatActivity {
+
 
     private PartyDataSource dataSource;
     final PokemonObject[] battlingPokemon = {null, null};
     final PokemonObject[] teamPokemon = {null, null, null, null, null, null};
     private int pokemonToSwapIn;
+    final PokemonObject[] po = {null, null};
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fight_page);
         dataSource = new PartyDataSource(this);
-
         GenerateNewEncounterRunnable runnable = new GenerateNewEncounterRunnable();
         new Thread(runnable).start();
 
         // paint all the buttons appropriately
-        TeamButtonsRunnable runnable2 = new TeamButtonsRunnable();
-        new Thread(runnable2).start();
+        TeamButtonsRunnable runnable1 = new TeamButtonsRunnable();
+        new Thread(runnable1).start();
+        StopSound();
 
     }
 
@@ -228,6 +240,8 @@ public class FightActivity extends AppCompatActivity {
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void run() {
+                    SoundPlayer(FightActivity.this, R.raw.battlemusic);
+
                     // grab reference to relevant data fields
                     TextView pokeName1 = (TextView) findViewById(R.id.playerPokemonNameTextView);
                     TextView pokeName2 = (TextView) findViewById(R.id.opponentPokemonNameTextView);
@@ -266,9 +280,7 @@ public class FightActivity extends AppCompatActivity {
                         pokeAttackButton2.setVisibility(View.INVISIBLE);
                     }
 
-
                 } // end run
-
 
             }); // end run
 

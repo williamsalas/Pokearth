@@ -16,6 +16,10 @@
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
     },
     {
+        "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\loading_screen_pokedex.xml",
+        "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\loading_screen_pokedex.xml"
+    },
+    {
         "merged": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_item.xml",
         "source": "C:\\Users\\willi\\AndroidStudioProjects\\PokearthW\\Pokearth\\app\\src\\main\\res\\layout\\activity_item.xml"
     },

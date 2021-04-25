@@ -2,12 +2,17 @@ package com.example.pokearth;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.os.Bundle;
 import android.os.Looper;
+
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,6 +23,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
+
+import com.example.pokearth.pokedex.LoadingPageDialog;
+
 import com.example.pokearth.pokedex.PokedexActivity;
 import com.google.gson.Gson;
 
@@ -29,7 +37,6 @@ import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
 public class PlayActivity extends AppCompatActivity {
 
-    private Button fightButton;
     private Button pokedexButton;
     final PokemonObject[] po = {null, null, null, null, null, null};
     private PartyDataSource dataSource;
@@ -39,16 +46,31 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_page);
 
+
         dataSource = new PartyDataSource(this);
 
         GenerateSaved runnable = new GenerateSaved();
         new Thread(runnable).start();
 
+        LoadingPageDialog loadingPageDialog = new LoadingPageDialog(PlayActivity.this);
+
+
         pokedexButton = findViewById(R.id.pokemon_select_button);
         pokedexButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPokedexActivity(v);
+
+
+                loadingPageDialog.startLoadingDialog();
+                Intent intent = new Intent(PlayActivity.this, PokedexActivity.class);
+                startActivity(intent);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadingPageDialog.dismissDialog();
+                    }
+                }, 10000);
             }
         });
 
@@ -62,11 +84,6 @@ public class PlayActivity extends AppCompatActivity {
 
     public void openBiomeActivity(View v) {
         Intent intent = new Intent(PlayActivity.this, BiomeActivity.class);
-        startActivity(intent);
-    }
-
-    public void openPokedexActivity(View v) {
-        Intent intent = new Intent(PlayActivity.this, PokedexActivity.class);
         startActivity(intent);
     }
 
