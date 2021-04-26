@@ -23,14 +23,18 @@ public class ShopActivity extends AppCompatActivity {
     ItemAdapter adapterArray;
     ArrayList<Item> itemsList = new ArrayList<>();
     PokeApi pokeApi = new PokeApiClient();
-
+    int position;
+    String name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ui = ActivityShopBinding.inflate(getLayoutInflater());
         setContentView(ui.getRoot());
-        setTitle("Shop");
+
+        position = getIntent().getIntExtra("position", 0);
+        name = getIntent().getStringExtra("name");
+        setTitle("Poke Mart");
 
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -41,28 +45,22 @@ public class ShopActivity extends AppCompatActivity {
                 Item third = new Item(25);
                 //X Items
                 Item fourth = new Item(57);
-                Item fifth = new Item(58);
+                //Item fifth = new Item(58);
                 Item sixth = new Item(61);
-                Item seventh = new Item(62);
+                //Item seventh = new Item(62);
                 Item eighth = new Item(59);
-                //Expert Belt
-                Item ninth = new Item(245);
-                //Berries
-                Item tenth = new Item(132);
-                Item eleventh = new Item(135);
+
 
 
                 itemsList.add(first);
                 itemsList.add(second);
                 itemsList.add(third);
                 itemsList.add(fourth);
-                itemsList.add(fifth);
+                //itemsList.add(fifth);
                 itemsList.add(sixth);
-                itemsList.add(seventh);
+                //itemsList.add(seventh);
                 itemsList.add(eighth);
-                itemsList.add(ninth);
-                itemsList.add(tenth);
-                itemsList.add(eleventh);
+
 
                 runOnUiThread(new Runnable() {
                     @Override
@@ -85,8 +83,10 @@ public class ShopActivity extends AppCompatActivity {
                                 startActivityForResult(intent,1);
                             }
                         });
+
                     }
                 });
+
 
 
             }
@@ -104,5 +104,12 @@ public class ShopActivity extends AppCompatActivity {
 
     }
 
+    public void onReturnClicked(View view){
+        Intent i = new Intent();
+        i.putExtra("position", position);
+        i.putExtra("name", name);
+        setResult(RESULT_OK,i);
+        finish();
+    }
 
 }
