@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,6 +49,10 @@ public class ItemActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra("position", position);
         intent.putExtra("name", name);
+
+        String quantity = String.valueOf(Integer.parseInt(ItemList.getInstance().getItems().get(position).getQuantityInBag()) + 1);
+        ItemList.getInstance().getItems().get(position).setQuantityInBag(quantity);
+
         setResult(RESULT_OK,intent);
         finish();
 
