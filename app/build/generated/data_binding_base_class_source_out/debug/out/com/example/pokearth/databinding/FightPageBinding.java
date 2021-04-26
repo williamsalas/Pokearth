@@ -78,6 +78,30 @@ public final class FightPageBinding implements ViewBinding {
   @NonNull
   public final Button runButton;
 
+  @NonNull
+  public final Button selectPokemon1Button;
+
+  @NonNull
+  public final Button selectPokemon2Button;
+
+  @NonNull
+  public final Button selectPokemon3Button;
+
+  @NonNull
+  public final Button selectPokemon4Button;
+
+  @NonNull
+  public final Button selectPokemon5Button;
+
+  @NonNull
+  public final Button selectPokemon6Button;
+
+  @NonNull
+  public final LinearLayout teamSelectButtonsEvensLinearLayout;
+
+  @NonNull
+  public final LinearLayout teamSelectButtonsOddsLinearLayout;
+
   private FightPageBinding(@NonNull RelativeLayout rootView, @NonNull TextView battleTextView,
       @NonNull Button fightButton, @NonNull LinearLayout fightButtonsLinearLayout,
       @NonNull RelativeLayout fightScreen, @NonNull Button itemsButton,
@@ -88,7 +112,12 @@ public final class FightPageBinding implements ViewBinding {
       @NonNull RelativeLayout opponentPokemonTextViewsRL, @NonNull TextView playerPokemonHPTextView,
       @NonNull TextView playerPokemonNameTextView, @NonNull ImageView playerPokemonSprite,
       @NonNull Button pokemonTeamButton, @NonNull LinearLayout rightColumnButtons,
-      @NonNull Button runButton) {
+      @NonNull Button runButton, @NonNull Button selectPokemon1Button,
+      @NonNull Button selectPokemon2Button, @NonNull Button selectPokemon3Button,
+      @NonNull Button selectPokemon4Button, @NonNull Button selectPokemon5Button,
+      @NonNull Button selectPokemon6Button,
+      @NonNull LinearLayout teamSelectButtonsEvensLinearLayout,
+      @NonNull LinearLayout teamSelectButtonsOddsLinearLayout) {
     this.rootView = rootView;
     this.battleTextView = battleTextView;
     this.fightButton = fightButton;
@@ -109,6 +138,14 @@ public final class FightPageBinding implements ViewBinding {
     this.pokemonTeamButton = pokemonTeamButton;
     this.rightColumnButtons = rightColumnButtons;
     this.runButton = runButton;
+    this.selectPokemon1Button = selectPokemon1Button;
+    this.selectPokemon2Button = selectPokemon2Button;
+    this.selectPokemon3Button = selectPokemon3Button;
+    this.selectPokemon4Button = selectPokemon4Button;
+    this.selectPokemon5Button = selectPokemon5Button;
+    this.selectPokemon6Button = selectPokemon6Button;
+    this.teamSelectButtonsEvensLinearLayout = teamSelectButtonsEvensLinearLayout;
+    this.teamSelectButtonsOddsLinearLayout = teamSelectButtonsOddsLinearLayout;
   }
 
   @Override
@@ -248,12 +285,63 @@ public final class FightPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.selectPokemon1Button;
+      Button selectPokemon1Button = rootView.findViewById(id);
+      if (selectPokemon1Button == null) {
+        break missingId;
+      }
+
+      id = R.id.selectPokemon2Button;
+      Button selectPokemon2Button = rootView.findViewById(id);
+      if (selectPokemon2Button == null) {
+        break missingId;
+      }
+
+      id = R.id.selectPokemon3Button;
+      Button selectPokemon3Button = rootView.findViewById(id);
+      if (selectPokemon3Button == null) {
+        break missingId;
+      }
+
+      id = R.id.selectPokemon4Button;
+      Button selectPokemon4Button = rootView.findViewById(id);
+      if (selectPokemon4Button == null) {
+        break missingId;
+      }
+
+      id = R.id.selectPokemon5Button;
+      Button selectPokemon5Button = rootView.findViewById(id);
+      if (selectPokemon5Button == null) {
+        break missingId;
+      }
+
+      id = R.id.selectPokemon6Button;
+      Button selectPokemon6Button = rootView.findViewById(id);
+      if (selectPokemon6Button == null) {
+        break missingId;
+      }
+
+      id = R.id.teamSelectButtonsEvensLinearLayout;
+      LinearLayout teamSelectButtonsEvensLinearLayout = rootView.findViewById(id);
+      if (teamSelectButtonsEvensLinearLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.teamSelectButtonsOddsLinearLayout;
+      LinearLayout teamSelectButtonsOddsLinearLayout = rootView.findViewById(id);
+      if (teamSelectButtonsOddsLinearLayout == null) {
+        break missingId;
+      }
+
       return new FightPageBinding((RelativeLayout) rootView, battleTextView, fightButton,
           fightButtonsLinearLayout, fightScreen, itemsButton, leftColumnButtons, move1Button,
           move2Button, opponentPokemonHPTextView, opponentPokemonNameTextView,
           opponentPokemonSprite, opponentPokemonSpriteRelativeLayout, opponentPokemonTextViewsRL,
           playerPokemonHPTextView, playerPokemonNameTextView, playerPokemonSprite,
-          pokemonTeamButton, rightColumnButtons, runButton);
+          pokemonTeamButton, rightColumnButtons, runButton, selectPokemon1Button,
+          selectPokemon2Button, selectPokemon3Button, selectPokemon4Button, selectPokemon5Button,
+          selectPokemon6Button, teamSelectButtonsEvensLinearLayout,
+          teamSelectButtonsOddsLinearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

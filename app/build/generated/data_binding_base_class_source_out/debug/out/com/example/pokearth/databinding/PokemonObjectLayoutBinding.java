@@ -23,12 +23,17 @@ public final class PokemonObjectLayoutBinding implements ViewBinding {
   public final TextView pokeName1;
 
   @NonNull
+  public final TextView pokemonID;
+
+  @NonNull
   public final ImageView pokemonImageView1;
 
   private PokemonObjectLayoutBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView pokeName1, @NonNull ImageView pokemonImageView1) {
+      @NonNull TextView pokeName1, @NonNull TextView pokemonID,
+      @NonNull ImageView pokemonImageView1) {
     this.rootView = rootView;
     this.pokeName1 = pokeName1;
+    this.pokemonID = pokemonID;
     this.pokemonImageView1 = pokemonImageView1;
   }
 
@@ -65,13 +70,19 @@ public final class PokemonObjectLayoutBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.pokemonID;
+      TextView pokemonID = rootView.findViewById(id);
+      if (pokemonID == null) {
+        break missingId;
+      }
+
       id = R.id.pokemonImageView1;
       ImageView pokemonImageView1 = rootView.findViewById(id);
       if (pokemonImageView1 == null) {
         break missingId;
       }
 
-      return new PokemonObjectLayoutBinding((ConstraintLayout) rootView, pokeName1,
+      return new PokemonObjectLayoutBinding((ConstraintLayout) rootView, pokeName1, pokemonID,
           pokemonImageView1);
     }
     String missingId = rootView.getResources().getResourceName(id);

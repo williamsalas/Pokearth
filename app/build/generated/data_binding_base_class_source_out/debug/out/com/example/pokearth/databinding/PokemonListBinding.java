@@ -4,6 +4,7 @@ package com.example.pokearth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,10 +20,15 @@ public final class PokemonListBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button moreButton;
+
+  @NonNull
   public final ListView pokemonList;
 
-  private PokemonListBinding(@NonNull ConstraintLayout rootView, @NonNull ListView pokemonList) {
+  private PokemonListBinding(@NonNull ConstraintLayout rootView, @NonNull Button moreButton,
+      @NonNull ListView pokemonList) {
     this.rootView = rootView;
+    this.moreButton = moreButton;
     this.pokemonList = pokemonList;
   }
 
@@ -53,13 +59,19 @@ public final class PokemonListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.moreButton;
+      Button moreButton = rootView.findViewById(id);
+      if (moreButton == null) {
+        break missingId;
+      }
+
       id = R.id.pokemonList;
       ListView pokemonList = rootView.findViewById(id);
       if (pokemonList == null) {
         break missingId;
       }
 
-      return new PokemonListBinding((ConstraintLayout) rootView, pokemonList);
+      return new PokemonListBinding((ConstraintLayout) rootView, moreButton, pokemonList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

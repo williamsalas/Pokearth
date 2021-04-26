@@ -61,13 +61,16 @@ public class PokemonObject extends MainActivity implements Serializable {
                     {1, 2, 1, 0.5, 1, 1, 1, 1, 0.5, 0.5, 1, 1, 1, 1, 1, 2, 2, 1} // fairy
             };
 
+
     Pokemon myPoke  = null;
+
     PokemonSpecies myPokeSpecies = null;
     final Bitmap[] bitmap = {null};
     final private Boolean[] isShiny = {null};
     final Health health = new Health();
 
     public PokemonObject(int id) {
+        Log.d("PokemonObject:","id:" + id);
         this.myPoke = pokeApi.getPokemon(id);
         this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
         this.isShiny[0] = Math.random() <= 0.25;
@@ -198,8 +201,7 @@ public class PokemonObject extends MainActivity implements Serializable {
     }
 
     @SuppressLint("SetTextI18n")
-    public int attack(PokemonObject defender, TextView battleText)
-    {
+    public int attack(PokemonObject defender, TextView battleText) {
         int damage = (int) (Math.random() * 50);
         defender.health.takeDamage(damage);
 
