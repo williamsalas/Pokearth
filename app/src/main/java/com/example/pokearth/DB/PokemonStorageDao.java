@@ -14,7 +14,7 @@ public interface PokemonStorageDao
     long createPokemon(PokemonStorage pokemonStorage);
 
     @Query("SELECT * FROM pokemonstorage")
-    List<Party> getAllPokemon();
+    List<PokemonStorage> getAllPokemon();
 
     @Query("DELETE FROM pokemonstorage")
     void deleteAllFromTable();

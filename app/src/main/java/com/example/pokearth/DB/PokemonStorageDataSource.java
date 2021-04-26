@@ -22,7 +22,7 @@ public class PokemonStorageDataSource {
         Log.d(TAG, "createPokemon: rowID "+ rowID);
     }
 
-    public List<Party> getAllPokemon()
+    public List<PokemonStorage> getAllPokemon()
     {
         return pokemonStorageDao.getAllPokemon();
     }

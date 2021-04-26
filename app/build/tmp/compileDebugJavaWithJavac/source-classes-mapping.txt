@@ -24,6 +24,8 @@ com/example/pokearth/databinding/ActivityBallshopBinding.java
 com/example/pokearth/PokemonObject.java
  com.example.pokearth.PokemonObject
  com.example.pokearth.PokemonObject$PokeTypes
+com/example/pokearth/pokedex/Pokedex.java
+ com.example.pokearth.pokedex.Pokedex
 com/example/pokearth/databinding/ShopPageBinding.java
  com.example.pokearth.databinding.ShopPageBinding
 com/example/pokearth/BiomeActivity.java
@@ -57,6 +59,8 @@ com/example/pokearth/databinding/MainPageBinding.java
  com.example.pokearth.databinding.MainPageBinding
 com/example/pokearth/Health.java
  com.example.pokearth.Health
+com/example/pokearth/pokedex/PokedexDataSource.java
+ com.example.pokearth.pokedex.PokedexDataSource
 com/example/pokearth/PlayActivity.java
  com.example.pokearth.PlayActivity
  com.example.pokearth.PlayActivity$1
@@ -114,12 +118,16 @@ com/example/pokearth/SplashActivity.java
  com.example.pokearth.SplashActivity$1
 com/example/pokearth/databinding/PokemonObjectLayoutBinding.java
  com.example.pokearth.databinding.PokemonObjectLayoutBinding
+com/example/pokearth/pokedex/PokedexDao.java
+ com.example.pokearth.pokedex.PokedexDao
 com/example/pokearth/databinding/PokemonActivityBinding.java
  com.example.pokearth.databinding.PokemonActivityBinding
 com/example/pokearth/databinding/ActivityShopBinding.java
  com.example.pokearth.databinding.ActivityShopBinding
 com/example/pokearth/DB/PartyDataSource.java
  com.example.pokearth.DB.PartyDataSource
+com/example/pokearth/pokedex/PokedexDatabase.java
+ com.example.pokearth.pokedex.PokedexDatabase
 com/example/pokearth/DB/PokemonStorage.java
  com.example.pokearth.DB.PokemonStorage
 com/example/pokearth/ShopActivity.java
