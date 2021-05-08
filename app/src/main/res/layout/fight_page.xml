@@ -341,7 +341,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:onClick="openPlayActivity"
+            android:onClick="openBiomeActivity"
             android:text="RUN" />
 
 
