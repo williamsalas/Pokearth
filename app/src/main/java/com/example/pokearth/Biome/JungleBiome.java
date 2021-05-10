@@ -4,15 +4,15 @@ import android.util.Log;
 
 import java.util.Random;
 
-public class GraveyardBiome implements Biome {
+public class JungleBiome implements Biome {
 
     private Random random;
 
-    private final int[] commonPokemonIds = {zubat, gastly}; // 75% chance
+    private final int[] commonPokemonIds = {bulbasaur, ekans, nidoranfemale, nidoranmale, oddish, paras, bellsprout}; // 75% chance
 
-    private final int[] uncommonPokemonIds = {golbat, grimer, haunter, cubone, koffing}; // 20% chance
+    private final int[] uncommonPokemonIds = {ivysaur, arbok, nidorina, nidorino, gloom, parasect, venonat, weepinbell, exeggcute}; // 20% chance
 
-    private final int[] rarePokemonIds = {muk, gengar, marowak, weezing}; // 5% chance
+    private final int[] rarePokemonIds = {venusaur, nidoqueen, nidoking, vileplume, venomoth, victreebel, exeggutor, scyther, pinsir}; // 5% chance
 
     @Override
     public int spawnWildPokemon() {
@@ -26,19 +26,19 @@ public class GraveyardBiome implements Biome {
             arrayLength = this.commonPokemonIds.length;
             index = this.random.nextInt(arrayLength);
             wildPokemonId = this.commonPokemonIds[index];
-            Log.d(GraveyardBiome.class.getSimpleName(), "common pokemon, id: " + wildPokemonId);
+            Log.d(JungleBiome.class.getSimpleName(), "common pokemon, id: " + wildPokemonId);
         } else if (encounterRoll <= 0.95) {
             // spawn uncommon
             arrayLength = this.uncommonPokemonIds.length;
             index = this.random.nextInt(arrayLength);
             wildPokemonId = this.uncommonPokemonIds[index];
-            Log.d(GraveyardBiome.class.getSimpleName(), "uncommon pokemon, id: " + wildPokemonId);
+            Log.d(JungleBiome.class.getSimpleName(), "uncommon pokemon, id: " + wildPokemonId);
         } else {
             // spawn rare
             arrayLength = this.rarePokemonIds.length;
             index = this.random.nextInt(arrayLength);
             wildPokemonId = this.rarePokemonIds[index];
-            Log.d(GraveyardBiome.class.getSimpleName(), "rare pokemon, id: " + wildPokemonId);
+            Log.d(JungleBiome.class.getSimpleName(), "rare pokemon, id: " + wildPokemonId);
         }
 
         return wildPokemonId;

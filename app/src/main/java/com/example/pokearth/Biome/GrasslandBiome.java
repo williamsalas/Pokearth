@@ -8,20 +8,11 @@ public class GrasslandBiome implements Biome {
 
     private Random random;
 
-    /**
-     * pidgey, rattata, nidoran fem/male, mankey, bellsprout, doduo
-     */
-    private final int[] commonPokemonIds = {16, 19, 29, 32, 56, 69, 84}; // 75% chance
+    private final int[] commonPokemonIds = {pidgey, rattata, nidoranfemale, nidoranmale, mankey, bellsprout, doduo}; // 75% chance
 
-    /**
-     * pidgeotto, raticate, primeape, ponyta, dodrio, rhyhorn, eevee
-     */
-    private final int[] uncommonPokemonIds = {17, 20, 57, 77, 85, 111, 133}; // 20% chance
+    private final int[] uncommonPokemonIds = {pidgeotto, raticate, primeape, ponyta, dodrio, rhyhorn, eevee}; // 20% chance
 
-    /**
-     * pidgeot, rapidash, hitmonlee, hitmonchan, rhydon, kangaskhan, tauros
-     */
-    private final int[] rarePokemonIds = {18, 78, 106, 107, 112, 115, 128}; // 5% chance
+    private final int[] rarePokemonIds = {pidgeot, rapidash, hitmonlee, hitmonchan, rhydon, kangaskhan, tauros}; // 5% chance
 
     @Override
     public int spawnWildPokemon() {

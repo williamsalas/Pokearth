@@ -19,8 +19,18 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pokearth.Biome.Biome;
+import com.example.pokearth.Biome.CaveBiome;
+import com.example.pokearth.Biome.CityBiome;
+import com.example.pokearth.Biome.ForestBiome;
 import com.example.pokearth.Biome.GrasslandBiome;
 import com.example.pokearth.Biome.GraveyardBiome;
+import com.example.pokearth.Biome.IceBiome;
+import com.example.pokearth.Biome.JungleBiome;
+import com.example.pokearth.Biome.LakeBiome;
+import com.example.pokearth.Biome.OceanBiome;
+import com.example.pokearth.Biome.PowerPlantBiome;
+import com.example.pokearth.Biome.SafariBiome;
+import com.example.pokearth.Biome.SpaceBiome;
 import com.example.pokearth.Biome.VolcanoBiome;
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
@@ -84,13 +94,54 @@ public class FightActivity extends AppCompatActivity {
                 biome = new GrasslandBiome();
                 break;
             case 1:
-                biome = new VolcanoBiome();
-                relativeLayout.setBackgroundResource(R.drawable.pokearth_volcano);
+                biome = new ForestBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_forest);
                 break;
             case 2:
+                biome = new LakeBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_lake);
+                break;
+            case 3:
+                biome = new CityBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_city);
+                break;
+            case 4:
+                biome = new OceanBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_ocean);
+                break;
+            case 5:
+                biome = new CaveBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_cave);
+                break;
+            case 6:
                 biome = new GraveyardBiome();
                 relativeLayout.setBackgroundResource(R.drawable.pokearth_graveyard);
                 break;
+            case 7:
+                biome = new JungleBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_jungle);
+                break;
+            case 8:
+                biome = new SafariBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_safarizone);
+                break;
+            case 9:
+                biome = new VolcanoBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_volcano);
+                break;
+            case 10:
+                biome = new PowerPlantBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_powerplant);
+                break;
+            case 11:
+                biome = new IceBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_icecave);
+                break;
+            case 12:
+                biome = new SpaceBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_space);
+                break;
+
 
         }
     }

@@ -28,20 +28,9 @@ public class BiomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.biome_page);
         Log.d(TAG, "onCreate: started.");
-        setChosenBiome(0); // default
+        setChosenBiome(0); // set top of biome list as default selection
 
-        Resources res = this.getResources();
-        mNames.add("Grassland"); // 0
-        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_grassland, null));
-        mNames.add("Volcano"); // 1
-        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_volcano, null));
-        mNames.add("Graveyard");
-        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_graveyard, null));
-
-        for (int i = 3; i < 10; i++) {
-            mNames.add("Biome: " + i);
-        }
-
+        initBiomeData();
 
         initRecyclerView();
     }
@@ -55,6 +44,36 @@ public class BiomeActivity extends AppCompatActivity {
         Intent intent = new Intent(BiomeActivity.this, FightActivity.class);
         intent.putExtra("Chosen Biome", chosenBiome);
         startActivity(intent);
+    }
+
+    private void initBiomeData() {
+        Resources res = this.getResources();
+        mNames.add("Grassland"); // 0
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_grassland, null));
+        mNames.add("Forest"); // 1
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_forest, null));
+        mNames.add("Lake");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_lake, null));
+        mNames.add("City");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_city, null));
+        mNames.add("Ocean");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_ocean, null));
+        mNames.add("Cave");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_cave, null));
+        mNames.add("Graveyard");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_graveyard, null));
+        mNames.add("Jungle");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_jungle, null));
+        mNames.add("Safari Zone");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_safarizone, null));
+        mNames.add("Volcano");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_volcano, null));
+        mNames.add("Power Plant");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_powerplant, null));
+        mNames.add("Ice Cave");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_icecave, null));
+        mNames.add("Space");
+        mImages.add(ResourcesCompat.getDrawable(res, R.drawable.pokearth_space, null));
     }
 
     public void initRecyclerView() {
