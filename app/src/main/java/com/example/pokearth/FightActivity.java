@@ -148,14 +148,9 @@ public class FightActivity extends AppCompatActivity {
 
     // click on the run button to go back to the Play Activity screen
     public void openBiomeActivity(View v) {
-//        Intent intent = new Intent(FightActivity.this, BiomeActivity.class);
-//        if (player != null)
-//            StopSound();
-//        startActivity(intent);
         StopSound();
         SoundPlayer(this, R.raw.mainmusic);
         super.finish();
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -344,9 +339,6 @@ public class FightActivity extends AppCompatActivity {
                     image1.setImageBitmap(battlingPokemon[0].getBitmap());
                     image2.setImageBitmap(battlingPokemon[1].getBitmap());
 
-                    image1.setVisibility(View.VISIBLE);
-                    image2.setVisibility(View.VISIBLE);
-
                     TextView pokeHP1 = (TextView) findViewById(R.id.playerPokemonHPTextView);
                     TextView pokeHP2 = (TextView) findViewById(R.id.opponentPokemonHPTextView);
 
@@ -356,14 +348,40 @@ public class FightActivity extends AppCompatActivity {
                     TextView battleText = (TextView) findViewById(R.id.battleTextView);
                     battleText.setText("A wild " + battlingPokemon[1].getName() + " appeared!");
 
-                    View pokeAttackButton1 = findViewById(R.id.move1Button);
-                    View pokeAttackButton2 = findViewById(R.id.move2Button);
+                    Button pokeAttackButton1 = findViewById(R.id.move1Button);
+                    Button pokeAttackButton2 = findViewById(R.id.move2Button);
 
-                    pokeAttackButton1.setBackgroundColor(Color.parseColor(battlingPokemon[0].getTypeColorString(0)));
+                    int playerPokeColor1 = Color.parseColor(battlingPokemon[0].getTypeColorString(0));
+                    int opponentPokeColor1 = Color.parseColor(battlingPokemon[1].getTypeColorString(0));
+
+                    pokeName1.setBackgroundColor(playerPokeColor1);
+                    pokeName2.setBackgroundColor(opponentPokeColor1);
+
+                    pokeAttackButton1.setBackgroundColor(playerPokeColor1);
+                    setAttackButton(pokeAttackButton1, battlingPokemon[0].getTypeString(0));
+
+                    Button fightButton = findViewById(R.id.fightButton);
+                    Button itemsButton = findViewById(R.id.itemsButton);
+                    Button pkmnButton = findViewById(R.id.pokemonTeamButton);
+                    Button runButton = findViewById(R.id.runButton);
+
+                    fightButton.setVisibility(View.VISIBLE);
+                    itemsButton.setVisibility(View.VISIBLE);
+                    pkmnButton.setVisibility(View.VISIBLE);
+                    runButton.setVisibility(View.VISIBLE);
+
+                    pokeName1.setVisibility(View.VISIBLE);
+                    pokeName2.setVisibility(View.VISIBLE);
+                    image1.setVisibility(View.VISIBLE);
+                    image2.setVisibility(View.VISIBLE);
+                    pokeHP1.setVisibility(View.VISIBLE);
+                    pokeHP2.setVisibility(View.VISIBLE);
+                    battleText.setVisibility(View.VISIBLE);
 
                     if (battlingPokemon[0].isDualType()) {
-                        pokeAttackButton2.setBackgroundColor(Color.parseColor(battlingPokemon[0].getTypeColorString(1)));
-
+                        int playerColor2 = Color.parseColor(battlingPokemon[0].getTypeColorString(1));
+                        pokeAttackButton2.setBackgroundColor(playerColor2);
+                        setAttackButton(pokeAttackButton2, battlingPokemon[0].getTypeString(1));
                     } else {
                         pokeAttackButton2.setVisibility(View.INVISIBLE);
                     }
@@ -372,6 +390,68 @@ public class FightActivity extends AppCompatActivity {
 
             }); // end run
 
+        }
+    }
+
+    public void setAttackButton(Button attackButton, String typeString) {
+        switch (typeString) {
+            case "normal":
+                attackButton.setText("Take Down");
+                break;
+            case "fighting":
+                attackButton.setText("Brick Break");
+                break;
+            case "flying":
+                attackButton.setText("Brave Bird");
+                break;
+            case "poison":
+                attackButton.setText("Sludge Bomb");
+                break;
+            case "ground":
+                attackButton.setText("Dig");
+                break;
+            case "rock":
+                attackButton.setText("Rock Slide");
+                break;
+            case "bug":
+                attackButton.setText("Bug Buzz");
+                break;
+            case "ghost":
+                attackButton.setText("Shadow Ball");
+                break;
+            case "steel":
+                attackButton.setText("Heavy Slam");
+                break;
+            case "fire":
+                attackButton.setText("Fire Blast");
+                break;
+            case "water":
+                attackButton.setText("Surf");
+                break;
+            case "grass":
+                attackButton.setText("Razor Leaf");
+                break;
+            case "electric":
+                attackButton.setText("Thunder");
+                break;
+            case "psychic":
+                attackButton.setText("Psychic");
+                break;
+            case "ice":
+                attackButton.setText("Blizzard");
+                break;
+            case "dragon":
+                attackButton.setText("Dragon Rage");
+                break;
+            case "dark":
+                attackButton.setText("Crunch");
+                break;
+            case "fairy":
+                attackButton.setText("Dazzling Gleam");
+                break;
+            default:
+                attackButton.setText("Tackle");
+                break;
         }
     }
 
@@ -414,6 +494,9 @@ public class FightActivity extends AppCompatActivity {
                 TextView pokeName1 = (TextView) findViewById(R.id.playerPokemonNameTextView);
                 pokeName1.setText(teamPokemon[pokemonToSwapIn].getName());
 
+                int playerPokeColor1 = Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(0));
+                pokeName1.setBackgroundColor(playerPokeColor1);
+
                 ImageView image1 = (ImageView) findViewById(R.id.playerPokemonSprite);
                 // set the image accordingly
                 byte[] byteBitmap = partyPokemon.get(pokemonToSwapIn).getBitmapString();
@@ -423,14 +506,16 @@ public class FightActivity extends AppCompatActivity {
 
                 TextView pokeHP1 = (TextView) findViewById(R.id.playerPokemonHPTextView);
                 pokeHP1.setText(teamPokemon[pokemonToSwapIn].health.getCurrentHP() + " HP");
-                View pokeAttackButton1 = findViewById(R.id.move1Button);
-                View pokeAttackButton2 = findViewById(R.id.move2Button);
+                Button pokeAttackButton1 = findViewById(R.id.move1Button);
+                Button pokeAttackButton2 = findViewById(R.id.move2Button);
 
                 pokeAttackButton1.setBackgroundColor(Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(0)));
+                setAttackButton(pokeAttackButton1, teamPokemon[pokemonToSwapIn].getTypeString(0));
 
                 if (teamPokemon[pokemonToSwapIn].isDualType()) {
                     pokeAttackButton2.setBackgroundColor(Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(1)));
-
+                    setAttackButton(pokeAttackButton2, teamPokemon[pokemonToSwapIn].getTypeString(1));
+                    pokeAttackButton2.setVisibility(View.VISIBLE);
                 } else {
                     pokeAttackButton2.setVisibility(View.INVISIBLE);
                 }

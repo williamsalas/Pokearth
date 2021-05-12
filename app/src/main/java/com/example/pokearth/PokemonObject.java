@@ -11,9 +11,12 @@ import com.google.gson.Gson;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.net.URL;
+import java.util.List;
 
+import me.sargunvohra.lib.pokekotlin.model.NamedApiResource;
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
+import me.sargunvohra.lib.pokekotlin.model.PokemonType;
 
 public class PokemonObject extends MainActivity implements Serializable {
 
@@ -130,7 +133,7 @@ public class PokemonObject extends MainActivity implements Serializable {
 
     public String getTypeColorString(int i) {
 
-        String type = this.myPoke.getTypes().get(i).getType().getName();
+        String type = getTypeString(i);
         Log.d("Logging info about type", type);
         String ans = "";
         switch (type) {
@@ -193,6 +196,14 @@ public class PokemonObject extends MainActivity implements Serializable {
                 break;
         }
         return ans;
+    }
+
+    public String getTypeString(int i) {
+        List<PokemonType> typeList = this.myPoke.getTypes();
+        PokemonType type = typeList.get(i);
+        NamedApiResource namedApiResource = type.getType();
+        String typeString = namedApiResource.getName();
+        return typeString;
     }
 
     public boolean isDualType() {
