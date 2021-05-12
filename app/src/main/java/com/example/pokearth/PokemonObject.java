@@ -62,7 +62,7 @@ public class PokemonObject extends MainActivity implements Serializable {
             };
 
 
-    Pokemon myPoke  = null;
+    Pokemon myPoke = null;
 
     PokemonSpecies myPokeSpecies = null;
     final Bitmap[] bitmap = {null};
@@ -70,10 +70,10 @@ public class PokemonObject extends MainActivity implements Serializable {
     final Health health = new Health();
 
     public PokemonObject(int id) {
-        Log.d("PokemonObject:","id:" + id);
+        Log.d("PokemonObject:", "id:" + id);
         this.myPoke = pokeApi.getPokemon(id);
         this.myPokeSpecies = pokeApi.getPokemonSpecies(id);
-        this.isShiny[0] = Math.random() <= 0.25;
+        this.isShiny[0] = Math.random() <= 0.05;
         String frontSpriteURL;
 
         if (this.isShiny[0])
@@ -87,8 +87,7 @@ public class PokemonObject extends MainActivity implements Serializable {
         }
     }
 
-    public PokemonObject(int id, String pokeObject, String pokeSpecies, byte[] byteBitmap)
-    {
+    public PokemonObject(int id, String pokeObject, String pokeSpecies, byte[] byteBitmap) {
         this.bitmap[0] = BitmapFactory.decodeByteArray(byteBitmap, 0, byteBitmap.length);
         Gson gson = new Gson();
         this.myPoke = gson.fromJson(pokeObject, Pokemon.class);
@@ -203,22 +202,23 @@ public class PokemonObject extends MainActivity implements Serializable {
     @SuppressLint("SetTextI18n")
     public int attack(PokemonObject defender, TextView battleText) {
         int damage = (int) (Math.random() * 50);
-        defender.health.takeDamage(damage);
-
         double matchupEffectivenessResult = this.getMatchupEffectiveness(defender);
         if (matchupEffectivenessResult == 0.0) {
             // no effect
+            damage *= 0;
             battleText.setText(this.getName() + " attacked " + defender.getName() + " with no effect...");
         } else if (matchupEffectivenessResult > 1) {
             //super effective
+            damage *= 2;
             battleText.setText(this.getName() + " attacked " + defender.getName() + " for " + damage + " damage! Super effective!");
         } else if (matchupEffectivenessResult < 1) {
             // not very effective
+            damage *= 0.5;
             battleText.setText(this.getName() + " attacked " + defender.getName() + " for " + damage + " damage! Not very effective...");
         } else {
             battleText.setText(this.getName() + " attacked " + defender.getName() + " for " + damage + " damage!");
         }
-
+        defender.health.takeDamage(damage);
         return damage;
     }
 }
