@@ -72,26 +72,22 @@ public class PlayActivity extends AppCompatActivity {
 
     public void openStorageActivity(View v)
     {
-        StopSound();
         Intent intent = new Intent(PlayActivity.this, PokemonStorageActivity.class);
         startActivity(intent);
     }
 
     public void openFightActivity(View v) {
-        StopSound();
         Intent intent = new Intent(PlayActivity.this, FightActivity.class);
         startActivity(intent);
     }
 
 
     public void openBiomeActivity(View v) {
-        StopSound();
         Intent intent = new Intent(PlayActivity.this, BiomeActivity.class);
         startActivity(intent);
     }
 
     public void openMainActivity(View v) {
-        StopSound();
         Intent intent = new Intent(PlayActivity.this, MainActivity.class);
         startActivity(intent);
     }
@@ -207,11 +203,5 @@ public class PlayActivity extends AppCompatActivity {
                 });
             }
         }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        StopSound();
     }
 }
