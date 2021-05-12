@@ -13,9 +13,9 @@ public interface PokedexDao
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long createPokemon(Pokedex pokedex);
 
-    @Query("SELECT * FROM party")
+    @Query("SELECT * FROM pokedex")
     List<Pokedex> getAllPokemon();
 
-    @Query("DELETE FROM party")
+    @Query("DELETE FROM pokedex")
     void deleteAllFromTable();
 }
