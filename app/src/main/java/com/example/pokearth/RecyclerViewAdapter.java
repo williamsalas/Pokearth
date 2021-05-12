@@ -1,8 +1,8 @@
 package com.example.pokearth;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +22,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private static final String TAG = "RecyclerViewAdapter";
 
     private ArrayList<String> mImageNames = new ArrayList<>();
-    private ArrayList<String> mImages = new ArrayList<>();
+    private ArrayList<Drawable> mImages = new ArrayList<>();
     private Context mContext;
+    private int selectedItemPosition = 0;
 
-    public RecyclerViewAdapter(ArrayList<String> imageNames, ArrayList<String> images, Context context) {
+    public RecyclerViewAdapter(ArrayList<String> imageNames, ArrayList<Drawable> images, Context context) {
         this.mImageNames = imageNames;
         this.mImages = images;
         this.mContext = context;
@@ -41,26 +42,34 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.d(TAG,"onBindViewHolder: called.");
+        Log.d(TAG, "onBindViewHolder: called.");
 
         holder.imageName.setText(mImageNames.get(position));
+        if (position < mImages.size())
+            holder.image.setImageDrawable(mImages.get(position));
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on: " + mImageNames.get(position));
-                // todo
-                //setAllHoldersWhite();
-                holder.itemView.setBackgroundColor(Color.LTGRAY);
-                Toast.makeText(mContext.getApplicationContext(),mImageNames.get(position),Toast.LENGTH_LONG).show();
+                selectedItemPosition = position;
+                BiomeActivity.setChosenBiome(selectedItemPosition);
+                notifyDataSetChanged();
+
+                // holder.itemView.setBackgroundColor(Color.LTGRAY);
+                Toast.makeText(mContext.getApplicationContext(), mImageNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
+
+        if (selectedItemPosition == position)
+            holder.itemView.setBackgroundColor(Color.LTGRAY);
+        else
+            holder.itemView.setBackgroundColor(Color.WHITE);
     }
 
     @Override
     public int getItemCount() {
         return mImageNames.size();
     }
-
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {

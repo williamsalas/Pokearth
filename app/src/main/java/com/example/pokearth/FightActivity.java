@@ -1,10 +1,9 @@
 package com.example.pokearth;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -13,26 +12,33 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
-import com.example.pokearth.DB.PartyDataSource;
-
-import com.example.pokearth.pokedex.PokemonPokedexObject;
-
-
+import com.example.pokearth.Biome.Biome;
+import com.example.pokearth.Biome.CaveBiome;
+import com.example.pokearth.Biome.CityBiome;
+import com.example.pokearth.Biome.ForestBiome;
+import com.example.pokearth.Biome.GrasslandBiome;
+import com.example.pokearth.Biome.GraveyardBiome;
+import com.example.pokearth.Biome.IceBiome;
+import com.example.pokearth.Biome.JungleBiome;
+import com.example.pokearth.Biome.LakeBiome;
+import com.example.pokearth.Biome.OceanBiome;
+import com.example.pokearth.Biome.PowerPlantBiome;
+import com.example.pokearth.Biome.SafariBiome;
+import com.example.pokearth.Biome.SpaceBiome;
+import com.example.pokearth.Biome.VolcanoBiome;
 import com.example.pokearth.DB.Party;
+import com.example.pokearth.DB.PartyDataSource;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
-
 import java.util.Random;
-
 
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
@@ -49,6 +55,8 @@ public class FightActivity extends AppCompatActivity {
     final PokemonObject[] teamPokemon = {null, null, null, null, null, null};
     private int pokemonToSwapIn;
     final PokemonObject[] po = {null, null};
+    Biome biome = null;
+    List<Party> partyPokemon = null;
 
 
     @Override
@@ -56,20 +64,98 @@ public class FightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fight_page);
         dataSource = new PartyDataSource(this);
+
+        int chosenBiome = -1;
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            chosenBiome = extras.getInt("Chosen Biome");
+        }
+
+        setFightActivity(chosenBiome);
+
+        Log.d(FightActivity.class.getSimpleName(), "Starting FightActivity with a chosen biome of " + chosenBiome);
+
+        // biome = new GrasslandBiome();
         GenerateNewEncounterRunnable runnable = new GenerateNewEncounterRunnable();
         new Thread(runnable).start();
 
         // paint all the buttons appropriately
         TeamButtonsRunnable runnable1 = new TeamButtonsRunnable();
         new Thread(runnable1).start();
-        StopSound();
 
     }
 
+    public void setFightActivity(int chosenBiome) {
+        Log.d(FightActivity.class.getSimpleName(), "Inside setFightActivity with chosenBiome " + chosenBiome);
+        RelativeLayout relativeLayout = findViewById(R.id.fightScreen);
+        switch (chosenBiome) {
+            case 0:
+            default:
+                biome = new GrasslandBiome();
+                break;
+            case 1:
+                biome = new ForestBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_forest);
+                break;
+            case 2:
+                biome = new LakeBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_lake);
+                break;
+            case 3:
+                biome = new CityBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_city);
+                break;
+            case 4:
+                biome = new OceanBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_ocean);
+                break;
+            case 5:
+                biome = new CaveBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_cave);
+                break;
+            case 6:
+                biome = new GraveyardBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_graveyard);
+                break;
+            case 7:
+                biome = new JungleBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_jungle);
+                break;
+            case 8:
+                biome = new SafariBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_safarizone);
+                break;
+            case 9:
+                biome = new VolcanoBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_volcano);
+                break;
+            case 10:
+                biome = new PowerPlantBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_powerplant);
+                break;
+            case 11:
+                biome = new IceBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_icecave);
+                break;
+            case 12:
+                biome = new SpaceBiome();
+                relativeLayout.setBackgroundResource(R.drawable.pokearth_space);
+                break;
+
+
+        }
+    }
+
     // click on the run button to go back to the Play Activity screen
-    public void openPlayActivity(View v) {
-        Intent intent = new Intent(FightActivity.this, PlayActivity.class);
-        startActivity(intent);
+    public void openBiomeActivity(View v) {
+//        Intent intent = new Intent(FightActivity.this, BiomeActivity.class);
+//        if (player != null)
+//            StopSound();
+//        startActivity(intent);
+        StopSound();
+        SoundPlayer(this, R.raw.mainmusic);
+        super.finish();
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -157,9 +243,8 @@ public class FightActivity extends AppCompatActivity {
         public void run() {
             // pokeAttackButton1.setBackgroundColor(Color.parseColor(po[0].getTypeColorString(0)));
             Looper.prepare();
-            List<Party> partyPokemon = dataSource.getAllPokemon();
             //PokemonObject[] team = new PokemonObject[6];
-
+            partyPokemon = dataSource.getAllPokemon();
             for (int x = 0; x < 6; x++) {
                 if (partyPokemon.get(x).getPokemonId() > 0)
                     teamPokemon[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
@@ -170,7 +255,6 @@ public class FightActivity extends AppCompatActivity {
 
                 @Override
                 public void run() {
-
                     // Stuff that updates the UI
                     Button teamMemberButton;
                     for (int i = 0; i < teamPokemon.length; i++) {
@@ -231,15 +315,19 @@ public class FightActivity extends AppCompatActivity {
         @Override
         public void run() {
             Looper.prepare();
-            battlingPokemon[0] = new PokemonObject(dataSource.getFirstPokemon().getPokemonId());
+//            battlingPokemon[0] = new PokemonObject(dataSource.getFirstPokemon().getPokemonId());
+            Party firstPartyPokemon = dataSource.getFirstPokemon();
+            battlingPokemon[0] = new PokemonObject(firstPartyPokemon.getPokemonId(), firstPartyPokemon.getPokeObject(), firstPartyPokemon.getPokeSpecies(), firstPartyPokemon.getBitmapString());
             //battlingPokemon[0] = new PokemonObject(rand.nextInt(151) + 1);
-            battlingPokemon[1] = new PokemonObject(rand.nextInt(151) + 1);
+//            battlingPokemon[1] = new PokemonObject(rand.nextInt(151) + 1);
+            battlingPokemon[1] = new PokemonObject(biome.spawnWildPokemon());
 
 
             runOnUiThread(new Runnable() {
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void run() {
+                    StopSound();
                     SoundPlayer(FightActivity.this, R.raw.battlemusic);
 
                     // grab reference to relevant data fields
@@ -293,6 +381,8 @@ public class FightActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                //Looper.prepare();
+                //List<Party> partyPokemon = dataSource.getAllPokemon();
                 switch (v.getId()) {
                     case R.id.selectPokemon1Button:
                         pokemonToSwapIn = 0;
@@ -317,13 +407,20 @@ public class FightActivity extends AppCompatActivity {
                 LinearLayout evenTeamButtons = (LinearLayout) findViewById(R.id.teamSelectButtonsEvensLinearLayout);
                 oddTeamButtons.setVisibility(View.INVISIBLE);
                 evenTeamButtons.setVisibility(View.INVISIBLE);
+
                 TextView battleText = (TextView) findViewById(R.id.battleTextView);
                 battleText.setText("Sent out " + teamPokemon[pokemonToSwapIn].getName() + "! You can do it!");
+
                 TextView pokeName1 = (TextView) findViewById(R.id.playerPokemonNameTextView);
                 pokeName1.setText(teamPokemon[pokemonToSwapIn].getName());
+
                 ImageView image1 = (ImageView) findViewById(R.id.playerPokemonSprite);
                 // set the image accordingly
-                image1.setImageBitmap(teamPokemon[pokemonToSwapIn].getBitmap());
+                byte[] byteBitmap = partyPokemon.get(pokemonToSwapIn).getBitmapString();
+                Bitmap bitmap = BitmapFactory.decodeByteArray(byteBitmap, 0, byteBitmap.length);
+                image1.setImageBitmap(bitmap);
+
+
                 TextView pokeHP1 = (TextView) findViewById(R.id.playerPokemonHPTextView);
                 pokeHP1.setText(teamPokemon[pokemonToSwapIn].health.getCurrentHP() + " HP");
                 View pokeAttackButton1 = findViewById(R.id.move1Button);
