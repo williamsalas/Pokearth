@@ -14,6 +14,8 @@ import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
 
 import static com.example.pokearth.MusicPlayer.SoundPlayer;
+import static com.example.pokearth.MusicPlayer.StopSound;
+import static com.example.pokearth.MusicPlayer.isPlaying;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
-
+        if(isPlaying)
+        {
+            StopSound();
+        }
         SoundPlayer(this, R.raw.mainmusic);
 
         playButton = findViewById(R.id.play_button);

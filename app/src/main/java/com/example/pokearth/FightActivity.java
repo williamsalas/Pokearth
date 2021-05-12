@@ -39,6 +39,7 @@ import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
 import static com.example.pokearth.MusicPlayer.SoundPlayer;
 import static com.example.pokearth.MusicPlayer.StopSound;
+import static com.example.pokearth.MusicPlayer.isPlaying;
 
 
 public class FightActivity extends AppCompatActivity {
@@ -62,7 +63,12 @@ public class FightActivity extends AppCompatActivity {
         // paint all the buttons appropriately
         TeamButtonsRunnable runnable1 = new TeamButtonsRunnable();
         new Thread(runnable1).start();
-        StopSound();
+
+        if(isPlaying)
+        {
+            StopSound();
+        }
+
 
     }
 

@@ -108,9 +108,6 @@ public class PokedexActivity extends AppCompatActivity {
 
     public void onMoreButtonClicked(View view) {
 
-        // LoadingPageDialog loadingPageDialog = new LoadingPageDialog(PokedexActivity.this);
-        // loadingPageDialog.startLoadingDialog();
-
         if(wasClicked){
             return;
         }
@@ -176,16 +173,6 @@ public class PokedexActivity extends AppCompatActivity {
                 startActivityForResult(intent, 1);
             }
         });
-
-        /*
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                loadingPageDialog.dismissDialog();
-            }
-        }, 5000);
-         */
 
     }
 
