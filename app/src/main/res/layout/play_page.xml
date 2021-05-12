@@ -7,27 +7,48 @@
     android:background="@drawable/play_page_background">
 
     <Button
+        android:id="@+id/storageButton"
+<<<<<<< Updated upstream
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openStorageActivity"
+        android:text="Storage"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+=======
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:onClick="openStorageActivity"
+        android:text="Storage"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemon_select_button"
+        app:layout_constraintEnd_toStartOf="@+id/fight_button"
+        app:layout_constraintStart_toEndOf="@+id/pokemon_select_button"
+        app:layout_constraintTop_toTopOf="@+id/fight_button" />
+>>>>>>> Stashed changes
+
+    <Button
         android:id="@+id/fight_button"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        android:onClick="openFightActivity"
+        android:onClick="openBiomeActivity"
         android:text="FIGHT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/biome_select_button"
-        android:layout_width="120dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="openBiomeActivity"
-        android:text="BIOME SELECTION"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fight_button"
-        app:layout_constraintStart_toEndOf="@+id/pokemon_select_button" />
+    <!--    <Button-->
+    <!--        android:id="@+id/biome_select_button"-->
+    <!--        android:layout_width="120dp"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_marginBottom="16dp"-->
+    <!--        android:onClick="openBiomeActivity"-->
+    <!--        android:text="BIOME SELECTION"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/fight_button"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/pokemon_select_button" />-->
 
     <Button
         android:id="@+id/pokemon_select_button"
@@ -53,7 +74,9 @@
         android:onClick="openMainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/abc_vector_test" />
+        app:srcCompat="@drawable/abc_vector_test"
+
+        />
 
 
     <ImageButton
@@ -64,7 +87,7 @@
         android:padding="3dp"
         android:scaleType="fitCenter"
         android:src="@drawable/pkmntrainersprite"
-        app:layout_constraintBottom_toTopOf="@+id/biome_select_button"
+        app:layout_constraintBottom_toTopOf="@+id/fight_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,21 +95,6 @@
         app:layout_constraintVertical_bias="0.432">
 
     </ImageButton>
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/partySprite1"-->
-    <!--        android:layout_width="125dp"-->
-    <!--        android:layout_height="125dp"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginLeft="16dp"-->
-    <!--        android:background="@drawable/customcircle"-->
-    <!--        android:padding="3dp"-->
-    <!--        android:scaleType="fitCenter"-->
-    <!--        android:src="@drawable/pkmntrainersprite"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        tools:layout_editor_absoluteY="390dp">-->
-
-    <!--    </ImageButton>-->
 
     <LinearLayout
         android:id="@+id/topPartySpritesLinearLayout"
@@ -104,34 +112,34 @@
         app:layout_constraintTop_toBottomOf="@+id/playerSprite">
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/partySprite1"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="@drawable/customcircle"
-            android:src="@drawable/pkmntrainersprite" />
+            android:src="@drawable/pkmntrainersprite"
+            android:visibility="invisible" />
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/partySprite2"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="@drawable/customcircle"
-            android:src="@drawable/pkmntrainersprite" />
+            android:src="@drawable/pkmntrainersprite"
+            android:visibility="invisible" />
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/partySprite3"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="@drawable/customcircle"
-            android:src="@drawable/pkmntrainersprite" />
+            android:src="@drawable/pkmntrainersprite"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -143,41 +151,46 @@
         android:orientation="horizontal"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/biome_select_button"
+        app:layout_constraintBottom_toTopOf="@+id/fight_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topPartySpritesLinearLayout">
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/partySprite4"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="@drawable/customcircle"
-            android:src="@drawable/pkmntrainersprite" />
+            android:src="@drawable/pkmntrainersprite"
+            android:visibility="invisible" />
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/partySprite5"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="@drawable/customcircle"
-            android:src="@drawable/pkmntrainersprite" />
+            android:src="@drawable/pkmntrainersprite"
+            android:visibility="invisible" />
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/partySprite6"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:background="@drawable/customcircle"
-            android:src="@drawable/pkmntrainersprite" />
+            android:src="@drawable/pkmntrainersprite"
+            android:visibility="invisible" />
     </LinearLayout>
 
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

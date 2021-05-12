@@ -18,9 +18,12 @@ public interface PartyDao
     @Query("DELETE FROM party")
     void deleteAllFromTable();
 
-    @Query("SELECT * FROM party WHERE id IS 0")
+    @Query("SELECT * FROM party WHERE id = 0")
     Party getFirstPokemon();
 
-    @Query("SELECT * FROM party WHERE pokemon_number IS 0")
+    @Query("SELECT * FROM party WHERE pokemon_number=0")
     int getFirstEmpty();
+
+    @Query("SELECT EXISTS(SELECT 1 FROM party WHERE pokemon_number=0 LIMIT 1)")
+    int checkEmpty();
 }

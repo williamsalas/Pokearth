@@ -9,6 +9,7 @@
         android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <supports-screens
         android:largeScreens="true"
@@ -26,7 +27,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Pokearth" >
+        android:theme="@style/Theme.Pokearth"
+        android:usesCleartextTraffic="true" >
         <activity android:name="com.example.pokearth.ItemActivity" />
         <activity android:name="com.example.pokearth.BiomeActivity" />
         <activity android:name="com.example.pokearth.MainActivity" />
@@ -38,6 +40,8 @@
         <activity android:name="com.example.pokearth.PokeMartActivity" />
         <activity android:name="com.example.pokearth.pokedex.PokedexActivity" />
         <activity android:name="com.example.pokearth.pokedex.PokemonActivity" />
+        <activity android:name="com.example.pokearth.storage.PokemonStorageActivity" />
+        <activity android:name="com.example.pokearth.storage.IndividualStorageActivity" />
         <activity android:name="com.example.pokearth.PartyActivity" />
         <activity android:name="com.example.pokearth.SplashActivity" >
             <intent-filter>

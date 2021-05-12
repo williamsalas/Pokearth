@@ -59,6 +59,9 @@ public final class PlayPageBinding implements ViewBinding {
   public final Button pokemonSelectButton;
 
   @NonNull
+  public final Button storageButton;
+
+  @NonNull
   public final LinearLayout topPartySpritesLinearLayout;
 
   private PlayPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button biomeSelectButton,
@@ -67,7 +70,8 @@ public final class PlayPageBinding implements ViewBinding {
       @NonNull ImageView partySprite2, @NonNull ImageView partySprite3,
       @NonNull ImageView partySprite4, @NonNull ImageView partySprite5,
       @NonNull ImageView partySprite6, @NonNull ImageButton playerSprite,
-      @NonNull Button pokemonSelectButton, @NonNull LinearLayout topPartySpritesLinearLayout) {
+      @NonNull Button pokemonSelectButton, @NonNull Button storageButton,
+      @NonNull LinearLayout topPartySpritesLinearLayout) {
     this.rootView = rootView;
     this.biomeSelectButton = biomeSelectButton;
     this.bottomPartySpritesLinearLayout = bottomPartySpritesLinearLayout;
@@ -81,6 +85,7 @@ public final class PlayPageBinding implements ViewBinding {
     this.partySprite6 = partySprite6;
     this.playerSprite = playerSprite;
     this.pokemonSelectButton = pokemonSelectButton;
+    this.storageButton = storageButton;
     this.topPartySpritesLinearLayout = topPartySpritesLinearLayout;
   }
 
@@ -183,6 +188,12 @@ public final class PlayPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.storageButton;
+      Button storageButton = rootView.findViewById(id);
+      if (storageButton == null) {
+        break missingId;
+      }
+
       id = R.id.topPartySpritesLinearLayout;
       LinearLayout topPartySpritesLinearLayout = rootView.findViewById(id);
       if (topPartySpritesLinearLayout == null) {
@@ -192,7 +203,7 @@ public final class PlayPageBinding implements ViewBinding {
       return new PlayPageBinding((ConstraintLayout) rootView, biomeSelectButton,
           bottomPartySpritesLinearLayout, fightButton, floatingActionButton, partySprite1,
           partySprite2, partySprite3, partySprite4, partySprite5, partySprite6, playerSprite,
-          pokemonSelectButton, topPartySpritesLinearLayout);
+          pokemonSelectButton, storageButton, topPartySpritesLinearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,6 +4,8 @@ com/example/pokearth/PokeMartActivity.java
  com.example.pokearth.PokeMartActivity$2
 com/example/pokearth/InventoryAdapter.java
  com.example.pokearth.InventoryAdapter
+com/example/pokearth/databinding/StoragePageBinding.java
+ com.example.pokearth.databinding.StoragePageBinding
 com/example/pokearth/ItemList.java
  com.example.pokearth.ItemList
  com.example.pokearth.ItemList$1
@@ -24,6 +26,8 @@ com/example/pokearth/databinding/ActivityBallshopBinding.java
 com/example/pokearth/PokemonObject.java
  com.example.pokearth.PokemonObject
  com.example.pokearth.PokemonObject$PokeTypes
+com/example/pokearth/pokedex/Pokedex.java
+ com.example.pokearth.pokedex.Pokedex
 com/example/pokearth/databinding/ShopPageBinding.java
  com.example.pokearth.databinding.ShopPageBinding
 com/example/pokearth/BiomeActivity.java
@@ -33,12 +37,16 @@ com/example/pokearth/FightActivity.java
  com.example.pokearth.FightActivity$1
  com.example.pokearth.FightActivity$2
  com.example.pokearth.FightActivity$CapturePokemon
+ com.example.pokearth.FightActivity$CapturePokemon$1
+ com.example.pokearth.FightActivity$CapturePokemon$2
  com.example.pokearth.FightActivity$GenerateNewEncounterRunnable
  com.example.pokearth.FightActivity$GenerateNewEncounterRunnable$1
  com.example.pokearth.FightActivity$TeamButtonsRunnable
  com.example.pokearth.FightActivity$TeamButtonsRunnable$1
 com/example/pokearth/databinding/ActivityPokemartBinding.java
  com.example.pokearth.databinding.ActivityPokemartBinding
+com/example/pokearth/storage/StorageAdapter.java
+ com.example.pokearth.storage.StorageAdapter
 com/example/pokearth/databinding/PlayPageBinding.java
  com.example.pokearth.databinding.PlayPageBinding
 com/example/pokearth/ItemAdapter.java
@@ -57,6 +65,8 @@ com/example/pokearth/databinding/MainPageBinding.java
  com.example.pokearth.databinding.MainPageBinding
 com/example/pokearth/Health.java
  com.example.pokearth.Health
+com/example/pokearth/pokedex/PokedexDataSource.java
+ com.example.pokearth.pokedex.PokedexDataSource
 com/example/pokearth/PlayActivity.java
  com.example.pokearth.PlayActivity
  com.example.pokearth.PlayActivity$1
@@ -69,8 +79,12 @@ com/example/pokearth/databinding/ActivityItemBinding.java
  com.example.pokearth.databinding.ActivityItemBinding
 com/example/pokearth/pokedex/PokemonAdapter.java
  com.example.pokearth.pokedex.PokemonAdapter
+com/example/pokearth/databinding/StorageGridviewActivityBinding.java
+ com.example.pokearth.databinding.StorageGridviewActivityBinding
 com/example/pokearth/DB/PartyDao.java
  com.example.pokearth.DB.PartyDao
+com/example/pokearth/storage/IndividualStorageActivity.java
+ com.example.pokearth.storage.IndividualStorageActivity
 com/example/pokearth/databinding/InventoryPageBinding.java
  com.example.pokearth.databinding.InventoryPageBinding
 com/example/pokearth/pokedex/PokemonActivity.java
@@ -114,12 +128,22 @@ com/example/pokearth/SplashActivity.java
  com.example.pokearth.SplashActivity$1
 com/example/pokearth/databinding/PokemonObjectLayoutBinding.java
  com.example.pokearth.databinding.PokemonObjectLayoutBinding
+com/example/pokearth/pokedex/PokedexDao.java
+ com.example.pokearth.pokedex.PokedexDao
 com/example/pokearth/databinding/PokemonActivityBinding.java
  com.example.pokearth.databinding.PokemonActivityBinding
 com/example/pokearth/databinding/ActivityShopBinding.java
  com.example.pokearth.databinding.ActivityShopBinding
+com/example/pokearth/storage/PokemonStorageActivity.java
+ com.example.pokearth.storage.PokemonStorageActivity
+ com.example.pokearth.storage.PokemonStorageActivity$1
+ com.example.pokearth.storage.PokemonStorageActivity$GenerateSaved
+ com.example.pokearth.storage.PokemonStorageActivity$GenerateSaved$1
+ com.example.pokearth.storage.PokemonStorageActivity$GenerateSaved$1$1
 com/example/pokearth/DB/PartyDataSource.java
  com.example.pokearth.DB.PartyDataSource
+com/example/pokearth/pokedex/PokedexDatabase.java
+ com.example.pokearth.pokedex.PokedexDatabase
 com/example/pokearth/DB/PokemonStorage.java
  com.example.pokearth.DB.PokemonStorage
 com/example/pokearth/ShopActivity.java
@@ -154,3 +178,5 @@ com/example/pokearth/BallShopActivity.java
  com.example.pokearth.BallShopActivity$1
  com.example.pokearth.BallShopActivity$1$1
  com.example.pokearth.BallShopActivity$1$1$1
+com/example/pokearth/databinding/IndividualStoragePageBinding.java
+ com.example.pokearth.databinding.IndividualStoragePageBinding

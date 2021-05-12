@@ -3,20 +3,16 @@ package com.example.pokearth;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.os.Bundle;
 import android.os.Looper;
 
-import android.media.MediaPlayer;
-import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,13 +23,11 @@ import com.example.pokearth.DB.PartyDataSource;
 import com.example.pokearth.pokedex.LoadingPageDialog;
 
 import com.example.pokearth.pokedex.PokedexActivity;
-import com.google.gson.Gson;
+import com.example.pokearth.storage.PokemonStorageActivity;
 
-import java.io.ByteArrayOutputStream;
 import java.util.List;
 
-import me.sargunvohra.lib.pokekotlin.model.Pokemon;
-import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
+import static com.example.pokearth.MusicPlayer.StopSound;
 
 public class PlayActivity extends AppCompatActivity {
 
@@ -76,18 +70,28 @@ public class PlayActivity extends AppCompatActivity {
 
     }
 
+    public void openStorageActivity(View v)
+    {
+        StopSound();
+        Intent intent = new Intent(PlayActivity.this, PokemonStorageActivity.class);
+        startActivity(intent);
+    }
+
     public void openFightActivity(View v) {
+        StopSound();
         Intent intent = new Intent(PlayActivity.this, FightActivity.class);
         startActivity(intent);
     }
 
 
     public void openBiomeActivity(View v) {
+        StopSound();
         Intent intent = new Intent(PlayActivity.this, BiomeActivity.class);
         startActivity(intent);
     }
 
     public void openMainActivity(View v) {
+        StopSound();
         Intent intent = new Intent(PlayActivity.this, MainActivity.class);
         startActivity(intent);
     }
@@ -203,5 +207,11 @@ public class PlayActivity extends AppCompatActivity {
                 });
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        StopSound();
     }
 }

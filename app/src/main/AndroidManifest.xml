@@ -3,6 +3,7 @@
     package="com.example.pokearth">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <supports-screens
         android:largeScreens="true"
@@ -16,7 +17,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pokearth">
+        android:theme="@style/Theme.Pokearth"
+        android:usesCleartextTraffic="true">
 
         <activity android:name=".ItemActivity"/>
         <activity android:name=".BiomeActivity"></activity>
@@ -29,7 +31,8 @@
         <activity android:name=".PokeMartActivity"/>
         <activity android:name=".pokedex.PokedexActivity"/>
         <activity android:name=".pokedex.PokemonActivity"/>
-
+        <activity android:name=".storage.PokemonStorageActivity"/>
+        <activity android:name=".storage.IndividualStorageActivity"/>
         <activity android:name=".PartyActivity"/>
 
         <activity android:name=".SplashActivity">

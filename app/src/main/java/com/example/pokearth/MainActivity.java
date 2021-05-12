@@ -3,12 +3,11 @@ package com.example.pokearth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.IOException;
+import com.example.pokearth.storage.PokemonStorageActivity;
 
 import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
@@ -56,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {openPartyActivity();}
         });
+    }
+
+    public void openStorageActivity()
+    {
+        Intent intent = new Intent(MainActivity.this, PokemonStorageActivity.class);
+        startActivity(intent);
     }
 
     public void openPlayActivity() {

@@ -1,10 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+            "outputFile": "C:\\Users\\Ckthulu\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\squiggly\\.gradle\\caches\\transforms-2\\files-2.1\\0cb9ff486f5edb59977e253831b932c8\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\Ckthulu\\.gradle\\caches\\transforms-2\\files-2.1\\aee462275766ea11fd05a9119c668fe0\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
+<<<<<<< Updated upstream
+=======
+=======
+            "outputFile": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Alex Lux\\.gradle\\caches\\transforms-2\\files-2.1\\0cb9ff486f5edb59977e253831b932c8\\appcompat-1.2.0\\res\\values-v25\\values-v25.xml",
+>>>>>>> ffebf40f3df6b77bd91717d15d28e43c87c60012
+>>>>>>> Stashed changes
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",
