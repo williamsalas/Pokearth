@@ -28,6 +28,7 @@
             android:gravity="center"
             android:text="Opponent Pokemon name"
             android:textAllCaps="true"
+            android:textColor="@color/black"
             android:textSize="12dp"
             android:visibility="invisible" />
         <!--        Opponent Pokemon HP TextView-->
@@ -39,6 +40,7 @@
             android:background="@drawable/border2"
             android:gravity="center"
             android:text="Opponent Pokemon HP"
+            android:textColor="@color/black"
             android:visibility="invisible" />
 
     </RelativeLayout>
@@ -121,6 +123,7 @@
             android:gravity="center"
             android:text="Player Pokemon name"
             android:textAllCaps="true"
+            android:textColor="@color/black"
             android:textSize="12dp"
             android:visibility="invisible" />
         <!--        Player Pokemon HP TextView-->
@@ -132,6 +135,7 @@
             android:background="@drawable/border2"
             android:gravity="center"
             android:text="Player Pokemon HP"
+            android:textColor="@color/black"
             android:visibility="invisible" />
 
     </RelativeLayout>
@@ -159,8 +163,8 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:onClick="playerAttackButtonClick"
-            android:textSize="10sp"
-            android:text="Move1" />
+            android:text="Move1"
+            android:textSize="10sp" />
 
         <!--    Fight Button-->
         <Button
@@ -168,9 +172,9 @@
             android:layout_width="90dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="10sp"
             android:onClick="playerAttackButtonClick"
-            android:text="Move2" />
+            android:text="Move2"
+            android:textSize="10sp" />
 
     </LinearLayout>
 
@@ -261,6 +265,7 @@
         android:layout_toStartOf="@+id/leftColumnButtons"
         android:layout_toLeftOf="@+id/leftColumnButtons"
         android:orientation="horizontal"
+        android:textColor="@color/black"
         android:visibility="visible">
 
 
@@ -273,6 +278,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Battle Text View"
+            android:textColor="@color/black"
             android:visibility="invisible" />
 
     </RelativeLayout>
