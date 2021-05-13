@@ -305,11 +305,15 @@ public class PartyActivity extends AppCompatActivity {
         public void run() {
             if (dataSource != null) {
                 Looper.prepare();
-                for (int x = 0; x < 6; x++) {
-                    po[x] = new PokemonObject(rand.nextInt(151) + 1);
+                for (int x = 1; x <= 7; x+=3) {
+                    po[x/3] = new PokemonObject(x);
+                }
+                for (int x=3; x<6; x++)
+                {
+                    po[x] = null;
                 }
 
-                for (int i = 0; i < 6; i++) {
+                for (int i = 0; i < 3; i++) {
                     byte[] img = new byte[0];
                     String myPS = "";
                     String myP = "";
@@ -322,6 +326,11 @@ public class PartyActivity extends AppCompatActivity {
                     myP = gson.toJson(po[i].myPoke, Pokemon.class);
                     myPS = gson.toJson(po[i].myPokeSpecies, PokemonSpecies.class);
                     Party tempPokemon = new Party(i, po[i].getId(), myP, myPS, img);
+                    dataSource.createPokemon(tempPokemon);
+                }
+                for(int i=3; i<6; i++)
+                {
+                    Party tempPokemon = new Party(i, 0);
                     dataSource.createPokemon(tempPokemon);
                 }
             }
@@ -346,23 +355,22 @@ public class PartyActivity extends AppCompatActivity {
                     ImageView pokemonImageView3 = (ImageView) findViewById(R.id.pokemonImageView3);
                     pokemonImageView3.setImageBitmap(po[2].getBitmap());
 
-
                     TextView pokeName4 = (TextView) findViewById(R.id.pokeName4);
-                    pokeName4.setText(po[3].getName());
+                    pokeName4.setText("Empty");
                     ImageView pokemonImageView4 = (ImageView) findViewById(R.id.pokemonImageView4);
-                    pokemonImageView4.setImageBitmap(po[3].getBitmap());
+                    pokemonImageView4.setImageBitmap(null);
 
 
                     TextView pokeName5 = (TextView) findViewById(R.id.pokeName5);
-                    pokeName5.setText(po[4].getName());
+                    pokeName5.setText("Empty");
                     ImageView pokemonImageView5 = (ImageView) findViewById(R.id.pokemonImageView5);
-                    pokemonImageView5.setImageBitmap(po[4].getBitmap());
+                    pokemonImageView5.setImageBitmap(null);
 
 
                     TextView pokeName6 = (TextView) findViewById(R.id.pokeName6);
-                    pokeName6.setText(po[5].getName());
+                    pokeName6.setText("Empty");
                     ImageView pokemonImageView6 = (ImageView) findViewById(R.id.pokemonImageView6);
-                    pokemonImageView6.setImageBitmap(po[5].getBitmap());
+                    pokemonImageView6.setImageBitmap(null);
 
                 }
             });
