@@ -41,6 +41,7 @@ public class StorageAdapter extends BaseAdapter
     public long getItemId(int position) {
         return 0;
     }
+
     @SuppressLint("ViewHolder")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

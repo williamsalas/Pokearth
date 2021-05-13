@@ -2,43 +2,30 @@ package com.example.pokearth;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.os.Bundle;
-import android.os.Looper;
-
-import android.media.MediaPlayer;
-import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
-
 import com.example.pokearth.pokedex.LoadingPageDialog;
-
 import com.example.pokearth.pokedex.PokedexActivity;
 import com.example.pokearth.storage.PokemonStorageActivity;
-import com.google.gson.Gson;
 
-import java.io.ByteArrayOutputStream;
 import java.util.List;
-
-import me.sargunvohra.lib.pokekotlin.model.Pokemon;
-import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
 public class PlayActivity extends AppCompatActivity {
 
-    private Button pokedexButton;
+    private Button pokedexButton, storageButton;
     final PokemonObject[] po = {null, null, null, null, null, null};
     private PartyDataSource dataSource;
 
@@ -55,6 +42,13 @@ public class PlayActivity extends AppCompatActivity {
 
         LoadingPageDialog loadingPageDialog = new LoadingPageDialog(PlayActivity.this);
 
+        storageButton = findViewById(R.id.storage_Button);
+        storageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStorageActivity(v);
+            }
+        });
 
         pokedexButton = findViewById(R.id.pokemon_select_button);
         pokedexButton.setOnClickListener(new View.OnClickListener() {

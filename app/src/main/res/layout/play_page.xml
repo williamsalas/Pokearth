@@ -6,7 +6,7 @@
     android:background="@drawable/play_page_background">
 
     <Button
-        android:id="@+id/storageButton"
+        android:id="@+id/storage_Button"
         android:text="Storage"
         android:layout_width="110dp"
         android:layout_height="70dp"
