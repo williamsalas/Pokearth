@@ -27,9 +27,10 @@
             android:background="@drawable/border2"
             android:gravity="center"
             android:text="Opponent Pokemon name"
-
-
-            />
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="invisible" />
         <!--        Opponent Pokemon HP TextView-->
         <TextView
             android:id="@+id/opponentPokemonHPTextView"
@@ -38,7 +39,9 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/border2"
             android:gravity="center"
-            android:text="Opponent Pokemon HP" />
+            android:text="Opponent Pokemon HP"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
@@ -119,9 +122,10 @@
             android:background="@drawable/border2"
             android:gravity="center"
             android:text="Player Pokemon name"
-
-
-            />
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="invisible" />
         <!--        Player Pokemon HP TextView-->
         <TextView
             android:id="@+id/playerPokemonHPTextView"
@@ -131,9 +135,8 @@
             android:background="@drawable/border2"
             android:gravity="center"
             android:text="Player Pokemon HP"
-
-
-            />
+            android:textColor="@color/black"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
@@ -154,23 +157,24 @@
         <!--    Fight Button-->
         <Button
             android:id="@+id/move1Button"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:onClick="playerAttackButtonClick"
-
-            android:text="Move1" />
+            android:text="Move1"
+            android:textSize="10sp" />
 
         <!--    Fight Button-->
         <Button
             android:id="@+id/move2Button"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="playerAttackButtonClick"
-            android:text="Move2" />
+            android:text="Move2"
+            android:textSize="10sp" />
 
     </LinearLayout>
 
@@ -261,6 +265,7 @@
         android:layout_toStartOf="@+id/leftColumnButtons"
         android:layout_toLeftOf="@+id/leftColumnButtons"
         android:orientation="horizontal"
+        android:textColor="@color/black"
         android:visibility="visible">
 
 
@@ -272,7 +277,9 @@
             android:background="@drawable/border2"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Battle Text View" />
+            android:text="Battle Text View"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
@@ -296,7 +303,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="displayAttackMenu"
-            android:text="FIGHT" />
+            android:text="FIGHT"
+            android:visibility="invisible" />
 
         <!--    Items Button-->
         <Button
@@ -305,8 +313,7 @@
             android:layout_height="wrap_content"
             android:onClick="catchAttempt"
             android:text="ITEMS"
-
-            />
+            android:visibility="invisible" />
 
 
     </LinearLayout>
@@ -331,7 +338,8 @@
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:onClick="displayTeamSelectMenu"
-            android:text="PKMN" />
+            android:text="PKMN"
+            android:visibility="invisible" />
 
 
         <!--    Run Button-->
@@ -342,7 +350,8 @@
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:onClick="openBiomeActivity"
-            android:text="RUN" />
+            android:text="RUN"
+            android:visibility="invisible" />
 
 
     </LinearLayout>
