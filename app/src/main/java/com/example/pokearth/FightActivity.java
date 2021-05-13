@@ -34,6 +34,8 @@ import com.example.pokearth.Biome.SpaceBiome;
 import com.example.pokearth.Biome.VolcanoBiome;
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
+import com.example.pokearth.DB.PokemonStorage;
+import com.example.pokearth.DB.PokemonStorageDataSource;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
@@ -51,6 +53,7 @@ public class FightActivity extends AppCompatActivity {
 
 
     private PartyDataSource dataSource;
+    private PokemonStorageDataSource storageDataSource;
     final PokemonObject[] battlingPokemon = {null, null};
     final PokemonObject[] teamPokemon = {null, null, null, null, null, null};
     private int pokemonToSwapIn;
@@ -64,6 +67,7 @@ public class FightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fight_page);
         dataSource = new PartyDataSource(this);
+        storageDataSource = new PokemonStorageDataSource(this);
 
         int chosenBiome = -1;
         Bundle extras = getIntent().getExtras();
@@ -442,30 +446,47 @@ public class FightActivity extends AppCompatActivity {
     }
 
     private class CapturePokemon implements Runnable {
+        @SuppressLint("SetTextI18n")
         @Override
         public void run() {
+            TextView battleText = (TextView) findViewById(R.id.battleTextView);
             if (dataSource != null) {
-                Looper.prepare();
+//                        Looper.prepare();
                 int partyIDToFill = dataSource.getFirstEmpty();
-                if (partyIDToFill != -1) {
-                    //Party caughtPokemon = new Party(partyIDToFill, battlingPokemon[1].getId()); // create a Party Object version of the wild pokemon
-                    byte[] caughtPokemonImg = new byte[0];
-                    String caughtPokemonSpecies = "";
-                    String caughtPokemon = "";
-                    Gson gson = new Gson();
 
-                    ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                    battlingPokemon[1].getBitmap().compress(Bitmap.CompressFormat.PNG, 100, bos);
-                    caughtPokemonImg = bos.toByteArray();
+                byte[] caughtPokemonImg = new byte[0];
+                String caughtPokemonSpecies = "";
+                String caughtPokemon = "";
+                Gson gson = new Gson();
 
-                    caughtPokemon = gson.toJson(battlingPokemon[1].myPoke, Pokemon.class);
-                    caughtPokemonSpecies = gson.toJson(battlingPokemon[1].myPokeSpecies, PokemonSpecies.class);
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                battlingPokemon[1].getBitmap().compress(Bitmap.CompressFormat.PNG, 100, bos);
+                caughtPokemonImg = bos.toByteArray();
 
+                caughtPokemon = gson.toJson(battlingPokemon[1].myPoke, Pokemon.class);
+                caughtPokemonSpecies = gson.toJson(battlingPokemon[1].myPokeSpecies, PokemonSpecies.class);
 
+                int hasSpace = dataSource.checkEmpty();
+                if (hasSpace == 1) {
                     Party capturedPokemon = new Party(partyIDToFill, battlingPokemon[1].getId(), caughtPokemon, caughtPokemonSpecies, caughtPokemonImg);
                     dataSource.createPokemon(capturedPokemon);
+                    runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            battleText.setText("Gotcha! " + battlingPokemon[1].getName() + " was caught and sent to party!");
+                        }
+                    });
                 } else {
-                    Log.d(FightActivity.class.getSimpleName(), "failed to find an index to fill into party.");
+                    PokemonStorage captdPokemon = new PokemonStorage(partyIDToFill, battlingPokemon[1].getId(), caughtPokemon, caughtPokemonSpecies, caughtPokemonImg);
+                    storageDataSource.createPokemon(captdPokemon);
+                    runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            battleText.setText("Gotcha! " + battlingPokemon[1].getName() + " was caught and sent to storage!");
+                        }
+                    });
                 }
             }
         }

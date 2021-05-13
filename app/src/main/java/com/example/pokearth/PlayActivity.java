@@ -27,6 +27,7 @@ import com.example.pokearth.DB.PartyDataSource;
 import com.example.pokearth.pokedex.LoadingPageDialog;
 
 import com.example.pokearth.pokedex.PokedexActivity;
+import com.example.pokearth.storage.PokemonStorageActivity;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
@@ -74,6 +75,12 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void openStorageActivity(View v)
+    {
+        Intent intent = new Intent(PlayActivity.this, PokemonStorageActivity.class);
+        startActivity(intent);
     }
 
     public void openFightActivity(View v) {
