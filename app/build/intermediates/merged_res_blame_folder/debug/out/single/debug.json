@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokemon_home_logo_nintendo_switch.jpg"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_graveyard.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_graveyard.png"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_ballshop.xml.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_ballshop.xml"
     },
@@ -52,6 +56,10 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_safarizone.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_safarizone.jpg"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -70,6 +78,10 @@
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item.xml.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_jungle.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_jungle.png"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pokemon.png.flat",
@@ -104,6 +116,10 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_list.xml"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_powerplant.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_powerplant.png"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whitecircle.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\whitecircle.png"
     },
@@ -114,6 +130,10 @@
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_lake.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_lake.png"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play_page_background.jpg.flat",
@@ -168,6 +188,10 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_background.xml"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_space.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_space.png"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pica_home_screen.jpg.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pica_home_screen.jpg"
     },
@@ -208,6 +232,10 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\pokemon.png"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_ocean.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_ocean.png"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
@@ -228,6 +256,10 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\activity_shop.xml"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_forest.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_forest.jpg"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_background.png"
     },
@@ -238,6 +270,10 @@
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blacksquarewcircle500.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\blacksquarewcircle500.png"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_city.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_city.jpg"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pokemon.png.flat",
@@ -280,8 +316,16 @@
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\shop_potion_icon.png"
     },
     {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_volcano.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_volcano.jpg"
+    },
+    {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_cave.jpg.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_cave.jpg"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_background_round.png.flat",
@@ -298,6 +342,10 @@
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_party_list.xml.flat",
         "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\layout\\party_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pokearth_icecave.png.flat",
+        "source": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\src\\main\\res\\drawable\\pokearth_icecave.png"
     },
     {
         "merged": "C:\\Users\\Alex Lux\\AndroidStudioProjects\\Pokearth\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pokemart.xml.flat",

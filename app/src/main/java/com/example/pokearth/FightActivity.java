@@ -452,6 +452,7 @@ public class FightActivity extends AppCompatActivity {
                     byte[] caughtPokemonImg = new byte[0];
                     String caughtPokemonSpecies = "";
                     String caughtPokemon = "";
+
                     Gson gson = new Gson();
 
                     ByteArrayOutputStream bos = new ByteArrayOutputStream();

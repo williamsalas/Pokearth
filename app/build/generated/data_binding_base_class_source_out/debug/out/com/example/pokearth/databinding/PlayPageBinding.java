@@ -23,9 +23,6 @@ public final class PlayPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button biomeSelectButton;
-
-  @NonNull
   public final LinearLayout bottomPartySpritesLinearLayout;
 
   @NonNull
@@ -61,7 +58,7 @@ public final class PlayPageBinding implements ViewBinding {
   @NonNull
   public final LinearLayout topPartySpritesLinearLayout;
 
-  private PlayPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button biomeSelectButton,
+  private PlayPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout bottomPartySpritesLinearLayout, @NonNull Button fightButton,
       @NonNull FloatingActionButton floatingActionButton, @NonNull ImageView partySprite1,
       @NonNull ImageView partySprite2, @NonNull ImageView partySprite3,
@@ -69,7 +66,6 @@ public final class PlayPageBinding implements ViewBinding {
       @NonNull ImageView partySprite6, @NonNull ImageButton playerSprite,
       @NonNull Button pokemonSelectButton, @NonNull LinearLayout topPartySpritesLinearLayout) {
     this.rootView = rootView;
-    this.biomeSelectButton = biomeSelectButton;
     this.bottomPartySpritesLinearLayout = bottomPartySpritesLinearLayout;
     this.fightButton = fightButton;
     this.floatingActionButton = floatingActionButton;
@@ -111,12 +107,6 @@ public final class PlayPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.biome_select_button;
-      Button biomeSelectButton = rootView.findViewById(id);
-      if (biomeSelectButton == null) {
-        break missingId;
-      }
-
       id = R.id.bottomPartySpritesLinearLayout;
       LinearLayout bottomPartySpritesLinearLayout = rootView.findViewById(id);
       if (bottomPartySpritesLinearLayout == null) {
@@ -189,10 +179,10 @@ public final class PlayPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PlayPageBinding((ConstraintLayout) rootView, biomeSelectButton,
-          bottomPartySpritesLinearLayout, fightButton, floatingActionButton, partySprite1,
-          partySprite2, partySprite3, partySprite4, partySprite5, partySprite6, playerSprite,
-          pokemonSelectButton, topPartySpritesLinearLayout);
+      return new PlayPageBinding((ConstraintLayout) rootView, bottomPartySpritesLinearLayout,
+          fightButton, floatingActionButton, partySprite1, partySprite2, partySprite3, partySprite4,
+          partySprite5, partySprite6, playerSprite, pokemonSelectButton,
+          topPartySpritesLinearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

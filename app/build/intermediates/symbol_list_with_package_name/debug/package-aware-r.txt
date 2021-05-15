@@ -1695,7 +1695,19 @@ drawable notify_panel_notification_icon_bg
 drawable pica_home_screen
 drawable pkmntrainersprite
 drawable play_page_background
+drawable pokearth_cave
+drawable pokearth_city
+drawable pokearth_forest
 drawable pokearth_grassland
+drawable pokearth_graveyard
+drawable pokearth_icecave
+drawable pokearth_jungle
+drawable pokearth_lake
+drawable pokearth_ocean
+drawable pokearth_powerplant
+drawable pokearth_safarizone
+drawable pokearth_space
+drawable pokearth_volcano
 drawable pokeballsprite
 drawable pokemart_background
 drawable pokemon_back
@@ -1806,7 +1818,6 @@ id beginning
 id biomeImage
 id biomeImageName
 id biomeMenuParentLayout
-id biome_select_button
 id blocking
 id bottom
 id bottomPartySpritesLinearLayout
