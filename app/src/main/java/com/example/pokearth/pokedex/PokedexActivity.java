@@ -117,7 +117,7 @@ public class PokedexActivity extends AppCompatActivity {
         PokedexThreads thread5 = new PokedexThreads(20, 25);
         PokedexThreads thread6 = new PokedexThreads(25, 30);
         PokedexThreads thread7 = new PokedexThreads(20, 35);
-        PokedexThreads thread8 = new PokedexThreads(35, 40);
+        PokedexThreads thread8 = new PokedexThreads(35, 100);
 
         thread5.start();
         // wait for thread to finish before continuing
