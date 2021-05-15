@@ -39,12 +39,52 @@ public class BiomeActivity extends AppCompatActivity {
         Intent intent = new Intent(BiomeActivity.this, PlayActivity.class);
         startActivity(intent);
     }
+    /*
+    LoadingPageDialog loadingPageDialog = new LoadingPageDialog(PlayActivity.this);
+
+
+        pokedexButton = findViewById(R.id.pokemon_select_button);
+        pokedexButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                loadingPageDialog.startLoadingDialog();
+                Intent intent = new Intent(PlayActivity.this, PokedexActivity.class);
+                startActivity(intent);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadingPageDialog.dismissDialog();
+                    }
+                }, 10000);
+            }
+        });
+
+    }
+
+    */
 
     public void openFightActivity(View v) {
         Intent intent = new Intent(BiomeActivity.this, FightActivity.class);
         intent.putExtra("Chosen Biome", chosenBiome);
         startActivity(intent);
+
+//        LoadingPageDialog loadingPageDialog = new LoadingPageDialog(BiomeActivity.this);
+//        loadingPageDialog.startLoadingDialog();
+//        Intent intent = new Intent(BiomeActivity.this, FightActivity.class);
+//        intent.putExtra("Chosen Biome", chosenBiome);
+//        startActivity(intent);
+//        Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                loadingPageDialog.dismissDialog();
+//            }
+//        }, 10000);
     }
+
 
     private void initBiomeData() {
         Resources res = this.getResources();

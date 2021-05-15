@@ -29,6 +29,8 @@
         <activity android:name=".PokeMartActivity"/>
         <activity android:name=".pokedex.PokedexActivity"/>
         <activity android:name=".pokedex.PokemonActivity"/>
+        <activity android:name=".storage.PokemonStorageActivity"/>
+        <activity android:name=".storage.IndividualStorageActivity"/>
 
         <activity android:name=".PartyActivity"/>
 
