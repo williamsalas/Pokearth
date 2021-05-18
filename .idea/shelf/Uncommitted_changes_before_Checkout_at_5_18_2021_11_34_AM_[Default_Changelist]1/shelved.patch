@@ -1,0 +1,341 @@
+Index: app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>1<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n2<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n3    package=\"com.example.pokearth\"\r\n4    android:versionCode=\"1\"\r\n5    android:versionName=\"1.0\" >\r\n6\r\n7    <uses-sdk\r\n8        android:minSdkVersion=\"16\"\r\n8-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml\r\n9        android:targetSdkVersion=\"30\" />\r\n9-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml\r\n10\r\n11    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n11-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:5:5-67\r\n11-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:5:22-64\r\n12\r\n13    <supports-screens\r\n13-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:7:5-11:40\r\n14        android:largeScreens=\"true\"\r\n14-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:8:9-36\r\n15        android:normalScreens=\"true\"\r\n15-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:9:9-37\r\n16        android:smallScreens=\"true\"\r\n16-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:10:9-36\r\n17        android:xlargeScreens=\"true\" />\r\n17-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:11:9-37\r\n18\r\n19    <application\r\n19-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:13:5-42:19\r\n20        android:name=\"androidx.multidex.MultiDexApplication\"\r\n21        android:allowBackup=\"true\"\r\n21-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:14:9-35\r\n22        android:appComponentFactory=\"androidx.core.app.CoreComponentFactory\"\r\n22-->[androidx.core:core:1.3.1] C:\\Users\\squiggly\\.gradle\\caches\\transforms-2\\files-2.1\\b234a824af7fd98a5c54fc0522824a91\\core-1.3.1\\AndroidManifest.xml:24:18-86\r\n23        android:debuggable=\"true\"\r\n24        android:icon=\"@mipmap/ic_launcher\"\r\n24-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:15:9-43\r\n25        android:label=\"@string/app_name\"\r\n25-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:16:9-41\r\n26        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n26-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:17:9-54\r\n27        android:supportsRtl=\"true\"\r\n27-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:18:9-35\r\n28        android:testOnly=\"true\"\r\n29        android:theme=\"@style/Theme.Pokearth\" >\r\n29-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:19:9-46\r\n30        <activity android:name=\"com.example.pokearth.ItemActivity\" />\r\n30-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:21:9-49\r\n30-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:21:19-47\r\n31        <activity android:name=\"com.example.pokearth.BiomeActivity\" />\r\n31-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:22:9-60\r\n31-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:22:19-48\r\n32        <activity android:name=\"com.example.pokearth.MainActivity\" />\r\n32-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:23:9-50\r\n32-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:23:19-47\r\n33        <activity android:name=\"com.example.pokearth.PlayActivity\" />\r\n33-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:24:9-50\r\n33-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:24:19-47\r\n34        <activity android:name=\"com.example.pokearth.FightActivity\" />\r\n34-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:25:9-51\r\n34-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:25:19-48\r\n35        <activity android:name=\"com.example.pokearth.InventoryActivity\" />\r\n35-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:26:9-55\r\n35-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:26:19-52\r\n36        <activity android:name=\"com.example.pokearth.ShopActivity\" />\r\n36-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:27:9-50\r\n36-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:27:19-47\r\n37        <activity android:name=\"com.example.pokearth.BallShopActivity\" />\r\n37-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:28:9-54\r\n37-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:28:19-51\r\n38        <activity android:name=\"com.example.pokearth.PokeMartActivity\" />\r\n38-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:29:9-53\r\n38-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:29:19-51\r\n39        <activity android:name=\"com.example.pokearth.pokedex.PokedexActivity\" />\r\n39-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:30:9-60\r\n39-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:30:19-58\r\n40        <activity android:name=\"com.example.pokearth.pokedex.PokemonActivity\" />\r\n40-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:31:9-60\r\n40-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:31:19-58\r\n41        <activity android:name=\"com.example.pokearth.PartyActivity\" />\r\n41-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:33:9-50\r\n41-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:33:19-48\r\n42        <activity android:name=\"com.example.pokearth.SplashActivity\" >\r\n42-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:35:9-41:20\r\n42-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:35:19-49\r\n43            <intent-filter>\r\n43-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:36:13-40:29\r\n44                <action android:name=\"android.intent.action.MAIN\" />\r\n44-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:37:17-69\r\n44-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:37:25-66\r\n45\r\n46                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n46-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:39:17-77\r\n46-->C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\AndroidManifest.xml:39:27-74\r\n47            </intent-filter>\r\n48        </activity>\r\n49\r\n50        <service\r\n50-->[androidx.room:room-runtime:2.2.6] C:\\Users\\squiggly\\.gradle\\caches\\transforms-2\\files-2.1\\5656c15061bb6c9a45f2785c725710a9\\room-runtime-2.2.6\\AndroidManifest.xml:25:9-28:40\r\n51            android:name=\"androidx.room.MultiInstanceInvalidationService\"\r\n51-->[androidx.room:room-runtime:2.2.6] C:\\Users\\squiggly\\.gradle\\caches\\transforms-2\\files-2.1\\5656c15061bb6c9a45f2785c725710a9\\room-runtime-2.2.6\\AndroidManifest.xml:26:13-74\r\n52            android:directBootAware=\"true\"\r\n52-->[androidx.room:room-runtime:2.2.6] C:\\Users\\squiggly\\.gradle\\caches\\transforms-2\\files-2.1\\5656c15061bb6c9a45f2785c725710a9\\room-runtime-2.2.6\\AndroidManifest.xml:27:13-43\r\n53            android:exported=\"false\" />\r\n53-->[androidx.room:room-runtime:2.2.6] C:\\Users\\squiggly\\.gradle\\caches\\transforms-2\\files-2.1\\5656c15061bb6c9a45f2785c725710a9\\room-runtime-2.2.6\\AndroidManifest.xml:28:13-37\r\n54    </application>\r\n55\r\n56</manifest>\r\n
+===================================================================
+--- app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt	(revision 9feba256ce3d87003baecf06c850c40ca9516ea5)
++++ app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt	(date 1621362719015)
+@@ -41,68 +41,67 @@
+ 26-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:17:9-54
+ 27        android:supportsRtl="true"
+ 27-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:18:9-35
+-28        android:testOnly="true"
+-29        android:theme="@style/Theme.Pokearth" >
+-29-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:19:9-46
+-30        <activity android:name="com.example.pokearth.ItemActivity" />
+-30-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:21:9-49
+-30-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:21:19-47
+-31        <activity android:name="com.example.pokearth.BiomeActivity" />
+-31-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:22:9-60
+-31-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:22:19-48
+-32        <activity android:name="com.example.pokearth.MainActivity" />
+-32-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:23:9-50
+-32-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:23:19-47
+-33        <activity android:name="com.example.pokearth.PlayActivity" />
+-33-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:24:9-50
+-33-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:24:19-47
+-34        <activity android:name="com.example.pokearth.FightActivity" />
+-34-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:25:9-51
+-34-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:25:19-48
+-35        <activity android:name="com.example.pokearth.InventoryActivity" />
+-35-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:26:9-55
+-35-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:26:19-52
+-36        <activity android:name="com.example.pokearth.ShopActivity" />
+-36-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:27:9-50
+-36-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:27:19-47
+-37        <activity android:name="com.example.pokearth.BallShopActivity" />
+-37-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:28:9-54
+-37-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:28:19-51
+-38        <activity android:name="com.example.pokearth.PokeMartActivity" />
+-38-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:29:9-53
+-38-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:29:19-51
+-39        <activity android:name="com.example.pokearth.pokedex.PokedexActivity" />
+-39-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:30:9-60
+-39-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:30:19-58
+-40        <activity android:name="com.example.pokearth.pokedex.PokemonActivity" />
+-40-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:31:9-60
+-40-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:31:19-58
+-41        <activity android:name="com.example.pokearth.PartyActivity" />
+-41-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:33:9-50
+-41-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:33:19-48
+-42        <activity android:name="com.example.pokearth.SplashActivity" >
+-42-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:35:9-41:20
+-42-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:35:19-49
+-43            <intent-filter>
+-43-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:36:13-40:29
+-44                <action android:name="android.intent.action.MAIN" />
+-44-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:37:17-69
+-44-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:37:25-66
+-45
+-46                <category android:name="android.intent.category.LAUNCHER" />
+-46-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:39:17-77
+-46-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:39:27-74
+-47            </intent-filter>
+-48        </activity>
+-49
+-50        <service
+-50-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+-51            android:name="androidx.room.MultiInstanceInvalidationService"
+-51-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
+-52            android:directBootAware="true"
+-52-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+-53            android:exported="false" />
+-53-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+-54    </application>
+-55
+-56</manifest>
++28        android:theme="@style/Theme.Pokearth" >
++28-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:19:9-46
++29        <activity android:name="com.example.pokearth.ItemActivity" />
++29-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:21:9-49
++29-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:21:19-47
++30        <activity android:name="com.example.pokearth.BiomeActivity" />
++30-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:22:9-60
++30-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:22:19-48
++31        <activity android:name="com.example.pokearth.MainActivity" />
++31-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:23:9-50
++31-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:23:19-47
++32        <activity android:name="com.example.pokearth.PlayActivity" />
++32-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:24:9-50
++32-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:24:19-47
++33        <activity android:name="com.example.pokearth.FightActivity" />
++33-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:25:9-51
++33-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:25:19-48
++34        <activity android:name="com.example.pokearth.InventoryActivity" />
++34-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:26:9-55
++34-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:26:19-52
++35        <activity android:name="com.example.pokearth.ShopActivity" />
++35-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:27:9-50
++35-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:27:19-47
++36        <activity android:name="com.example.pokearth.BallShopActivity" />
++36-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:28:9-54
++36-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:28:19-51
++37        <activity android:name="com.example.pokearth.PokeMartActivity" />
++37-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:29:9-53
++37-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:29:19-51
++38        <activity android:name="com.example.pokearth.pokedex.PokedexActivity" />
++38-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:30:9-60
++38-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:30:19-58
++39        <activity android:name="com.example.pokearth.pokedex.PokemonActivity" />
++39-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:31:9-60
++39-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:31:19-58
++40        <activity android:name="com.example.pokearth.PartyActivity" />
++40-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:33:9-50
++40-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:33:19-48
++41        <activity android:name="com.example.pokearth.SplashActivity" >
++41-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:35:9-41:20
++41-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:35:19-49
++42            <intent-filter>
++42-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:36:13-40:29
++43                <action android:name="android.intent.action.MAIN" />
++43-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:37:17-69
++43-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:37:25-66
++44
++45                <category android:name="android.intent.category.LAUNCHER" />
++45-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:39:17-77
++45-->C:\Users\squiggly\Documents\GitHub\Pokearth\app\src\main\AndroidManifest.xml:39:27-74
++46            </intent-filter>
++47        </activity>
++48
++49        <service
++49-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
++50            android:name="androidx.room.MultiInstanceInvalidationService"
++50-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
++51            android:directBootAware="true"
++51-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
++52            android:exported="false" />
++52-->[androidx.room:room-runtime:2.2.6] C:\Users\squiggly\.gradle\caches\transforms-2\files-2.1\5656c15061bb6c9a45f2785c725710a9\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
++53    </application>
++54
++55</manifest>
+Index: app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.pokearth\"\r\n    android:versionCode=\"1\"\r\n    android:versionName=\"1.0\" >\r\n\r\n    <uses-sdk\r\n        android:minSdkVersion=\"16\"\r\n        android:targetSdkVersion=\"30\" />\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <supports-screens\r\n        android:largeScreens=\"true\"\r\n        android:normalScreens=\"true\"\r\n        android:smallScreens=\"true\"\r\n        android:xlargeScreens=\"true\" />\r\n\r\n    <application\r\n        android:name=\"androidx.multidex.MultiDexApplication\"\r\n        android:allowBackup=\"true\"\r\n        android:appComponentFactory=\"androidx.core.app.CoreComponentFactory\"\r\n        android:debuggable=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:testOnly=\"true\"\r\n        android:theme=\"@style/Theme.Pokearth\" >\r\n        <activity android:name=\"com.example.pokearth.ItemActivity\" />\r\n        <activity android:name=\"com.example.pokearth.BiomeActivity\" />\r\n        <activity android:name=\"com.example.pokearth.MainActivity\" />\r\n        <activity android:name=\"com.example.pokearth.PlayActivity\" />\r\n        <activity android:name=\"com.example.pokearth.FightActivity\" />\r\n        <activity android:name=\"com.example.pokearth.InventoryActivity\" />\r\n        <activity android:name=\"com.example.pokearth.ShopActivity\" />\r\n        <activity android:name=\"com.example.pokearth.BallShopActivity\" />\r\n        <activity android:name=\"com.example.pokearth.PokeMartActivity\" />\r\n        <activity android:name=\"com.example.pokearth.pokedex.PokedexActivity\" />\r\n        <activity android:name=\"com.example.pokearth.pokedex.PokemonActivity\" />\r\n        <activity android:name=\"com.example.pokearth.PartyActivity\" />\r\n        <activity android:name=\"com.example.pokearth.SplashActivity\" >\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n\r\n        <service\r\n            android:name=\"androidx.room.MultiInstanceInvalidationService\"\r\n            android:directBootAware=\"true\"\r\n            android:exported=\"false\" />\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml	(revision 9feba256ce3d87003baecf06c850c40ca9516ea5)
++++ app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml	(date 1621362719075)
+@@ -25,7 +25,6 @@
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+-        android:testOnly="true"
+         android:theme="@style/Theme.Pokearth" >
+         <activity android:name="com.example.pokearth.ItemActivity" />
+         <activity android:name="com.example.pokearth.BiomeActivity" />
+Index: app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\shop_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\shop_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\pokemon_list.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\pokemon_list.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\activity_item.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\activity_item.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\activity_shop.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\activity_shop.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\main_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\main_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\play_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\play_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\loading_screen_pokedex.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\loading_screen_pokedex.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\pokemon_activity.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\pokemon_activity.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\activity_inventory.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\activity_inventory.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\fight_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\fight_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\activity_ballshop.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\activity_ballshop.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\activity_pokemart.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\activity_pokemart.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\inventory_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\inventory_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\party_list.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\party_list.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\biome_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\biome_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\splash_page.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\splash_page.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\pokemon_object_layout.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\pokemon_object_layout.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\itemlist_object_layout.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\itemlist_object_layout.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\biome_listitem.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\biome_listitem.xml\"\r\n    },\r\n    {\r\n        \"merged\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\build\\\\intermediates\\\\incremental\\\\mergeDebugResources\\\\stripped.dir\\\\layout\\\\itemlist_object_layout_with_quantity.xml\",\r\n        \"source\": \"C:\\\\Users\\\\squiggly\\\\Documents\\\\GitHub\\\\Pokearth\\\\app\\\\src\\\\main\\\\res\\\\layout\\\\itemlist_object_layout_with_quantity.xml\"\r\n    }\r\n]
+===================================================================
+--- app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json	(revision 9feba256ce3d87003baecf06c850c40ca9516ea5)
++++ app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json	(date 1621362718832)
+@@ -72,11 +72,11 @@
+         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout.xml"
+     },
+     {
+-        "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_listitem.xml",
+-        "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
+-    },
+-    {
+         "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\itemlist_object_layout_with_quantity.xml",
+         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout_with_quantity.xml"
++    },
++    {
++        "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_listitem.xml",
++        "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
+     }
+ ]
+\ No newline at end of file
+Index: app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.pokearth\"\r\n    android:versionCode=\"1\"\r\n    android:versionName=\"1.0\" >\r\n\r\n    <uses-sdk\r\n        android:minSdkVersion=\"16\"\r\n        android:targetSdkVersion=\"30\" />\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <supports-screens\r\n        android:largeScreens=\"true\"\r\n        android:normalScreens=\"true\"\r\n        android:smallScreens=\"true\"\r\n        android:xlargeScreens=\"true\" />\r\n\r\n    <application\r\n        android:name=\"androidx.multidex.MultiDexApplication\"\r\n        android:allowBackup=\"true\"\r\n        android:appComponentFactory=\"androidx.core.app.CoreComponentFactory\"\r\n        android:debuggable=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:testOnly=\"true\"\r\n        android:theme=\"@style/Theme.Pokearth\" >\r\n        <activity android:name=\"com.example.pokearth.ItemActivity\" />\r\n        <activity android:name=\"com.example.pokearth.BiomeActivity\" />\r\n        <activity android:name=\"com.example.pokearth.MainActivity\" />\r\n        <activity android:name=\"com.example.pokearth.PlayActivity\" />\r\n        <activity android:name=\"com.example.pokearth.FightActivity\" />\r\n        <activity android:name=\"com.example.pokearth.InventoryActivity\" />\r\n        <activity android:name=\"com.example.pokearth.ShopActivity\" />\r\n        <activity android:name=\"com.example.pokearth.BallShopActivity\" />\r\n        <activity android:name=\"com.example.pokearth.PokeMartActivity\" />\r\n        <activity android:name=\"com.example.pokearth.pokedex.PokedexActivity\" />\r\n        <activity android:name=\"com.example.pokearth.pokedex.PokemonActivity\" />\r\n        <activity android:name=\"com.example.pokearth.PartyActivity\" />\r\n        <activity android:name=\"com.example.pokearth.SplashActivity\" >\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n\r\n        <service\r\n            android:name=\"androidx.room.MultiInstanceInvalidationService\"\r\n            android:directBootAware=\"true\"\r\n            android:exported=\"false\" />\r\n    </application>\r\n\r\n</manifest>
+===================================================================
+--- app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml	(revision 9feba256ce3d87003baecf06c850c40ca9516ea5)
++++ app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml	(date 1621362719014)
+@@ -25,7 +25,6 @@
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+-        android:testOnly="true"
+         android:theme="@style/Theme.Pokearth" >
+         <activity android:name="com.example.pokearth.ItemActivity" />
+         <activity android:name="com.example.pokearth.BiomeActivity" />
+diff --git app/build/intermediates/incremental/mergeDebugAssets/merger.xml app/build/intermediates/incremental/mergeDebugAssets/merger.xml
+diff --git app/build/intermediates/incremental/mergeDebugShaders/merger.xml app/build/intermediates/incremental/mergeDebugShaders/merger.xml
+diff --git app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+diff --git app/build/outputs/apk/debug/output-metadata.json app/build/outputs/apk/debug/output-metadata.json
+diff --git app/build/outputs/logs/manifest-merger-debug-report.txt app/build/outputs/logs/manifest-merger-debug-report.txt
+diff --git app/build/generated/ap_generated_sources/debug/out/androidx/databinding/library/baseAdapters/BR.java app/build/generated/ap_generated_sources/debug/out/androidx/databinding/library/baseAdapters/BR.java
+diff --git app/build/generated/ap_generated_sources/debug/out/androidx/databinding/DataBinderMapperImpl.java app/build/generated/ap_generated_sources/debug/out/androidx/databinding/DataBinderMapperImpl.java
+diff --git app/build/generated/ap_generated_sources/debug/out/androidx/databinding/DataBindingComponent.java app/build/generated/ap_generated_sources/debug/out/androidx/databinding/DataBindingComponent.java
+diff --git app/build/generated/source/buildConfig/debug/com/example/pokearth/BuildConfig.java app/build/generated/source/buildConfig/debug/com/example/pokearth/BuildConfig.java
+diff --git app/build/generated/data_binding_trigger/debug/com/example/pokearth/DataBindingTriggerClass.java app/build/generated/data_binding_trigger/debug/com/example/pokearth/DataBindingTriggerClass.java
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h600dp-port-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h600dp-port-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h720dp-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h720dp-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v21.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v21.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-xlarge-v4.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-xlarge-v4.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v20.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v20.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w550dp-land-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w550dp-land-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rXC.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rXC.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v25.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v25.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rCA.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rCA.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v26.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v26.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v24.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v24.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v22.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v22.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v17.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v17.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v18.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v18.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v16.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v16.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-port.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-port.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldltr-v21.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldltr-v21.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hdpi-v4.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hdpi-v4.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json
+diff --git app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json
+diff --git app/build/intermediates/merged_manifests/debug/output-metadata.json app/build/intermediates/merged_manifests/debug/output-metadata.json
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/ShopPageBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/ShopPageBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/FightPageBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/FightPageBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/PokemonActivityBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/PokemonActivityBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/PokemonListBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/PokemonListBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/SplashPageBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/SplashPageBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/MainPageBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/MainPageBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/PokemonObjectLayoutBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/PokemonObjectLayoutBinding.java
+diff --git app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/InventoryPageBinding.java app/build/generated/data_binding_base_class_source_out/debug/out/com/example/pokearth/databinding/InventoryPageBinding.java
+diff --git app/build/intermediates/processed_res/debug/out/output-metadata.json app/build/intermediates/processed_res/debug/out/output-metadata.json
+diff --git app/build/intermediates/packaged_manifests/debug/output-metadata.json app/build/intermediates/packaged_manifests/debug/output-metadata.json
+diff --git app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json
+diff --git app/build/generated/ap_generated_sources/debug/out/com/example/pokearth/BR.java app/build/generated/ap_generated_sources/debug/out/com/example/pokearth/BR.java
+diff --git app/build/generated/ap_generated_sources/debug/out/com/example/pokearth/DataBinderMapperImpl.java app/build/generated/ap_generated_sources/debug/out/com/example/pokearth/DataBinderMapperImpl.java
