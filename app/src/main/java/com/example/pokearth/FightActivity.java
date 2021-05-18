@@ -9,11 +9,13 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewDebug;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -290,9 +292,91 @@ public class FightActivity extends AppCompatActivity {
             });
         }
     }
+    public void onPotionBagClick(View view){
+        LinearLayout itemSelectMenuLayout = (LinearLayout) findViewById(R.id.ItemBagButtons);
+        itemSelectMenuLayout.setVisibility(View.INVISIBLE);
+
+        Intent i = new Intent(FightActivity.this, PotionBagActivity.class);
+        startActivityForResult(i,1);
+    }
+
+    public void onPokeBallBagClick(View view){
+        LinearLayout itemSelectMenuLayout = (LinearLayout) findViewById(R.id.ItemBagButtons);
+        itemSelectMenuLayout.setVisibility(View.INVISIBLE);
+
+        Intent i = new Intent(FightActivity.this, PokeBallBagActivity.class);
+        startActivityForResult(i,2);
+
+    }
+
+    public void displayItemMenu(View view){
+        LinearLayout itemSelectMenuLayout = (LinearLayout) findViewById(R.id.ItemBagButtons);
+
+        if(itemSelectMenuLayout.getVisibility() == View.INVISIBLE){
+            itemSelectMenuLayout.setVisibility(View.VISIBLE);
+        }else {
+            itemSelectMenuLayout.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        int position = data.getIntExtra("position",0);
+        String itemUsed = "";
+
+        //If PotionBagClick
+
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+
+                if(position == 0){
+                    itemUsed = "potion";
+                }else if(position == 1){
+                    itemUsed = "superpotion";
+                }else if(position == 2){
+                    itemUsed = "hyperpotion";
+                }
+                heal(itemUsed);
+            } else if(resultCode == RESULT_CANCELED){
+
+            }
+
+        } else if(requestCode == 2){
+            if(resultCode == RESULT_OK){
+                if(position == 0){
+                    itemUsed = "pokeball";
+                }else if(position == 1){
+                    itemUsed = "greatball";
+                }else if(position == 2){
+                    itemUsed = "ultraball";
+                }
+                catchAttempt(itemUsed);
+
+            } else if(resultCode == RESULT_CANCELED){
+
+            }
+        }
+    }
+
+    public void heal(String potionType){
+        TextView pokeHP1 = (TextView) findViewById(R.id.playerPokemonHPTextView);
+        int healingAmount = 0;
+        if(potionType == "potion"){
+            healingAmount = 20;
+        }else if(potionType == "superpotion"){
+            healingAmount = 60;
+        }else if(potionType == "hyperpotion"){
+            healingAmount = 200;
+        }
+
+        battlingPokemon[0].heal(battlingPokemon[0],healingAmount);
+        pokeHP1.setText(Integer.toString(battlingPokemon[0].health.getCurrentHP()) + " HP");
+        Toast.makeText(this,"You healed your pokemon!", Toast.LENGTH_SHORT).show();
+    }
 
     @SuppressLint("SetTextI18n")
-    public void catchAttempt(View v) {
+    public void catchAttempt(String ballUsed) {
         TextView battleText = (TextView) findViewById(R.id.battleTextView);
         ImageView opponentSprite = (ImageView) findViewById(R.id.opponentPokemonSprite);
 
@@ -300,7 +384,15 @@ public class FightActivity extends AppCompatActivity {
             battleText.setText("Gotcha! " + this.battlingPokemon[1].getName() + " was caught!");
             opponentSprite.getLayoutParams().height = 250;
             opponentSprite.getLayoutParams().width = 250;
-            opponentSprite.setImageResource(R.drawable.pokeballsprite);
+
+            if(ballUsed == "pokeball"){
+                opponentSprite.setImageResource(R.drawable.pokeballsprite);
+            }else if(ballUsed == "greatball"){
+                opponentSprite.setImageResource(R.drawable.greatballsprite);
+            }else if(ballUsed == "ultraball"){
+                opponentSprite.setImageResource(R.drawable.ultraballsprite);
+            }
+
             CapturePokemon runnable = new CapturePokemon();
             new Thread(runnable).start();
         } else {

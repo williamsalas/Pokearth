@@ -8,38 +8,33 @@ import android.widget.AdapterView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pokearth.databinding.ActivityShopBinding;
+import com.example.pokearth.databinding.ActivityPotionbagBinding;
 
 import java.util.ArrayList;
 
-import me.sargunvohra.lib.pokekotlin.client.PokeApi;
-import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
-
-public class ShopActivity extends AppCompatActivity {
+public class PotionBagActivity extends AppCompatActivity {
 
 
-    ActivityShopBinding ui;
+    ActivityPotionbagBinding ui;
     private final Activity context = this;
     ItemAdapter adapterArray;
     ArrayList<Item> itemsList = new ArrayList<>();
-    PokeApi pokeApi = new PokeApiClient();
     int position;
     String name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ui = ActivityShopBinding.inflate(getLayoutInflater());
+        ui = ActivityPotionbagBinding.inflate(getLayoutInflater());
         setContentView(ui.getRoot());
 
         position = getIntent().getIntExtra("position", 0);
         name = getIntent().getStringExtra("name");
-        setTitle("Poke Mart");
+        setTitle("Potions");
 
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                //Potions
                 Item first = new Item(17);
                 Item second = new Item(26);
                 Item third = new Item(25);
@@ -48,7 +43,6 @@ public class ShopActivity extends AppCompatActivity {
                 itemsList.add(first);
                 itemsList.add(second);
                 itemsList.add(third);
-
 
 
                 runOnUiThread(new Runnable() {
@@ -63,13 +57,10 @@ public class ShopActivity extends AppCompatActivity {
 
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                Intent intent = new Intent(ShopActivity.this, ItemActivity.class);
-                                Item existingItem = itemsList.get(position);
-                                intent.putExtra("position",position);
-                                intent.putExtra("name",existingItem.getName());
-                                intent.putExtra("image",existingItem.getBitmap());
-                                intent.putExtra("description",existingItem.getDescription());
-                                startActivityForResult(intent,1);
+                                Intent returnIntent = new Intent();
+                                returnIntent.putExtra("position",position);
+                                setResult(Activity.RESULT_OK,returnIntent);
+                                finish();
                             }
                         });
 
@@ -83,21 +74,13 @@ public class ShopActivity extends AppCompatActivity {
 
         thread.start();
 
-
-
-
-
-
-
-
-
     }
 
     public void onReturnClicked(View view){
         Intent i = new Intent();
         i.putExtra("position", position);
         i.putExtra("name", name);
-        setResult(RESULT_OK,i);
+        setResult(RESULT_CANCELED,i);
         finish();
     }
 

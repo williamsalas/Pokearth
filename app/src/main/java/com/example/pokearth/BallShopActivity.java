@@ -37,17 +37,11 @@ public class BallShopActivity extends AppCompatActivity {
                 Item first = new Item(4);
                 Item second = new Item(3);
                 Item third = new Item(2);
-                //Dusk Ball, Moon Ball
-                Item fourth = new Item(13);
-                Item fifth = new Item(451);
-
-
 
                 itemsList.add(first);
                 itemsList.add(second);
                 itemsList.add(third);
-                itemsList.add(fourth);
-                itemsList.add(fifth);
+
 
 
                 runOnUiThread(new Runnable() {

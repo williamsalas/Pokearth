@@ -43,19 +43,20 @@ public class InventoryActivity extends AppCompatActivity {
                     Item first = new Item(17);
                     Item second = new Item(26);
                     Item third = new Item(25);
-                //X Items
-                    Item fourth = new Item(57);
-                //Item fifth = new Item(58);
-                    Item sixth = new Item(61);
-                //Item seventh = new Item(62);
-                    Item eighth = new Item(59);
+
+                    Item fourth = new Item(4);
+                    Item fifth = new Item(3);
+                    Item sixth = new Item(2);
+
+
 
                     ItemList.getInstance().addToArray(first);
                     ItemList.getInstance().addToArray(second);
                     ItemList.getInstance().addToArray(third);
                     ItemList.getInstance().addToArray(fourth);
+                    ItemList.getInstance().addToArray(fifth);
                     ItemList.getInstance().addToArray(sixth);
-                    ItemList.getInstance().addToArray(eighth);
+
 
                 }
 
