@@ -50,8 +50,13 @@ public class ItemActivity extends AppCompatActivity {
         intent.putExtra("position", position);
         intent.putExtra("name", name);
 
-        String quantity = String.valueOf(Integer.parseInt(ItemList.getInstance().getItems().get(position).getQuantityInBag()) + 1);
-        ItemList.getInstance().getItems().get(position).setQuantityInBag(quantity);
+        if(name.equals("poke-ball") || name.equals("great-ball") || name.equals("ultra-ball") ){
+            String quantity = String.valueOf(Integer.parseInt(ItemList.getInstance().getItems().get(position + 3).getQuantityInBag()) + 1);
+            ItemList.getInstance().getItems().get(position + 3).setQuantityInBag(quantity);
+        } else{
+            String quantity = String.valueOf(Integer.parseInt(ItemList.getInstance().getItems().get(position).getQuantityInBag()) + 1);
+            ItemList.getInstance().getItems().get(position).setQuantityInBag(quantity);
+        }
 
         setResult(RESULT_OK,intent);
         finish();

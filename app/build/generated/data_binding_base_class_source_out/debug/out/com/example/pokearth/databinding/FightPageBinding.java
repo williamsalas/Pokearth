@@ -22,6 +22,15 @@ public final class FightPageBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
+  public final LinearLayout ItemBagButtons;
+
+  @NonNull
+  public final Button PokeBallsButton;
+
+  @NonNull
+  public final Button PotionsButton;
+
+  @NonNull
   public final TextView battleTextView;
 
   @NonNull
@@ -102,12 +111,14 @@ public final class FightPageBinding implements ViewBinding {
   @NonNull
   public final LinearLayout teamSelectButtonsOddsLinearLayout;
 
-  private FightPageBinding(@NonNull RelativeLayout rootView, @NonNull TextView battleTextView,
-      @NonNull Button fightButton, @NonNull LinearLayout fightButtonsLinearLayout,
-      @NonNull RelativeLayout fightScreen, @NonNull Button itemsButton,
-      @NonNull LinearLayout leftColumnButtons, @NonNull Button move1Button,
-      @NonNull Button move2Button, @NonNull TextView opponentPokemonHPTextView,
-      @NonNull TextView opponentPokemonNameTextView, @NonNull ImageView opponentPokemonSprite,
+  private FightPageBinding(@NonNull RelativeLayout rootView, @NonNull LinearLayout ItemBagButtons,
+      @NonNull Button PokeBallsButton, @NonNull Button PotionsButton,
+      @NonNull TextView battleTextView, @NonNull Button fightButton,
+      @NonNull LinearLayout fightButtonsLinearLayout, @NonNull RelativeLayout fightScreen,
+      @NonNull Button itemsButton, @NonNull LinearLayout leftColumnButtons,
+      @NonNull Button move1Button, @NonNull Button move2Button,
+      @NonNull TextView opponentPokemonHPTextView, @NonNull TextView opponentPokemonNameTextView,
+      @NonNull ImageView opponentPokemonSprite,
       @NonNull RelativeLayout opponentPokemonSpriteRelativeLayout,
       @NonNull RelativeLayout opponentPokemonTextViewsRL, @NonNull TextView playerPokemonHPTextView,
       @NonNull TextView playerPokemonNameTextView, @NonNull ImageView playerPokemonSprite,
@@ -119,6 +130,9 @@ public final class FightPageBinding implements ViewBinding {
       @NonNull LinearLayout teamSelectButtonsEvensLinearLayout,
       @NonNull LinearLayout teamSelectButtonsOddsLinearLayout) {
     this.rootView = rootView;
+    this.ItemBagButtons = ItemBagButtons;
+    this.PokeBallsButton = PokeBallsButton;
+    this.PotionsButton = PotionsButton;
     this.battleTextView = battleTextView;
     this.fightButton = fightButton;
     this.fightButtonsLinearLayout = fightButtonsLinearLayout;
@@ -175,6 +189,24 @@ public final class FightPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.ItemBagButtons;
+      LinearLayout ItemBagButtons = rootView.findViewById(id);
+      if (ItemBagButtons == null) {
+        break missingId;
+      }
+
+      id = R.id.PokeBallsButton;
+      Button PokeBallsButton = rootView.findViewById(id);
+      if (PokeBallsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.PotionsButton;
+      Button PotionsButton = rootView.findViewById(id);
+      if (PotionsButton == null) {
+        break missingId;
+      }
+
       id = R.id.battleTextView;
       TextView battleTextView = rootView.findViewById(id);
       if (battleTextView == null) {
@@ -333,14 +365,14 @@ public final class FightPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FightPageBinding((RelativeLayout) rootView, battleTextView, fightButton,
-          fightButtonsLinearLayout, fightScreen, itemsButton, leftColumnButtons, move1Button,
-          move2Button, opponentPokemonHPTextView, opponentPokemonNameTextView,
-          opponentPokemonSprite, opponentPokemonSpriteRelativeLayout, opponentPokemonTextViewsRL,
-          playerPokemonHPTextView, playerPokemonNameTextView, playerPokemonSprite,
-          pokemonTeamButton, rightColumnButtons, runButton, selectPokemon1Button,
-          selectPokemon2Button, selectPokemon3Button, selectPokemon4Button, selectPokemon5Button,
-          selectPokemon6Button, teamSelectButtonsEvensLinearLayout,
+      return new FightPageBinding((RelativeLayout) rootView, ItemBagButtons, PokeBallsButton,
+          PotionsButton, battleTextView, fightButton, fightButtonsLinearLayout, fightScreen,
+          itemsButton, leftColumnButtons, move1Button, move2Button, opponentPokemonHPTextView,
+          opponentPokemonNameTextView, opponentPokemonSprite, opponentPokemonSpriteRelativeLayout,
+          opponentPokemonTextViewsRL, playerPokemonHPTextView, playerPokemonNameTextView,
+          playerPokemonSprite, pokemonTeamButton, rightColumnButtons, runButton,
+          selectPokemon1Button, selectPokemon2Button, selectPokemon3Button, selectPokemon4Button,
+          selectPokemon5Button, selectPokemon6Button, teamSelectButtonsEvensLinearLayout,
           teamSelectButtonsOddsLinearLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);

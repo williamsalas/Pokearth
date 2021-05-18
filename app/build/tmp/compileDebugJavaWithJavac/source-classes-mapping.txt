@@ -24,6 +24,8 @@ com/example/pokearth/databinding/ActivityBallshopBinding.java
 com/example/pokearth/PokemonObject.java
  com.example.pokearth.PokemonObject
  com.example.pokearth.PokemonObject$PokeTypes
+com/example/pokearth/databinding/ActivityPokeballbagBinding.java
+ com.example.pokearth.databinding.ActivityPokeballbagBinding
 com/example/pokearth/databinding/ShopPageBinding.java
  com.example.pokearth.databinding.ShopPageBinding
 com/example/pokearth/BiomeActivity.java
@@ -77,6 +79,11 @@ com/example/pokearth/pokedex/PokemonActivity.java
  com.example.pokearth.pokedex.PokemonActivity
 com/example/pokearth/MusicPlayer.java
  com.example.pokearth.MusicPlayer
+com/example/pokearth/PokeBallBagActivity.java
+ com.example.pokearth.PokeBallBagActivity
+ com.example.pokearth.PokeBallBagActivity$1
+ com.example.pokearth.PokeBallBagActivity$1$1
+ com.example.pokearth.PokeBallBagActivity$1$1$1
 com/example/pokearth/Item.java
  com.example.pokearth.Item
 com/example/pokearth/DB/PokemonStorageDatabase.java
@@ -85,6 +92,11 @@ com/example/pokearth/DB/Party.java
  com.example.pokearth.DB.Party
 com/example/pokearth/databinding/BiomeListitemBinding.java
  com.example.pokearth.databinding.BiomeListitemBinding
+com/example/pokearth/PotionBagActivity.java
+ com.example.pokearth.PotionBagActivity
+ com.example.pokearth.PotionBagActivity$1
+ com.example.pokearth.PotionBagActivity$1$1
+ com.example.pokearth.PotionBagActivity$1$1$1
 com/example/pokearth/databinding/PartyListBinding.java
  com.example.pokearth.databinding.PartyListBinding
 com/example/pokearth/databinding/SplashPageBinding.java
@@ -107,6 +119,8 @@ com/example/pokearth/pokedex/LoadingPageDialog.java
  com.example.pokearth.pokedex.LoadingPageDialog
 com/example/pokearth/databinding/ItemlistObjectLayoutWithQuantityBinding.java
  com.example.pokearth.databinding.ItemlistObjectLayoutWithQuantityBinding
+com/example/pokearth/databinding/ActivityPotionbagBinding.java
+ com.example.pokearth.databinding.ActivityPotionbagBinding
 com/example/pokearth/ItemActivity.java
  com.example.pokearth.ItemActivity
 com/example/pokearth/SplashActivity.java

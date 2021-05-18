@@ -8,6 +8,9 @@
 
 
     <!--    Opponent Pokemon TextViews RelativeLayout-->
+
+
+
     <RelativeLayout
         android:id="@+id/opponentPokemonTextViewsRL"
         android:layout_width="wrap_content"
@@ -303,7 +306,7 @@
             android:id="@+id/itemsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="catchAttempt"
+            android:onClick="displayItemMenu"
             android:text="ITEMS"
 
             />
@@ -347,5 +350,29 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ItemBagButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/PotionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Potions"
+            android:onClick="onPotionBagClick"/>
+
+        <Button
+            android:id="@+id/PokeBallsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PokeBalls"
+            android:onClick="onPokeBallBagClick"/>
+    </LinearLayout>
 
 </RelativeLayout>

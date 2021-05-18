@@ -221,6 +221,12 @@ public class PokemonObject extends MainActivity implements Serializable {
 
         return damage;
     }
+
+    public void heal(PokemonObject defender, int healAmount){
+
+        defender.health.healDamage(healAmount);
+
+    }
 }
 
 

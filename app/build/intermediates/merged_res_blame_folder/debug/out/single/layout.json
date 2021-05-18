@@ -52,6 +52,10 @@
         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\inventory_page.xml"
     },
     {
+        "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_pokeballbag.xml",
+        "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\activity_pokeballbag.xml"
+    },
+    {
         "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\party_list.xml",
         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\party_list.xml"
     },
@@ -68,15 +72,19 @@
         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\pokemon_object_layout.xml"
     },
     {
+        "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_potionbag.xml",
+        "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\activity_potionbag.xml"
+    },
+    {
         "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\itemlist_object_layout.xml",
         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout.xml"
     },
     {
-        "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_listitem.xml",
-        "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
-    },
-    {
         "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\itemlist_object_layout_with_quantity.xml",
         "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\itemlist_object_layout_with_quantity.xml"
+    },
+    {
+        "merged": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\biome_listitem.xml",
+        "source": "C:\\Users\\squiggly\\Documents\\GitHub\\Pokearth\\app\\src\\main\\res\\layout\\biome_listitem.xml"
     }
 ]
