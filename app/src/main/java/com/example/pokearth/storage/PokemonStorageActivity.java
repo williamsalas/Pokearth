@@ -13,8 +13,12 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PokemonStorage;
 import com.example.pokearth.DB.PokemonStorageDataSource;
+import com.example.pokearth.MainActivity;
+import com.example.pokearth.PartyActivity;
+import com.example.pokearth.PlayActivity;
 import com.example.pokearth.R;
 import static com.example.pokearth.MusicPlayer.StopSound;
 
@@ -26,6 +30,7 @@ public class PokemonStorageActivity extends AppCompatActivity
     private Button backButton;
     GridView simpleGrid;
     private PokemonStorageDataSource dataSource;
+    private int partySlot=-1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -34,6 +39,9 @@ public class PokemonStorageActivity extends AppCompatActivity
         setContentView(R.layout.storage_page);
         dataSource = new PokemonStorageDataSource(this);
 
+        Intent intent = getIntent();
+        partySlot=intent.getIntExtra("party_slot", -1);
+
         GenerateSaved runnable = new GenerateSaved();
         new Thread(runnable).start();
 
@@ -41,8 +49,8 @@ public class PokemonStorageActivity extends AppCompatActivity
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                StopSound();
-                onBackPressed();
+                Intent back = new Intent(getApplicationContext(), PlayActivity.class);
+                startActivity(back);
             }
         });
     }
@@ -67,8 +75,9 @@ public class PokemonStorageActivity extends AppCompatActivity
 
                     gridView.setOnItemClickListener(new OnItemClickListener() {
                         public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                            Intent intent = new Intent(getApplicationContext(), IndividualStorageActivity.class);
-                            intent.putExtra("id", position);
+                            Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                            intent.putExtra("storage_slot", position);
+                            intent.putExtra("party_slot", partySlot);
                             startActivity(intent);
                         }
                     });

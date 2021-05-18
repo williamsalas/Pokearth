@@ -17,7 +17,7 @@ import static com.example.pokearth.MusicPlayer.player;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button playButton, inventoryButton, shopButton, partyButton;
+    private Button playButton, inventoryButton, shopButton;
 
 
     PokeApi pokeApi = new PokeApiClient();
@@ -52,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
                 openShopActivity();
             }
         });
-        partyButton = findViewById(R.id.party_button);
-        partyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {openPartyActivity();}
-        });
     }
 
     public void openPlayActivity() {
@@ -70,11 +65,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openShopActivity() {
         Intent intent = new Intent(MainActivity.this, PokeMartActivity.class);
-        startActivity(intent);
-    }
-
-    public void openPartyActivity() {
-        Intent intent = new Intent(MainActivity.this, PartyActivity.class);
         startActivity(intent);
     }
 }
