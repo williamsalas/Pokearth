@@ -18,4 +18,7 @@ public interface PokemonStorageDao
 
     @Query("DELETE FROM pokemonstorage")
     void deleteAllFromTable();
+
+    @Query("SELECT * FROM pokemonstorage WHERE id = :storageSlot")
+    PokemonStorage getAt(int storageSlot);
 }

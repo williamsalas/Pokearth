@@ -3,6 +3,7 @@ package com.example.pokearth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Looper;
@@ -14,6 +15,9 @@ import android.widget.TextView;
 
 import com.example.pokearth.DB.Party;
 import com.example.pokearth.DB.PartyDataSource;
+import com.example.pokearth.DB.PokemonStorage;
+import com.example.pokearth.DB.PokemonStorageDataSource;
+import com.example.pokearth.storage.PokemonStorageActivity;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
@@ -30,22 +34,96 @@ public class PartyActivity extends AppCompatActivity {
     PokeApi pokeApi = new PokeApiClient();
     final PokemonObject[] po = {null, null, null, null, null, null};
     private PartyDataSource dataSource;
+    private PokemonStorageDataSource storageDataSource;
     private Party tempPoke = new Party(0, 0);
+    private int partySlot=-1, storageSlot=-1;
 
     private Button backButton;
-    private Button statButton1, statButton2, statButton3, statButton4, statButton5, statButton6;
+    private Button swapButton1, swapButton2, swapButton3, swapButton4, swapButton5, swapButton6;
     private Button removeButton1, removeButton2, removeButton3, removeButton4, removeButton5, removeButton6;
-    private Button assignButton1, assignButton2, assignButton3, assignButton4, assignButton5, assignButton6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.party_list);
+        dataSource = new PartyDataSource(getApplicationContext());
 
-        dataSource = new PartyDataSource(this);
+        Intent intent = getIntent();
+        storageSlot=intent.getIntExtra("storage_slot", -1)+1;
+        partySlot=intent.getIntExtra("party_slot", -1);
+        Log.d("PartyActivity", "storageSlot: " + storageSlot);
+        Log.d("PartyActivity", "partySlot: " + partySlot);
 
-        GenerateSaved runnable = new GenerateSaved();
-        new Thread(runnable).start();
+        if(storageSlot>-1 && partySlot>-1)
+        {
+            DoSwap runnable = new DoSwap();
+            new Thread(runnable).start();
+        }
+        else
+        {
+            GenerateSaved runnable = new GenerateSaved();
+            new Thread(runnable).start();
+        }
+
+        swapButton1 = findViewById(R.id.swap1);
+        swapButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                partySlot=0;
+                GenerateSwapScreen runnable = new GenerateSwapScreen();
+                new Thread(runnable).start();
+            }
+        });
+
+        swapButton2 = findViewById(R.id.swap2);
+        swapButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                partySlot=1;
+                GenerateSwapScreen runnable = new GenerateSwapScreen();
+                new Thread(runnable).start();
+            }
+        });
+
+        swapButton3 = findViewById(R.id.swap3);
+        swapButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                partySlot=2;
+                GenerateSwapScreen runnable = new GenerateSwapScreen();
+                new Thread(runnable).start();
+            }
+        });
+
+        swapButton4 = findViewById(R.id.swap4);
+        swapButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                partySlot=3;
+                GenerateSwapScreen runnable = new GenerateSwapScreen();
+                new Thread(runnable).start();
+            }
+        });
+
+        swapButton5 = findViewById(R.id.swap5);
+        swapButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                partySlot=4;
+                GenerateSwapScreen runnable = new GenerateSwapScreen();
+                new Thread(runnable).start();
+            }
+        });
+
+        swapButton6 = findViewById(R.id.swap6);
+        swapButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                partySlot=5;
+                GenerateSwapScreen runnable = new GenerateSwapScreen();
+                new Thread(runnable).start();
+            }
+        });
 
         removeButton1 = findViewById(R.id.remove1);
         removeButton1.setOnClickListener(new View.OnClickListener() {
@@ -117,9 +195,39 @@ public class PartyActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent back = new Intent(getApplicationContext(), PlayActivity.class);
+                startActivity(back);
             }
         });
+    }
+
+    class DoSwap implements Runnable{
+        @Override
+        public void run(){
+            tempPoke = dataSource.getAt(partySlot);
+            storageDataSource = new PokemonStorageDataSource(getApplicationContext());
+            PokemonStorage tempStoragePoke = storageDataSource.getAt(storageSlot);
+            dataSource.createPokemon( new Party(partySlot, tempStoragePoke.getPokemonId(), tempStoragePoke.getPokeObject(), tempStoragePoke.getPokeSpecies(), tempStoragePoke.getBitmapString()));
+            storageDataSource.createPokemon(new PokemonStorage(storageSlot, tempPoke.getPokemonId(), tempPoke.getPokeObject(), tempPoke.getPokeSpecies(), tempPoke.getBitmapString()));
+
+            GenerateSaved runnable = new GenerateSaved();
+            new Thread(runnable).start();
+        }
+    }
+
+    class GenerateSwapScreen implements Runnable{
+        @Override
+        public void run() {
+            runOnUiThread(new Runnable() {
+                @SuppressLint("SetTextI18n")
+                @Override
+                public void run() {
+                    Intent nextActivity = new Intent(getApplicationContext(), PokemonStorageActivity.class);
+                    nextActivity.putExtra("party_slot", partySlot);
+                    startActivity(nextActivity);
+                }
+            });
+        }
     }
 
     class GenerateRemoveFromParty implements Runnable {

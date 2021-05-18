@@ -26,6 +26,7 @@ import java.util.List;
 public class PlayActivity extends AppCompatActivity {
 
     private Button pokedexButton, storageButton;
+    private ImageView playerImageView, pokemonImageView1, pokemonImageView2, pokemonImageView3, pokemonImageView4, pokemonImageView5, pokemonImageView6;
     final PokemonObject[] po = {null, null, null, null, null, null};
     private PartyDataSource dataSource;
 
@@ -41,6 +42,69 @@ public class PlayActivity extends AppCompatActivity {
         new Thread(runnable).start();
 
         LoadingPageDialog loadingPageDialog = new LoadingPageDialog(PlayActivity.this);
+
+        playerImageView = findViewById(R.id.playerSprite);
+        playerImageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pokemonImageView1 = findViewById(R.id.partySprite1);
+        pokemonImageView1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pokemonImageView2 = findViewById(R.id.partySprite2);
+        pokemonImageView2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pokemonImageView3 = findViewById(R.id.partySprite3);
+        pokemonImageView3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pokemonImageView4 = findViewById(R.id.partySprite4);
+        pokemonImageView4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pokemonImageView5 = findViewById(R.id.partySprite5);
+        pokemonImageView5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pokemonImageView6 = findViewById(R.id.partySprite6);
+        pokemonImageView6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PartyActivity.class);
+                startActivity(intent);
+            }
+        });
 
         storageButton = findViewById(R.id.storage_Button);
         storageButton.setOnClickListener(new View.OnClickListener() {

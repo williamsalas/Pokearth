@@ -40,4 +40,6 @@ public class PartyDataSource
     public Party getFirstPokemon(){return partyDao.getFirstPokemon();}
 
     public int checkEmpty(){return partyDao.checkEmpty();}
+
+    public Party getAt(int partySlot) { return partyDao.getAt(partySlot);}
 }

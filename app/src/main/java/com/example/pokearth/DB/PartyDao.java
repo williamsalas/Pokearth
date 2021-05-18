@@ -26,4 +26,7 @@ public interface PartyDao
 
     @Query("SELECT EXISTS(SELECT 1 FROM party WHERE pokemon_number=0 LIMIT 1)")
     int checkEmpty();
+
+    @Query("SELECT * FROM party WHERE id = :partySlot")
+    Party getAt(int partySlot);
 }
