@@ -31,4 +31,6 @@ public class PokemonStorageDataSource {
     {
         pokemonStorageDao.deleteAllFromTable();
     }
+
+    public PokemonStorage getAt(int storageSlot) {return pokemonStorageDao.getAt(storageSlot);}
 }

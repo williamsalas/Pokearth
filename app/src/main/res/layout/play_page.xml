@@ -81,7 +81,9 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432">
+        app:layout_constraintVertical_bias="0.432"
+        android:clickable="true"
+        android:focusable="true">
 
     </ImageButton>
 
@@ -108,6 +110,8 @@
             android:layout_weight="1"
             android:background="@drawable/customcircle"
             android:src="@drawable/pkmntrainersprite"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="invisible" />
 
         <ImageView
@@ -118,6 +122,8 @@
             android:layout_weight="1"
             android:background="@drawable/customcircle"
             android:src="@drawable/pkmntrainersprite"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="invisible" />
 
         <ImageView
@@ -128,6 +134,8 @@
             android:layout_weight="1"
             android:background="@drawable/customcircle"
             android:src="@drawable/pkmntrainersprite"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="invisible" />
     </LinearLayout>
 
@@ -154,6 +162,8 @@
             android:layout_weight="1"
             android:background="@drawable/customcircle"
             android:src="@drawable/pkmntrainersprite"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="invisible" />
 
         <ImageView
@@ -164,6 +174,8 @@
             android:layout_weight="1"
             android:background="@drawable/customcircle"
             android:src="@drawable/pkmntrainersprite"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="invisible" />
 
         <ImageView
@@ -174,6 +186,8 @@
             android:layout_weight="1"
             android:background="@drawable/customcircle"
             android:src="@drawable/pkmntrainersprite"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="invisible" />
     </LinearLayout>
 

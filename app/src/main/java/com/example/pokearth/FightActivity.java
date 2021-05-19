@@ -60,9 +60,11 @@ public class FightActivity extends AppCompatActivity {
     final PokemonObject[] battlingPokemon = {null, null};
     final PokemonObject[] teamPokemon = {null, null, null, null, null, null};
     private int pokemonToSwapIn;
-    final PokemonObject[] po = {null, null};
     Biome biome = null;
     List<Party> partyPokemon = null;
+    final private String redHPHex = "#e84545";
+    final private String greenHPHex = "#29bb89";
+    private boolean fightOver = false;
 
 
     @Override
@@ -72,27 +74,24 @@ public class FightActivity extends AppCompatActivity {
         dataSource = new PartyDataSource(this);
         storageDataSource = new PokemonStorageDataSource(this);
 
+        // assigns the chosen biome based on what was chosen in BiomeActivity
+        assignChosenBiome();
+
+        GenerateNewEncounterRunnable newEncounterRunnable = new GenerateNewEncounterRunnable();
+        new Thread(newEncounterRunnable).start();
+
+        // paint all the buttons appropriately
+        TeamButtonsRunnable teamButtonsRunnable = new TeamButtonsRunnable();
+        new Thread(teamButtonsRunnable).start();
+    }
+
+    // assigns the chosen biome based on what was chosen in BiomeActivity
+    public void assignChosenBiome() {
         int chosenBiome = -1;
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             chosenBiome = extras.getInt("Chosen Biome");
         }
-
-        setFightActivity(chosenBiome);
-
-        Log.d(FightActivity.class.getSimpleName(), "Starting FightActivity with a chosen biome of " + chosenBiome);
-
-        // biome = new GrasslandBiome();
-        GenerateNewEncounterRunnable runnable = new GenerateNewEncounterRunnable();
-        new Thread(runnable).start();
-
-        // paint all the buttons appropriately
-        TeamButtonsRunnable runnable1 = new TeamButtonsRunnable();
-        new Thread(runnable1).start();
-
-    }
-
-    public void setFightActivity(int chosenBiome) {
         Log.d(FightActivity.class.getSimpleName(), "Inside setFightActivity with chosenBiome " + chosenBiome);
         RelativeLayout relativeLayout = findViewById(R.id.fightScreen);
         switch (chosenBiome) {
@@ -148,9 +147,8 @@ public class FightActivity extends AppCompatActivity {
                 biome = new SpaceBiome();
                 relativeLayout.setBackgroundResource(R.drawable.pokearth_space);
                 break;
-
-
         }
+        Log.d(FightActivity.class.getSimpleName(), "Starting FightActivity with a chosen biome of " + chosenBiome);
     }
 
     // click on the run button to go back to the Play Activity screen
@@ -170,35 +168,57 @@ public class FightActivity extends AppCompatActivity {
             fightButtonsLinearLayout.setVisibility(View.INVISIBLE);
             battleText.setVisibility(View.VISIBLE);
 
-            if (battlingPokemon[0].health.getCurrentHP() != 0 && battlingPokemon[1].health.getCurrentHP() != 0) {
-
-                battlingPokemon[0].attack(battlingPokemon[1], battleText);
-                TextView opponentPokemonHPTextView = (TextView) findViewById(R.id.opponentPokemonHPTextView);
-                opponentPokemonHPTextView.setText(battlingPokemon[1].health.getCurrentHP() + " HP");
-
-                Runnable opponentMove = new Runnable() {
-                    @Override
-                    public void run() {
-                        battlingPokemon[1].attack(battlingPokemon[0], battleText);
-                        TextView playerPokemonHPTextView = (TextView) findViewById(R.id.playerPokemonHPTextView);
-                        playerPokemonHPTextView.setText(battlingPokemon[0].health.getCurrentHP() + " HP");
-                    }
-                };
-
-
-                if (battlingPokemon[1].health.getCurrentHP() != 0) {
-                    Handler h = new Handler();
-                    h.postDelayed(opponentMove, 3000); // simulate enemy thinking
-                }
-
-            } else if (battlingPokemon[0].health.getCurrentHP() == 0) {
-                battleText.setText("You can't do that! " + battlingPokemon[0].getName() + " is fainted!");
-            } else {
-                battleText.setText("You can't do that! " + battlingPokemon[1].getName() + " is already fainted!");
-            }
+            playerAttack();
         }
     }
 
+    private void playerAttack() {
+        TextView battleText = (TextView) findViewById(R.id.battleTextView);
+        if (bothPokemonAlive() && !this.fightOver) {
+            // attack the opponent
+            battlingPokemon[0].attack(battlingPokemon[1], battleText);
+
+            setOpponentHP();
+
+            if (battlingPokemon[1].health.isFainted()) {
+                this.fightOver = true;
+            } else // opponent counter attacks
+            {
+                opponentAttack();
+            }
+        } else if (battlingPokemon[0].health.isFainted()) {
+            battleText.setText("You can't do that! " + battlingPokemon[0].getName() + " is fainted!");
+        } else {
+            battleText.setText("You can't do that! " + battlingPokemon[1].getName() + " is already fainted!");
+        }
+    }
+
+    private void opponentAttack() {
+        TextView battleText = (TextView) findViewById(R.id.battleTextView);
+        TextView playerPokemonHP = (TextView) findViewById(R.id.playerPokemonHPTextView);
+
+        Runnable opponentMove = new Runnable() {
+            @Override
+            public void run() {
+                battlingPokemon[1].attack(battlingPokemon[0], battleText);
+                TextView playerPokemonHPTextView = (TextView) findViewById(R.id.playerPokemonHPTextView);
+                playerPokemonHPTextView.setText(battlingPokemon[0].health.getCurrentHP() + " HP");
+
+                if (battlingPokemon[0].health.getCurrentHP() <= 20) {
+                    Log.d("FightActivity", "Opponent attack set player health to below 20");
+                    playerPokemonHP.setBackgroundColor(Color.parseColor(redHPHex));
+                }
+            }
+        };
+
+
+        if (bothPokemonAlive()) {
+            Handler h = new Handler();
+            h.postDelayed(opponentMove, 3000); // simulate enemy thinking
+        }
+    }
+
+    // on 'Fight' button click
     public void displayAttackMenu(View v) {
         // if toggled off, toggle the ui that has attack1, attack2
         // if toggled on, turn off
@@ -214,15 +234,12 @@ public class FightActivity extends AppCompatActivity {
         }
     }
 
+    // on 'PKMN' button click
     public void displayTeamSelectMenu(View v) {
         // if toggled off, toggle the ui that has team selection buttons
         // if toggled on, turn off
         LinearLayout teamSelectButtonsOddsLinearLayout = (LinearLayout) findViewById(R.id.teamSelectButtonsOddsLinearLayout);
         LinearLayout teamSelectButtonsEvensLinearLayout = (LinearLayout) findViewById(R.id.teamSelectButtonsEvensLinearLayout);
-
-//        // paint all the buttons appropriately
-//        SetTeamColors runnable = new SetTeamColors();
-//        new Thread(runnable).start();
 
         if (teamSelectButtonsOddsLinearLayout.getVisibility() == View.INVISIBLE) {
             teamSelectButtonsOddsLinearLayout.setVisibility(View.VISIBLE);
@@ -240,56 +257,165 @@ public class FightActivity extends AppCompatActivity {
 
     }
 
-    class TeamButtonsRunnable implements Runnable {
+    // on 'Items' button click, to be changed to on pokeball item use
+    @SuppressLint("SetTextI18n")
+    public void catchAttempt(View v) {
+        if (!this.fightOver) {
+            TextView battleText = (TextView) findViewById(R.id.battleTextView);
+            ImageView opponentSprite = (ImageView) findViewById(R.id.opponentPokemonSprite);
 
-        public void run() {
-            // pokeAttackButton1.setBackgroundColor(Color.parseColor(po[0].getTypeColorString(0)));
-            Looper.prepare();
-            //PokemonObject[] team = new PokemonObject[6];
-            partyPokemon = dataSource.getAllPokemon();
-            for (int x = 0; x < 6; x++) {
-                if (partyPokemon.get(x).getPokemonId() > 0)
-                    teamPokemon[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
-                else
-                    teamPokemon[x] = null;
+            // if success
+            if (Math.random() > 0.5) {
+                battleText.setText("Gotcha! " + this.battlingPokemon[1].getName() + " was caught!");
+                opponentSprite.getLayoutParams().height = 250;
+                opponentSprite.getLayoutParams().width = 250;
+                opponentSprite.setImageResource(R.drawable.pokeballsprite);
+                CapturePokemon runnable = new CapturePokemon();
+                new Thread(runnable).start();
+                this.fightOver = true;
+            } else {
+                battleText.setText("Oh no! The Pokemon broke free!");
+                opponentAttack();
             }
-            runOnUiThread(new Runnable() {
+        } // end if
+    }
 
+    // sets the Pokemon move names appropriately
+    public void setAttackButton(Button attackButton, String typeString) {
+        switch (typeString) {
+            case "normal":
+                attackButton.setText("Take Down");
+                break;
+            case "fighting":
+                attackButton.setText("Brick Break");
+                break;
+            case "flying":
+                attackButton.setText("Brave Bird");
+                break;
+            case "poison":
+                attackButton.setText("Sludge Bomb");
+                break;
+            case "ground":
+                attackButton.setText("Dig");
+                break;
+            case "rock":
+                attackButton.setText("Rock Slide");
+                break;
+            case "bug":
+                attackButton.setText("Bug Buzz");
+                break;
+            case "ghost":
+                attackButton.setText("Shadow Ball");
+                break;
+            case "steel":
+                attackButton.setText("Heavy Slam");
+                break;
+            case "fire":
+                attackButton.setText("Fire Blast");
+                break;
+            case "water":
+                attackButton.setText("Surf");
+                break;
+            case "grass":
+                attackButton.setText("Razor Leaf");
+                break;
+            case "electric":
+                attackButton.setText("Thunder");
+                break;
+            case "psychic":
+                attackButton.setText("Psychic");
+                break;
+            case "ice":
+                attackButton.setText("Blizzard");
+                break;
+            case "dragon":
+                attackButton.setText("Dragon Rage");
+                break;
+            case "dark":
+                attackButton.setText("Crunch");
+                break;
+            case "fairy":
+                attackButton.setText("Dazzling Gleam");
+                break;
+            default:
+                attackButton.setText("Tackle");
+                break;
+        }
+    }
+
+    // swaps the active fighting pokemon with a party pokemon
+    @SuppressLint("SetTextI18n")
+    public void swapPokemonButton(View v) {
+        if (!this.fightOver) {
+            runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    // Stuff that updates the UI
-                    Button teamMemberButton;
-                    for (int i = 0; i < teamPokemon.length; i++) {
-                        switch (i) {
-                            case 0:
-                                teamMemberButton = findViewById(R.id.selectPokemon1Button);
-                                break;
-                            case 1:
-                                teamMemberButton = findViewById(R.id.selectPokemon2Button);
-                                break;
-                            case 2:
-                                teamMemberButton = findViewById(R.id.selectPokemon3Button);
-                                break;
-                            case 3:
-                                teamMemberButton = findViewById(R.id.selectPokemon4Button);
-                                break;
-                            case 4:
-                                teamMemberButton = findViewById(R.id.selectPokemon5Button);
-                                break;
-                            case 5:
-                                teamMemberButton = findViewById(R.id.selectPokemon6Button);
-                                break;
-                            default:
-                                throw new IllegalStateException("Unexpected value: " + i);
-                        }
-                        if (teamPokemon[i] != null) {
-                            teamMemberButton.setBackgroundColor(Color.parseColor(teamPokemon[i].getTypeColorString(0)));
-                            teamMemberButton.setText(teamPokemon[i].getName());
-                        } else {
-                            teamMemberButton.setVisibility(View.INVISIBLE);
-                        }
+                    //Looper.prepare();
+                    //List<Party> partyPokemon = dataSource.getAllPokemon();
+                    switch (v.getId()) {
+                        case R.id.selectPokemon1Button:
+                            pokemonToSwapIn = 0;
+                            break;
+                        case R.id.selectPokemon2Button:
+                            pokemonToSwapIn = 1;
+                            break;
+                        case R.id.selectPokemon3Button:
+                            pokemonToSwapIn = 2;
+                            break;
+                        case R.id.selectPokemon4Button:
+                            pokemonToSwapIn = 3;
+                            break;
+                        case R.id.selectPokemon5Button:
+                            pokemonToSwapIn = 4;
+                            break;
+                        case R.id.selectPokemon6Button:
+                            pokemonToSwapIn = 5;
+                            break;
+                    }
+
+                    LinearLayout oddTeamButtons = (LinearLayout) findViewById(R.id.teamSelectButtonsOddsLinearLayout);
+                    LinearLayout evenTeamButtons = (LinearLayout) findViewById(R.id.teamSelectButtonsEvensLinearLayout);
+                    oddTeamButtons.setVisibility(View.INVISIBLE);
+                    evenTeamButtons.setVisibility(View.INVISIBLE);
+
+                    TextView battleText = (TextView) findViewById(R.id.battleTextView);
+                    battleText.setText("Sent out " + teamPokemon[pokemonToSwapIn].getName() + "! You can do it!");
+
+                    TextView pokeName1 = (TextView) findViewById(R.id.playerPokemonNameTextView);
+                    pokeName1.setText(teamPokemon[pokemonToSwapIn].getName());
+
+                    int playerPokeColor1 = Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(0));
+                    pokeName1.setBackgroundColor(playerPokeColor1);
+
+                    ImageView image1 = (ImageView) findViewById(R.id.playerPokemonSprite);
+                    // set the image accordingly
+                    byte[] byteBitmap = partyPokemon.get(pokemonToSwapIn).getBitmapString();
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(byteBitmap, 0, byteBitmap.length);
+                    image1.setImageBitmap(bitmap);
+
+
+                    TextView pokeHP1 = (TextView) findViewById(R.id.playerPokemonHPTextView);
+                    pokeHP1.setText(teamPokemon[pokemonToSwapIn].health.getCurrentHP() + " HP");
+                    if (teamPokemon[pokemonToSwapIn].health.getCurrentHP() > 20) {
+                        pokeHP1.setBackgroundColor(Color.parseColor(greenHPHex));
+                    } else {
+                        pokeHP1.setBackgroundColor(Color.parseColor(redHPHex));
+                    }
+                    Button pokeAttackButton1 = findViewById(R.id.move1Button);
+                    Button pokeAttackButton2 = findViewById(R.id.move2Button);
+
+                    pokeAttackButton1.setBackgroundColor(Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(0)));
+                    setAttackButton(pokeAttackButton1, teamPokemon[pokemonToSwapIn].getTypeString(0));
+
+                    if (teamPokemon[pokemonToSwapIn].isDualType()) {
+                        pokeAttackButton2.setBackgroundColor(Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(1)));
+                        setAttackButton(pokeAttackButton2, teamPokemon[pokemonToSwapIn].getTypeString(1));
+                        pokeAttackButton2.setVisibility(View.VISIBLE);
+                    } else {
+                        pokeAttackButton2.setVisibility(View.INVISIBLE);
                     }
                 }
+
             });
         }
     }
@@ -398,9 +524,12 @@ public class FightActivity extends AppCompatActivity {
             new Thread(runnable).start();
         } else {
             battleText.setText("Oh no! The Pokemon broke free!");
+          opponentAttack();
         }
+
     }
 
+    // generates a new wild pokemon encounter
     private class GenerateNewEncounterRunnable implements Runnable {
         Random rand = new Random();
 
@@ -490,139 +619,62 @@ public class FightActivity extends AppCompatActivity {
         }
     }
 
-    public void setAttackButton(Button attackButton, String typeString) {
-        switch (typeString) {
-            case "normal":
-                attackButton.setText("Take Down");
-                break;
-            case "fighting":
-                attackButton.setText("Brick Break");
-                break;
-            case "flying":
-                attackButton.setText("Brave Bird");
-                break;
-            case "poison":
-                attackButton.setText("Sludge Bomb");
-                break;
-            case "ground":
-                attackButton.setText("Dig");
-                break;
-            case "rock":
-                attackButton.setText("Rock Slide");
-                break;
-            case "bug":
-                attackButton.setText("Bug Buzz");
-                break;
-            case "ghost":
-                attackButton.setText("Shadow Ball");
-                break;
-            case "steel":
-                attackButton.setText("Heavy Slam");
-                break;
-            case "fire":
-                attackButton.setText("Fire Blast");
-                break;
-            case "water":
-                attackButton.setText("Surf");
-                break;
-            case "grass":
-                attackButton.setText("Razor Leaf");
-                break;
-            case "electric":
-                attackButton.setText("Thunder");
-                break;
-            case "psychic":
-                attackButton.setText("Psychic");
-                break;
-            case "ice":
-                attackButton.setText("Blizzard");
-                break;
-            case "dragon":
-                attackButton.setText("Dragon Rage");
-                break;
-            case "dark":
-                attackButton.setText("Crunch");
-                break;
-            case "fairy":
-                attackButton.setText("Dazzling Gleam");
-                break;
-            default:
-                attackButton.setText("Tackle");
-                break;
+    // creates the appropriate party pokemon buttons
+    private class TeamButtonsRunnable implements Runnable {
+
+        public void run() {
+            // pokeAttackButton1.setBackgroundColor(Color.parseColor(po[0].getTypeColorString(0)));
+            Looper.prepare();
+            //PokemonObject[] team = new PokemonObject[6];
+            partyPokemon = dataSource.getAllPokemon();
+            for (int x = 0; x < 6; x++) {
+                if (partyPokemon.get(x).getPokemonId() > 0)
+                    teamPokemon[x] = new PokemonObject(partyPokemon.get(x).getPokemonId());
+                else
+                    teamPokemon[x] = null;
+            }
+            runOnUiThread(new Runnable() {
+
+                @Override
+                public void run() {
+                    // Stuff that updates the UI
+                    Button teamMemberButton;
+                    for (int i = 0; i < teamPokemon.length; i++) {
+                        switch (i) {
+                            case 0:
+                                teamMemberButton = findViewById(R.id.selectPokemon1Button);
+                                break;
+                            case 1:
+                                teamMemberButton = findViewById(R.id.selectPokemon2Button);
+                                break;
+                            case 2:
+                                teamMemberButton = findViewById(R.id.selectPokemon3Button);
+                                break;
+                            case 3:
+                                teamMemberButton = findViewById(R.id.selectPokemon4Button);
+                                break;
+                            case 4:
+                                teamMemberButton = findViewById(R.id.selectPokemon5Button);
+                                break;
+                            case 5:
+                                teamMemberButton = findViewById(R.id.selectPokemon6Button);
+                                break;
+                            default:
+                                throw new IllegalStateException("Unexpected value: " + i);
+                        }
+                        if (teamPokemon[i] != null) {
+                            teamMemberButton.setBackgroundColor(Color.parseColor(teamPokemon[i].getTypeColorString(0)));
+                            teamMemberButton.setText(teamPokemon[i].getName());
+                        } else {
+                            teamMemberButton.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                }
+            });
         }
     }
 
-    @SuppressLint("SetTextI18n")
-    public void swapPokemonButton(View v) {
-
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                //Looper.prepare();
-                //List<Party> partyPokemon = dataSource.getAllPokemon();
-                switch (v.getId()) {
-                    case R.id.selectPokemon1Button:
-                        pokemonToSwapIn = 0;
-                        break;
-                    case R.id.selectPokemon2Button:
-                        pokemonToSwapIn = 1;
-                        break;
-                    case R.id.selectPokemon3Button:
-                        pokemonToSwapIn = 2;
-                        break;
-                    case R.id.selectPokemon4Button:
-                        pokemonToSwapIn = 3;
-                        break;
-                    case R.id.selectPokemon5Button:
-                        pokemonToSwapIn = 4;
-                        break;
-                    case R.id.selectPokemon6Button:
-                        pokemonToSwapIn = 5;
-                        break;
-                }
-                LinearLayout oddTeamButtons = (LinearLayout) findViewById(R.id.teamSelectButtonsOddsLinearLayout);
-                LinearLayout evenTeamButtons = (LinearLayout) findViewById(R.id.teamSelectButtonsEvensLinearLayout);
-                oddTeamButtons.setVisibility(View.INVISIBLE);
-                evenTeamButtons.setVisibility(View.INVISIBLE);
-
-                TextView battleText = (TextView) findViewById(R.id.battleTextView);
-                battleText.setText("Sent out " + teamPokemon[pokemonToSwapIn].getName() + "! You can do it!");
-
-                TextView pokeName1 = (TextView) findViewById(R.id.playerPokemonNameTextView);
-                pokeName1.setText(teamPokemon[pokemonToSwapIn].getName());
-
-                int playerPokeColor1 = Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(0));
-                pokeName1.setBackgroundColor(playerPokeColor1);
-
-                ImageView image1 = (ImageView) findViewById(R.id.playerPokemonSprite);
-                // set the image accordingly
-                byte[] byteBitmap = partyPokemon.get(pokemonToSwapIn).getBitmapString();
-                Bitmap bitmap = BitmapFactory.decodeByteArray(byteBitmap, 0, byteBitmap.length);
-                image1.setImageBitmap(bitmap);
-
-
-                TextView pokeHP1 = (TextView) findViewById(R.id.playerPokemonHPTextView);
-                pokeHP1.setText(teamPokemon[pokemonToSwapIn].health.getCurrentHP() + " HP");
-                Button pokeAttackButton1 = findViewById(R.id.move1Button);
-                Button pokeAttackButton2 = findViewById(R.id.move2Button);
-
-                pokeAttackButton1.setBackgroundColor(Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(0)));
-                setAttackButton(pokeAttackButton1, teamPokemon[pokemonToSwapIn].getTypeString(0));
-
-                if (teamPokemon[pokemonToSwapIn].isDualType()) {
-                    pokeAttackButton2.setBackgroundColor(Color.parseColor(teamPokemon[pokemonToSwapIn].getTypeColorString(1)));
-                    setAttackButton(pokeAttackButton2, teamPokemon[pokemonToSwapIn].getTypeString(1));
-                    pokeAttackButton2.setVisibility(View.VISIBLE);
-                } else {
-                    pokeAttackButton2.setVisibility(View.INVISIBLE);
-                }
-            }
-        });
-
-        battlingPokemon[0] = teamPokemon[pokemonToSwapIn];
-
-    }
-
+    // capture pokemon event
     private class CapturePokemon implements Runnable {
         @SuppressLint("SetTextI18n")
         @Override
@@ -667,6 +719,21 @@ public class FightActivity extends AppCompatActivity {
                     });
                 }
             }
+        }
+    }
+
+    public boolean bothPokemonAlive() {
+        return battlingPokemon[0].health.getCurrentHP() != 0 && battlingPokemon[1].health.getCurrentHP() != 0;
+    }
+
+    public void setOpponentHP() {
+        int opponentCurrentHP = battlingPokemon[1].health.getCurrentHP();
+        TextView opponentPokemonHPTextView = (TextView) findViewById(R.id.opponentPokemonHPTextView);
+        opponentPokemonHPTextView.setText(opponentCurrentHP + " HP");
+
+        if (opponentCurrentHP <= 20) {
+            Log.d("FightActivity", "Player attack set opponent health to below 20");
+            opponentPokemonHPTextView.setBackgroundColor(Color.parseColor(redHPHex));
         }
     }
 
