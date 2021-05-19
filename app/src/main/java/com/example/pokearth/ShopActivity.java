@@ -43,23 +43,12 @@ public class ShopActivity extends AppCompatActivity {
                 Item first = new Item(17);
                 Item second = new Item(26);
                 Item third = new Item(25);
-                //X Items
-                Item fourth = new Item(57);
-                //Item fifth = new Item(58);
-                Item sixth = new Item(61);
-                //Item seventh = new Item(62);
-                Item eighth = new Item(59);
-
 
 
                 itemsList.add(first);
                 itemsList.add(second);
                 itemsList.add(third);
-                itemsList.add(fourth);
-                //itemsList.add(fifth);
-                itemsList.add(sixth);
-                //itemsList.add(seventh);
-                itemsList.add(eighth);
+
 
 
                 runOnUiThread(new Runnable() {

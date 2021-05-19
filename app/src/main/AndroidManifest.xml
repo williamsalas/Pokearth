@@ -31,7 +31,8 @@
         <activity android:name=".pokedex.PokemonActivity"/>
         <activity android:name=".storage.PokemonStorageActivity"/>
         <activity android:name=".storage.IndividualStorageActivity"/>
-
+        <activity android:name=".PokeBallBagActivity"/>
+        <activity android:name=".PotionBagActivity"/>
         <activity android:name=".PartyActivity"/>
 
         <activity android:name=".SplashActivity">

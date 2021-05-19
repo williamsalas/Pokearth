@@ -1653,6 +1653,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable greatballsprite
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1722,14 +1723,18 @@ drawable splash_screen
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable ultraballsprite
 drawable whitecircle
 id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id ItemBagButtons
 id META
 id NO_DEBUG
+id PokeBallsButton
+id PotionsButton
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2306,7 +2311,9 @@ layout abc_tooltip
 layout activity_ballshop
 layout activity_inventory
 layout activity_item
+layout activity_pokeballbag
 layout activity_pokemart
+layout activity_potionbag
 layout activity_shop
 layout biome_listitem
 layout biome_page

@@ -40,6 +40,8 @@
         <activity android:name="com.example.pokearth.pokedex.PokemonActivity" />
         <activity android:name="com.example.pokearth.storage.PokemonStorageActivity" />
         <activity android:name="com.example.pokearth.storage.IndividualStorageActivity" />
+        <activity android:name="com.example.pokearth.PokeBallBagActivity" />
+        <activity android:name="com.example.pokearth.PotionBagActivity" />
         <activity android:name="com.example.pokearth.PartyActivity" />
         <activity android:name="com.example.pokearth.SplashActivity" >
             <intent-filter>
